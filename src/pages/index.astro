@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import { ColorGroups } from '../components/Colors';
+import {Content as ColorMarkdown} from '../markdown/colors.md'
 ---
 
 <Layout title="Welcome to Astro.">
@@ -16,7 +17,7 @@ import { ColorGroups } from '../components/Colors';
 		</ul>
 		
 		<div>
-			primitives-color:
+			<ColorMarkdown />
 			<ColorGroups />
 		</div>
 	</main>
