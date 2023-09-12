@@ -3,14 +3,25 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import { ColorGroups } from "../components/Colors";
 import { Content as ColorMarkdown } from "../markdown/colors.md";
+import { Borders } from "../components/Borders";
+import { Content as BorderMarkdown } from "../markdown/borders.md";
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
     <h1>
       Velkommen til <span class="text-gradient">Knut</span><br /><small>
-        - designsystemet til GU</small>
+        - designsystemet til GU</small
+      >
     </h1>
+
+    <div>
+      <BorderMarkdown />
+      <Borders />
+      <ColorMarkdown />
+      <ColorGroups />
+    </div>
+
     <ul role="list" class="link-card-grid">
       <Card
         href="/framework-demo"
@@ -18,11 +29,6 @@ import { Content as ColorMarkdown } from "../markdown/colors.md";
         body="Astro kan rendre f.eks. React, Vue og Svelte sammen"
       />
     </ul>
-
-    <div>
-      <ColorMarkdown />
-      <ColorGroups />
-    </div>
   </main>
 </Layout>
 
