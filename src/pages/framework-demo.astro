@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ReactButton } from '../components/ReactButton';
+import VueButton from '../components/VueButton.vue';
+import SvelteButton from '../components/SvelteButton.svelte';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<p class="instructions">
+			Astro kan rendre mange andre frameworks!
+		</p>
+
+		<ReactButton client:load />
+
+		<br />
+		
+		<VueButton client:load />
+		<br />
+		
+		<SvelteButton client:load />
+		<br />
+
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+</style>
