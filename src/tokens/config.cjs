@@ -36,16 +36,16 @@ module.exports = {
         },
       ],
     },
-    ts: {
-      transformGroup: "js",
-      buildPath: "./src/tokens/output/",
-      files: [
-        {
-          destination: "tokens.d.ts",
-          format: "typescript/es6-declarations",
-        },
-      ],
-    },
+    // ts: {
+    //   transformGroup: "js",
+    //   buildPath: "./src/tokens/output/",
+    //   files: [
+    //     {
+    //       destination: "tokens.d.ts",
+    //       format: "typescript/es6-declarations",
+    //     },
+    //   ],
+    // },
     js: {
       transformGroup: "js",
       buildPath: "./src/tokens/output/",
