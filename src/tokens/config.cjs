@@ -8,6 +8,7 @@ module.exports = {
         {
           destination: "tokens.scss",
           format: "scss/variables",
+          filter: function(token){return !token.name.startsWith("font") && !token.name.startsWith("effect")},
         },
       ],
     },
@@ -18,6 +19,7 @@ module.exports = {
         {
           destination: "tokens.less",
           format: "less/variables",
+          filter: function(token){return !token.name.startsWith("font") && !token.name.startsWith("effect")},
         },
       ],
     },
