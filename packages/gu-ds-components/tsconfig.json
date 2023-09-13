@@ -1,0 +1,25 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+      "isolatedModules": true,
+      "allowSyntheticDefaultImports": true,
+      "jsx": "react",
+      "target": "esnext",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "strict": true,
+      "sourceMap": false,
+      "skipLibCheck": true,
+      "noEmit": true,
+      "noEmitHelpers": true,
+      "importHelpers": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "removeComments": true,
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "useUnknownInCatchVariables": false
+    }
+  }
+  
