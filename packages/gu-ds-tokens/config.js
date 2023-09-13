@@ -1,9 +1,9 @@
 module.exports = {
-  source: ["./src/tokens/tokens-from-figma.json"],
+  source: ["./tokens-from-figma.json"],
   platforms: {
     scss: {
       transformGroup: "scss",
-      buildPath: "./src/tokens/output/",
+      buildPath: "./output/",
       files: [
         {
           destination: "tokens.scss",
@@ -14,7 +14,7 @@ module.exports = {
     },
     less: {
       transformGroup: "less",
-      buildPath: "./src/tokens/output/",
+      buildPath: "./output/",
       files: [
         {
           destination: "tokens.less",
@@ -25,7 +25,7 @@ module.exports = {
     },
     css: {
       transformGroup: "css",
-      buildPath: "./src/tokens/output/",
+      buildPath: "./output/",
       files: [
         {
           destination: "tokens.css",
@@ -38,19 +38,9 @@ module.exports = {
         },
       ],
     },
-    // ts: {
-    //   transformGroup: "js",
-    //   buildPath: "./src/tokens/output/",
-    //   files: [
-    //     {
-    //       destination: "tokens.d.ts",
-    //       format: "typescript/es6-declarations",
-    //     },
-    //   ],
-    // },
     js: {
       transformGroup: "js",
-      buildPath: "./src/tokens/output/",
+      buildPath: "./output/",
       files: [
         { destination: "tokens.json", format: "json/nested" },
         {

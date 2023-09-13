@@ -1,27 +1,17 @@
 {
   "name": "gu-ds",
-  "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "tokens": "node ./src/tokens/build.cjs"
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "tokens": "turbo tokens"
   },
   "dependencies": {
-    "@astrojs/netlify": "^3.0.1",
-    "@astrojs/react": "^3.0.2",
-    "@astrojs/svelte": "^4.0.2",
-    "@astrojs/vue": "^3.0.0",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
-    "astro": "^3.0.12",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "style-dictionary": "^3.8.0",
-    "svelte": "^4.0.0",
-    "vue": "^3.2.30"
+    "turbo": "latest"
   }
 }

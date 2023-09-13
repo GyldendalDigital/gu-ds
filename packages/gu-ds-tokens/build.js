@@ -1,5 +1,5 @@
-const StyleDictionary = require("style-dictionary").extend("./src/tokens/config.cjs");
-const removeValue = require("./utils/removeValue.cjs")
+const StyleDictionary = require("style-dictionary").extend("./config.js");
+const removeValue = require("./utils/removeValue.js")
 
 StyleDictionary.registerFormat({
   name: "es6-object-simplified",

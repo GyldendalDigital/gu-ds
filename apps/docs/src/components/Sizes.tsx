@@ -1,4 +1,4 @@
-import tokens from "../tokens/output/tokens.json";
+import tokens from "gu-ds-tokens/output/tokens.json";
 
 const Size = (name: string, value: number) => (
   <tr
