@@ -10,6 +10,9 @@
     },
     "tokens": {
       "cache": false
+    },
+    "css": {
+      "cache": false
     }
   }
 }

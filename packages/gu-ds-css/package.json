@@ -1,0 +1,10 @@
+{
+  "name": "gu-ds-css",
+  "version": "0.0.1",
+  "scripts": {
+    "css": "node ./build.js"
+  },
+  "dependencies": {
+    "gu-ds-tokens": "*"
+  }
+}

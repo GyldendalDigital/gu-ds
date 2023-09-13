@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "turbo dev",
     "build": "turbo build",
-    "tokens": "turbo tokens"
+    "tokens": "turbo tokens",
+    "css": "turbo css"
   },
   "dependencies": {
     "turbo": "latest"
