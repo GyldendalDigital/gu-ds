@@ -2,8 +2,8 @@
 
 ## ⚡ Quick how to: update tokens
 
-1. Export from Figma
-2. Replace the content in `./tokens-from-figma.json` with the exported json
+1. Export json from Figma
+2. Replace json in `tokens-from-figma.json`
 3. Run `yarn tokens`
 4. Commit changes
 
@@ -17,13 +17,13 @@
 │   ├── tokens.scss
 │   ├── tokens.js
 │   └── token.json
-├── build.cjs
-├── config.cjs
+├── build.js
+├── config.js
 └── tokens-from-figma.json
 ```
 
-We use [style-dictionary](https://github.com/amzn/style-dictionary) to generate tokens from `./tokens-from-figma.json`. 
+We use [style-dictionary](https://github.com/amzn/style-dictionary) to transform and format the tokens in `./tokens-from-figma.json`.
 
-In `./config.cjs` we decide which formats we want (css, scss, js and more), and in `./build.cjs` we can create formatters and use other utilities to change the output how we want.
+In `./config.js` we decide which formats we want (css, scss, js and more), and in `./build.js` we can create formatters and use other utilities to change the output how we want.
 
 The files in `./output` are auto generated and should never be edited manually.
