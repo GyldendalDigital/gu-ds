@@ -4,7 +4,9 @@ import Card from "../components/Card.astro";
 import { Colors } from "../components/Colors";
 import { Content as ColorMarkdown } from "../markdown/colors.md";
 import { Borders } from "../components/Borders";
+import { Sizes } from "../components/Sizes";
 import { Content as BorderMarkdown } from "../markdown/borders.md";
+import { Content as SizeMarkdown } from "../markdown/sizes.md";
 ---
 
 <Layout title="GUDS gave til fart i nye prosjekter">
@@ -16,6 +18,8 @@ import { Content as BorderMarkdown } from "../markdown/borders.md";
     </h1>
 
     <div>
+      <SizeMarkdown />
+      <Sizes />
       <BorderMarkdown />
       <Borders />
       <ColorMarkdown />

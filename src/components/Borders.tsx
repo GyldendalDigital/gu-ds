@@ -10,7 +10,6 @@ const Border = (
   key={radiusName+widthName}
     style={{
       padding: "10px",
-      gap: "10px",
       border: `${widthValue}px solid white`,
       borderRadius: radiusValue,
       textAlign: "center",
