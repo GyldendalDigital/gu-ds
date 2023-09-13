@@ -1,6 +1,8 @@
 # GU designsystem
 
-[Token generation](./packages/gu-ds-tokens/README.md)
+Temporary URL: https://vermillion-sawine-93f2f2.netlify.app
+
+- [Token generation](./packages/gu-ds-tokens/README.md)
 
 ## 🙏 Credits
 
