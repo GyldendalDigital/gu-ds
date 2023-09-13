@@ -1,5 +1,12 @@
 ---
-import { ExampleComponent } from "gu-ds-components";
+import { ExampleComponent, ProgressBar } from "gu-ds-components";
 ---
 
 <ExampleComponent>Knut</ExampleComponent>
+<ProgressBar client:load progressBars={[
+    {
+      valueNow: 18,
+      valueText: "heihei",
+      fillColor: "blue",
+    }
+  ]} />

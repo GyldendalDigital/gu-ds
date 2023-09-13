@@ -9,8 +9,11 @@
     "dev": "npm run build -- --watch"
   },
   "dependencies": {
+    "gu-ds-tokens": "*",
+    "polished": "^4.2.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.0.8"
   },
   "devDependencies": {
     "tsup": "^7.2.0",
