@@ -1,2 +1,5 @@
 # generated types
 .astro/
+
+# netlify
+.netlify

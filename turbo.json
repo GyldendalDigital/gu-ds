@@ -5,6 +5,7 @@
       "cache": false
     },
     "build": {
+      "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     },
     "tokens": {

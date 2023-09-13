@@ -1,6 +1,6 @@
 # GU designsystem
 
-[Token generation](./src/tokens/TOKEN_README.md)
+[Token generation](./packages/gu-ds-tokens/README.md)
 
 ## 🙏 Credits
 
