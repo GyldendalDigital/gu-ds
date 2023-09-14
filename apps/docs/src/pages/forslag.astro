@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { TableClient, AzureNamedKeyCredential } from "@azure/data-tables";
+import { countBy } from "lodash";
+
+const forslag = new Array<string>();
+
+const search = async () => {
+  const account = import.meta.env.AZURE_ACCOUNT;
+  const accountKey = import.meta.env.AZURE_KEY;
+  const tableName = "dsforslag";
+
+  const credential = new AzureNamedKeyCredential(account, accountKey);
+  const client = new TableClient(
+    `https://${account}.table.core.windows.net`,
+    tableName,
+    credential
+  );
+
+  const entities = await client.listEntities();
+
+  for await (const entity of entities) {
+    if (entity.partitionKey) forslag.push(entity.partitionKey);
+  }
+};
+
+await search();
+
+const forslagGroup = Object.entries(countBy(forslag))
+  .map((e) => ({ value: e[0], count: e[1] as number }))
+  .sort((a, b) => b.count - a.count);
+---
+
+<Layout title="Forslag">
+  <main>
+    <ul>
+      {
+        forslagGroup.map((f) => (
+          <li>
+            {f.value}: {f.count}
+          </li>
+        ))
+      }
+    </ul>
+  </main>
+</Layout>

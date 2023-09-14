@@ -42,9 +42,40 @@ const { title } = Astro.props;
   }
   html {
     font-family: Inter, system-ui, sans-serif;
-    background: var(--primitives-color-purple-900);
+    background: var(--primitives-color-gray-1000);
   }
   body {
     margin: 0;
+  }
+  main {
+    color: var(--primitives-color-blue-800);
+    font-size: calc(var(--primitives-size-20) * 1px);
+    line-height: var(--primitives-font-line-height-150) / 10;
+  }
+  h1 {
+    font-size: calc(var(--primitives-size-48) * 1px);
+    font-weight: var(--primitives-font-weight-bold);
+    text-align: center;
+    line-height: 0.9;
+  }
+
+  input {
+    text-align: center;
+    width: calc(100px + 25vw);
+    border: 0;
+    border-bottom: 1px solid var(--primitives-color-white);
+    color: var(--primitives-color-white);
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+    font-size: calc(var(--primitives-size-48) * 1px);
+  }
+
+  .submit-button {
+    background: var(--component-button-color-background);
+    border-radius: calc(var(--semantic-action-border-radius-pill) * 1px);
+    padding: calc(var(--component-button-padding-top)* 1px) calc(var(--component-button-padding-left)* 1px);
   }
 </style>

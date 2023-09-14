@@ -7,13 +7,57 @@ import { Borders } from "../components/Borders";
 import { Sizes } from "../components/Sizes";
 import { Content as BorderMarkdown } from "../markdown/borders.md";
 import { Content as SizeMarkdown } from "../markdown/sizes.md";
+import { AnimatedInput } from "../components/AnimatedInput";
+import { TableClient, AzureNamedKeyCredential } from "@azure/data-tables";
+
+const save = async (value: string) => {
+  const account = import.meta.env.AZURE_ACCOUNT;
+  const accountKey = import.meta.env.AZURE_KEY;
+  const tableName = "dsforslag";
+
+  const credential = new AzureNamedKeyCredential(account, accountKey);
+  const client = new TableClient(
+    `https://${account}.table.core.windows.net`,
+    tableName,
+    credential
+  );
+
+  await client.createEntity({
+    partitionKey: value,
+    rowKey: new Date().toISOString(),
+  });
+};
+
+let forslagCookie = Astro.cookies.get("forslag")?.value ?? "";
+
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const name = `${data.get("name")}`;
+
+    if (forslagCookie !== name) {
+      await save(name);
+
+      Astro.cookies.set("forslag", name);
+      forslagCookie = name;
+    }
+    return Astro.redirect("/");
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
 ---
 
 <Layout title="GUDS gave til fart i nye prosjekter">
   <main>
     <h1>
-      Velkommen til <span class="text-gradient">Knut</span>
-      <br />
+      <form method="post">
+        Velkommen til <AnimatedInput client:load initialValue={forslagCookie} />
+        <br />
+        <button class="submit-button">Send inn forslag</button>
+      </form>
       <small>- Gyldendal Undervisnings designsystem</small>
     </h1>
 

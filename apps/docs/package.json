@@ -15,13 +15,15 @@
     "@astrojs/react": "^3.0.2",
     "@astrojs/svelte": "^4.0.2",
     "@astrojs/vue": "^3.0.0",
+    "@azure/data-tables": "^13.2.2",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "astro": "^3.0.12",
+    "gu-ds-tokens": "*",
+    "lodash": "^4.17.21",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "svelte": "^4.0.0",
-    "vue": "^3.2.30",
-    "gu-ds-tokens":"*"
+    "vue": "^3.2.30"
   }
 }
