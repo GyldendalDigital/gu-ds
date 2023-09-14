@@ -56,7 +56,7 @@ if (Astro.request.method === "POST") {
       <form method="post">
         Velkommen til <AnimatedInput client:load initialValue={forslagCookie} />
         <br />
-        <button class="submit-button">Send inn forslag</button>
+        <button class="submit-button">Send inn forslag{forslagCookie && " på nytt"}</button>
       </form>
       <small>- Gyldendal Undervisnings designsystem</small>
     </h1>

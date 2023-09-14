@@ -1,11 +1,11 @@
-import { useEffect, useState, FunctionComponent } from "react";
+import { useEffect, useState } from "react";
 
 let knutDone = false;
 
 /** Half assed attempt to make a fancy input */
-export const AnimatedInput: FunctionComponent<{ initialValue: string }> = ({
+export const AnimatedInput = ({
   initialValue,
-}) => {
+}:{ initialValue: string }) => {
   const [placeHolder, setPlaceHolder] = useState<string | undefined>("");
 
   const knut = "Knut?";
