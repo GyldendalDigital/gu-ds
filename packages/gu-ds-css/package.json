@@ -7,5 +7,9 @@
   },
   "dependencies": {
     "gu-ds-tokens": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GyldendalDigital/gu-ds"
   }
 }

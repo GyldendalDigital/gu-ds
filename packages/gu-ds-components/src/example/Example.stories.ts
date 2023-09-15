@@ -1,8 +1,8 @@
-import { ExampleComponent } from "./ExampleComponent";
+import { Example } from "./Example";
 
 export default {
-    title: 'Example/ExampleComponent',
-    component: ExampleComponent,
+    title: 'Example',
+    component: Example,
     parameters: {
       // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
       layout: 'centered',
@@ -17,6 +17,6 @@ export default {
 
   export const Primary = {
     args: {
-      children: "du!",
+      message: "Eksempel",
     },
   };
