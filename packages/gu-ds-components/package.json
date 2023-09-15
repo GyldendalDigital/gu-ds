@@ -13,7 +13,7 @@
     "dist/*"
   ],
   "scripts": {
-    "build": "tsup src/index.ts src/register-web-components.ts --format cjs,esm --dts",
+    "build": "tsup src/index.ts src/register-web-components.ts --format esm --dts",
     "dev": "npm run build -- --watch"
   },
   "dependencies": {
