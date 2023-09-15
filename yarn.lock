@@ -1715,6 +1715,18 @@
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
+"@r2wc/core@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@r2wc/core/-/core-1.0.0.tgz#5724bf472769ffe4157528bd10f62b9aada36098"
+  integrity sha512-P/P1YXpCXESnJKxFGXDZFrldov3T5wqeJSgQNWMgTkuV4CA9C+gVwv2guadkB7h5PuFyJxaLLbK6vl2VAUltpA==
+
+"@r2wc/react-to-web-component@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@r2wc/react-to-web-component/-/react-to-web-component-2.0.2.tgz#695a077a231c108226d1b3cf69b43dbcfe607c6c"
+  integrity sha512-HxgWXh6aipgvZ7l31m+AN0mM8KI5jkiCEBnSMBl/UKibVrhFgtsumL8fmLd5/q+OHBJKK0w4e5sAmzY1yu8dpA==
+  dependencies:
+    "@r2wc/core" "^1.0.0"
+
 "@radix-ui/number@1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@radix-ui/number/-/number-1.0.1.tgz#644161a3557f46ed38a042acf4a770e826021674"

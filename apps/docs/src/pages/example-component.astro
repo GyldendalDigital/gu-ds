@@ -1,12 +1,25 @@
 ---
-
+import { Example } from "gu-ds-components";
 ---
 
-<gu-ds-example message="web component" backgroundColor="lightsalmon">
-  Dette er et web component
+<gu-ds-example message="Web component" background-color="lightsalmon">
 </gu-ds-example>
 
+<br />
+
 <div id="react-root"></div>
+
+<br />
+
+<Example
+  message="Server side rendered react component"
+  backgroundColor="lightsalmon"
+/>
+
+<script>
+  import registerWebComponents from "gu-ds-components/register-web-components";
+  registerWebComponents();
+</script>
 
 <script>
   import { Example } from "gu-ds-components";
@@ -18,7 +31,10 @@
     const root = createRoot(element);
     const componentWithoutJsx = createElement(
       Example,
-      { message: "Dette er et react component", backgroundColor: "salmon" },
+      {
+        message: "Client side rendered react component",
+        backgroundColor: "salmon",
+      },
       null
     );
     root.render(componentWithoutJsx);
