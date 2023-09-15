@@ -1,6 +1,6 @@
 {
   "name": "gu-ds",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -14,6 +14,7 @@
     "css": "turbo css"
   },
   "dependencies": {
+    "@changesets/cli": "^2.26.2",
     "turbo": "latest"
   }
 }
