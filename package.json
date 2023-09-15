@@ -10,6 +10,7 @@
     "dev": "turbo dev",
     "build": "turbo build",
     "tokens": "turbo tokens",
+    "storybook": "turbo storybook",
     "css": "turbo css"
   },
   "dependencies": {

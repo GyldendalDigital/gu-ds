@@ -13,6 +13,9 @@
     },
     "css": {
       "cache": false
+    },
+    "storybook": {
+      "cache": false
     }
   }
 }
