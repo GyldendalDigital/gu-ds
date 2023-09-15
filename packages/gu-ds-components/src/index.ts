@@ -1,1 +1,3 @@
-export * from "./example-component/ExampleComponent";
+export * from "./example/Example";
+
+import "./register-web-components";

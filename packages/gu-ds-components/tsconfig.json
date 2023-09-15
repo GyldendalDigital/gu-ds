@@ -3,6 +3,7 @@
     "compilerOptions": {
       "isolatedModules": true,
       "allowSyntheticDefaultImports": true,
+      "lib": ["dom", "esnext"],
       "jsx": "react",
       "target": "esnext",
       "module": "commonjs",

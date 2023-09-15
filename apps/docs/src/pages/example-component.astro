@@ -1,0 +1,26 @@
+---
+
+---
+
+<gu-ds-example message="web component" backgroundColor="lightsalmon">
+  Dette er et web component
+</gu-ds-example>
+
+<div id="react-root"></div>
+
+<script>
+  import { Example } from "gu-ds-components";
+  import { createElement } from "react";
+  import { createRoot } from "react-dom/client";
+
+  const element = document.getElementById("react-root");
+  if (element) {
+    const root = createRoot(element);
+    const componentWithoutJsx = createElement(
+      Example,
+      { message: "Dette er et react component", backgroundColor: "salmon" },
+      null
+    );
+    root.render(componentWithoutJsx);
+  }
+</script>
