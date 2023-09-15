@@ -26,6 +26,11 @@ export const AnimatedInput = ({
           setPlaceHolder("");
         }, 2000);
       }
+      if (placeHolder === gud) {
+        setTimeout(() => {
+          setPlaceHolder(undefined);
+        }, 2000);
+      }
     }, 250);
 
     return () => window.clearTimeout(timeoutID);

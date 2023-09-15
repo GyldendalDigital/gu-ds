@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import { Colors } from "../components/Colors";
 import { Content as ColorMarkdown } from "../markdown/colors.md";
 import { Borders } from "../components/Borders";
@@ -55,11 +54,22 @@ if (Astro.request.method === "POST") {
     <h1>
       <form method="post">
         Velkommen til <AnimatedInput client:load initialValue={forslagCookie} />
+        {
+          !forslagCookie && (
+            <button class="submit-button">Send inn forslag</button>
+          )
+        }
         <br />
-        <button class="submit-button">Send inn forslag{forslagCookie && " på nytt"}</button>
       </form>
       <small>- Gyldendal Undervisnings designsystem</small>
     </h1>
+    {
+      forslagCookie && (
+        <div class="status">
+          Forslag mottatt. <a href="/forslag">Se andre forslag</a>.
+        </div>
+      )
+    }
 
     <div>
       <SizeMarkdown />
@@ -69,35 +79,12 @@ if (Astro.request.method === "POST") {
       <ColorMarkdown />
       <Colors client:idle />
     </div>
-
-    <ul role="list" class="link-card-grid">
-      <Card
-        href="/kodegreier"
-        title="Flere rammeverk"
-        body="Astro kan rendre f.eks. React, Vue og Svelte sammen"
-      />
-    </ul>
   </main>
 </Layout>
 
 <style>
-  main {
-    color: var(--primitives-color-blue-800);
-    font-size: calc(var(--primitives-size-20) * 1px);
-    line-height: var(--primitives-font-line-height-150) / 10;
-  }
-  h1 {
-    font-size: calc(var(--primitives-size-48) * 1px);
-    font-weight: var(--primitives-font-weight-bold);
+  .status {
     text-align: center;
-    line-height: 0.9;
-  }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
   }
   small {
     font-size: calc(var(--primitives-size-20) * 1px);
