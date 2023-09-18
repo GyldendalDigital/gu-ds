@@ -3,24 +3,13 @@
     "compilerOptions": {
       "isolatedModules": true,
       "allowSyntheticDefaultImports": true,
-      "lib": ["dom", "esnext"],
+      "lib": ["dom", "es2020"],
       "jsx": "react",
-      "target": "esnext",
-      "module": "commonjs",
+      "target": "ES2020",
+      "module": "esnext",
       "moduleResolution": "node",
       "strict": true,
-      "sourceMap": false,
-      "skipLibCheck": true,
-      "noEmit": true,
-      "noEmitHelpers": true,
-      "importHelpers": true,
-      "noUnusedLocals": true,
-      "noUnusedParameters": true,
-      "removeComments": true,
-      "resolveJsonModule": true,
-      "esModuleInterop": true,
-      "forceConsistentCasingInFileNames": true,
-      "useUnknownInCatchVariables": false
+      "noEmit": true
     }
   }
   

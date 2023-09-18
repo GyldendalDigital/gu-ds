@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import vue from "@astrojs/vue";
 import svelte from "@astrojs/svelte";
@@ -9,5 +9,6 @@ import netlify from "@astrojs/netlify/functions";
 export default defineConfig({
   integrations: [react(), vue(), svelte()],
   output: "server",
-  adapter: netlify()
+  adapter: netlify(),
+  vite: { ssr: { noExternal: ["solid-use"] } },
 });

@@ -11,6 +11,6 @@ export const propNames = {
 };
 
 export const Example: FunctionComponent<Props> = ({
-  backgroundColor,
   message,
+  backgroundColor,
 }) => <div style={{ backgroundColor }}>{message}</div>;
