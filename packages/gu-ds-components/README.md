@@ -1,6 +1,8 @@
 # Component library
 
-Components can be used as react components or as web components
+Components can be used as react components or as web components.<br />
+TypeScript definitions are included.
+
 
 ```jsx
 import Example from "gu-ds-components/react/example";
