@@ -1,5 +1,5 @@
 import r2wc from "@r2wc/react-to-web-component";
-import { Example, propNames } from "./components/example/Example";
+import { Example, propNames } from "./example/Example";
 
 const registerWebComponents = () => {
   window.customElements.define(

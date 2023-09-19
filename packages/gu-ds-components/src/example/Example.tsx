@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 
-interface Props {
+export interface ExampleProps {
   backgroundColor: string;
   message: string;
 }
@@ -10,7 +10,7 @@ export const propNames = {
   message: "string",
 };
 
-export const Example: FunctionComponent<Props> = ({
+export const Example: FunctionComponent<ExampleProps> = ({
   message,
   backgroundColor,
 }) => <div style={{ backgroundColor }}>{message}</div>;

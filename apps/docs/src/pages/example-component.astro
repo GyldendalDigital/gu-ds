@@ -1,31 +1,26 @@
 ---
-import Example from "gu-ds-components/components/example";
+import Example from "gu-ds-components/react/example";
 ---
 
-<gu-ds-example message="Web component" background-color="lightsalmon">
-</gu-ds-example>
-
-<br />
-
-<div id="react-root"></div>
-
-<br />
+<!-- Server side rendered react component -->
 
 <Example
   message="Server side rendered react component"
   backgroundColor="lightsalmon"
 />
 
-<script>
-  import registerWebComponents from "gu-ds-components/register-web-components";
-  registerWebComponents();
-</script>
+<br />
+
+<!-- Client side rendered react component -->
+
+<div id="react-root"></div>
+
+<br />
 
 <script>
-  import  Example  from "gu-ds-components/components/example";
+  import Example from "gu-ds-components/react/example";
   import { createElement } from "react";
   import { createRoot } from "react-dom/client";
-
   const element = document.getElementById("react-root");
   if (element) {
     const root = createRoot(element);
@@ -40,3 +35,28 @@ import Example from "gu-ds-components/components/example";
     root.render(componentWithoutJsx);
   }
 </script>
+
+<!-- Web component using custom element -->
+
+<script>
+  import "gu-ds-components/web-component/example";
+</script>
+
+<gu-ds-example message="Web component using custom element" background-color="lightsalmon" />
+
+<br />
+
+
+<!-- Scripted Web component -->
+
+<div id="web-component-container">
+</div>
+
+<script>
+  import Example from "gu-ds-components/web-component/example";
+  const example = new Example();
+  example.backgroundColor = "darksalmon";
+  example.message = "Scripted Web component"
+  document.querySelector("#web-component-container")?.appendChild(example);
+</script>
+

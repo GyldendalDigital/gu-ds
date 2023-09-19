@@ -4,11 +4,16 @@
   "license": "MIT",
   "type": "module",
   "exports": {
-    "./components/example": "./dist/components/example/index.js",
+    "./react/*": {
+      "import": "./dist/*/react.js"
+    },
+    "./web-component/*": {
+      "import": "./dist/*/web-component.js"
+    },
     "./register-web-components": "./dist/register-web-components.js"
   },
   "files": [
-    "dist/*"
+    "dist/**/*"
   ],
   "scripts": {
     "build": "tsup",

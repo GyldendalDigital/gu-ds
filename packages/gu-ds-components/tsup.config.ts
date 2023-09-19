@@ -2,7 +2,11 @@ import { defineConfig } from "tsup";
 import tsconfig from "./tsconfig.json";
 
 export default defineConfig((options) => ({
-  entry: ["src/register-web-components.ts", "src/components/**/index.ts"],
+  entry: [
+    "src/register-web-components.ts",
+    "src/**/react.ts",
+    "src/**/web-component.ts",
+  ],
   dts: true,
   outDir: "dist",
   format: ["esm"],
