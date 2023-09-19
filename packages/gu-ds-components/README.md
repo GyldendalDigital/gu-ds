@@ -10,13 +10,13 @@ import Example from "gu-ds-components/react/example";
 ```
 
 ```html
-<script>import Example from "gu-ds-components/web-component/example";</script>
+<script>import "gu-ds-components/web-component/example";</script>
 <gu-ds-example message="Hello" />
 ```
 
 ```JavaScript
 import Example from "gu-ds-components/web-component/example";
 const example = new Example();
-example.message = "Hello"
+example.message = "Hello";
 document.body.appendChild(example);
 ```
