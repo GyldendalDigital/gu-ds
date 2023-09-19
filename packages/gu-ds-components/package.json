@@ -9,8 +9,7 @@
     },
     "./web-component/*": {
       "import": "./dist/*/web-component.js"
-    },
-    "./register-web-components": "./dist/register-web-components.js"
+    }
   },
   "files": [
     "dist/**/*"
