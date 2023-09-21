@@ -21,6 +21,7 @@
     "astro": "^3.0.12",
     "gu-ds-tokens": "*",
     "gu-ds-components": "*",
+    "gu-ds-css": "*",
     "lodash": "^4.17.21",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

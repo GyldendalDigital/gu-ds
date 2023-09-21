@@ -9,7 +9,8 @@
       "module": "esnext",
       "moduleResolution": "node",
       "strict": true,
-      "noEmit": true
+      "noEmit": true,
+      "resolveJsonModule": true
     }
   }
   

@@ -1,12 +1,13 @@
 ---
 import Example from "gu-ds-components/react/example";
+import tokens from "gu-ds-tokens/output/tokens.json";
 ---
 
 <!-- Server side rendered react component -->
 
 <Example
   message="Server side rendered react component"
-  backgroundColor="lightsalmon"
+  backgroundColor={tokens.primitives.color.pink[100]}
 />
 
 <br />
@@ -19,6 +20,7 @@ import Example from "gu-ds-components/react/example";
 
 <script>
   import Example from "gu-ds-components/react/example";
+  import tokens from "gu-ds-tokens/output/tokens.json";
   import { createElement } from "react";
   import { createRoot } from "react-dom/client";
   const element = document.getElementById("react-root");
@@ -28,7 +30,7 @@ import Example from "gu-ds-components/react/example";
       Example,
       {
         message: "Client side rendered react component",
-        backgroundColor: "salmon",
+        backgroundColor: tokens.primitives.color.orange[100],
       },
       null
     );
@@ -42,7 +44,7 @@ import Example from "gu-ds-components/react/example";
   import "gu-ds-components/web-component/example";
 </script>
 
-<gu-ds-example message="Web component using custom element" background-color="lightsalmon" />
+<gu-ds-example message="Web component using custom element" background-color={tokens.primitives.color.purple[100]} />
 
 <br />
 
@@ -54,8 +56,9 @@ import Example from "gu-ds-components/react/example";
 
 <script>
   import Example from "gu-ds-components/web-component/example";
+  import tokens from "gu-ds-tokens/output/tokens.json";
   const example = new Example();
-  example.backgroundColor = "darksalmon";
+  example.backgroundColor = tokens.primitives.color.turquoise[100];
   example.message = "Scripted Web component"
   document.querySelector("#web-component-container")?.appendChild(example);
 </script>
