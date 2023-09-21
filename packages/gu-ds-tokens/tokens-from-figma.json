@@ -3558,7 +3558,7 @@
       "listcard": {
         "padding": {
           "type": "color",
-          "value": "{semantic.elevation.container.padding.medium}",
+          "value": "{semantic.layout.container.padding.medium}",
           "extensions": {
             "org.lukasoppermann.figmaDesignTokens": {
               "collection": "component",
@@ -3955,7 +3955,7 @@
             "border": {
               "radius": {
                 "type": "color",
-                "value": "{primitives.border.radius.6}",
+                "value": "{primitives.border.radius.8}",
                 "extensions": {
                   "org.lukasoppermann.figmaDesignTokens": {
                     "collection": "component",
@@ -4458,7 +4458,7 @@
           },
           "xsmall": {
             "type": "color",
-            "value": "{primitives.border.radius.6}",
+            "value": "{primitives.border.radius.8}",
             "extensions": {
               "org.lukasoppermann.figmaDesignTokens": {
                 "collection": "semantic",

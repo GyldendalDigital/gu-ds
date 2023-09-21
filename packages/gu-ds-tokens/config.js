@@ -43,14 +43,14 @@ module.exports = {
       buildPath: "./output/",
       files: [
         { destination: "tokens.json", format: "json/nested" },
-        {
-          destination: "tokens.js",
-          format: "es6-object-simplified",
-        },
-        {
-          destination: "token-variables.js",
-          format: "es6-variables",
-        },
+        // {
+        //   destination: "tokens.js",
+        //   format: "es6-object-simplified",
+        // },
+        // {
+        //   destination: "token-variables.js",
+        //   format: "es6-variables",
+        // },
       ],
     },
   },
