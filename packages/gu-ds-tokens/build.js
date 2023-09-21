@@ -1,15 +1,10 @@
 const StyleDictionary = require("style-dictionary").extend("./config.js");
-const removeValue = require("./utils/removeValue.js")
+const minifyDictionary = require("./utils/minifyDictionary.js");
 
 StyleDictionary.registerFormat({
-  name: "es6-object-simplified",
-  formatter: ({ dictionary }) => {
-    return `export default ${JSON.stringify(
-      removeValue(dictionary.tokens),
-      null,
-      2
-    )}`;
-  },
+  name: "json/nested-v2",
+  formatter: ({ dictionary }) =>
+    JSON.stringify(minifyDictionary(dictionary.tokens), null, 2) + "\n",
 });
 
 StyleDictionary.registerFormat({

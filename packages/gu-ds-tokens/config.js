@@ -42,15 +42,11 @@ module.exports = {
       transformGroup: "js",
       buildPath: "./output/",
       files: [
-        { destination: "tokens.json", format: "json/nested" },
-        // {
-        //   destination: "tokens.js",
-        //   format: "es6-object-simplified",
-        // },
-        // {
-        //   destination: "token-variables.js",
-        //   format: "es6-variables",
-        // },
+        { destination: "tokens.json", format: "json/nested-v2" },
+        {
+          destination: "token-variables.js",
+          format: "es6-variables",
+        },
       ],
     },
   },

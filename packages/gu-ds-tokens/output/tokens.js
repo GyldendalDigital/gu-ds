@@ -1,18 +1,5 @@
 export default {
   "font": {
-    "label": {
-      "fontSize": 12,
-      "textDecoration": "none",
-      "fontFamily": "Inter",
-      "fontWeight": 400,
-      "fontStyle": "normal",
-      "fontStretch": "normal",
-      "letterSpacing": 0,
-      "lineHeight": 18,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
-      "textCase": "none"
-    },
     "action": {
       "button": {
         "fontSize": 16,
@@ -98,6 +85,19 @@ export default {
         "paragraphSpacing": 0,
         "textCase": "none"
       },
+      "lead": {
+        "fontSize": 24,
+        "textDecoration": "none",
+        "fontFamily": "Inter",
+        "fontWeight": 400,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0,
+        "lineHeight": 36,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
       "caption": {
         "fontSize": 14,
         "textDecoration": "none",
@@ -111,15 +111,15 @@ export default {
         "paragraphSpacing": 0,
         "textCase": "none"
       },
-      "lead": {
-        "fontSize": 24,
+      "badge": {
+        "fontSize": 12,
         "textDecoration": "none",
         "fontFamily": "Inter",
         "fontWeight": 400,
         "fontStyle": "normal",
         "fontStretch": "normal",
         "letterSpacing": 0,
-        "lineHeight": 36,
+        "lineHeight": 18,
         "paragraphIndent": 0,
         "paragraphSpacing": 0,
         "textCase": "none"
@@ -205,17 +205,17 @@ export default {
         "textCase": "none"
       },
       "xs": {
-        "fontSize": 18,
+        "fontSize": 16,
         "textDecoration": "none",
         "fontFamily": "Inter",
         "fontWeight": 600,
         "fontStyle": "normal",
         "fontStretch": "normal",
-        "letterSpacing": 0,
-        "lineHeight": 21.6,
+        "letterSpacing": 0.16,
+        "lineHeight": 19.2,
         "paragraphIndent": 0,
         "paragraphSpacing": 0,
-        "textCase": "none"
+        "textCase": "uppercase"
       },
       "xxs": {
         "fontSize": 14,
@@ -229,6 +229,19 @@ export default {
         "paragraphIndent": 0,
         "paragraphSpacing": 0,
         "textCase": "none"
+      },
+      "subheading": {
+        "fontSize": 14,
+        "textDecoration": "none",
+        "fontFamily": "Inter",
+        "fontWeight": 400,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0.28,
+        "lineHeight": 16.8,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "uppercase"
       }
     },
     "tile": {
@@ -236,7 +249,7 @@ export default {
         "fontSize": 24,
         "textDecoration": "none",
         "fontFamily": "Inter",
-        "fontWeight": 600,
+        "fontWeight": 500,
         "fontStyle": "normal",
         "fontStretch": "normal",
         "letterSpacing": 0,
@@ -352,19 +365,36 @@ export default {
   },
   "effect": {
     "shadowdepth.default": {
-      "shadowType": "dropShadow",
-      "radius": 30,
-      "color": "#0000001a",
-      "offsetX": 0,
-      "offsetY": 0,
-      "spread": 0
+      "0": {
+        "shadowType": "dropShadow",
+        "radius": 16,
+        "color": "#0000001f",
+        "offsetX": 0,
+        "offsetY": 4,
+        "spread": 0
+      },
+      "1": {
+        "shadowType": "dropShadow",
+        "radius": 8,
+        "color": "#0000001f",
+        "offsetX": 0,
+        "offsetY": 2,
+        "spread": 0
+      },
+      "description": "Shadow depth 1",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:4589fee6d95dff6481f5a5ea6c9621d0a56d6ab1,",
+          "exportKey": "effect"
+        }
+      }
     },
     "shadowdepth.hover": {
       "shadowType": "dropShadow",
-      "radius": 30,
-      "color": "#0000004d",
+      "radius": 24,
+      "color": "#0000003d",
       "offsetX": 0,
-      "offsetY": 0,
+      "offsetY": 4,
       "spread": 0
     },
     "focus.default": {
@@ -391,29 +421,42 @@ export default {
       "offsetY": 1,
       "spread": 0
     },
-    "elevation": {
-      "modal": {
+    "modal": {
+      "0": {
         "shadowType": "dropShadow",
-        "radius": 15,
-        "color": "#00000040",
+        "radius": 20,
+        "color": "#0000003d",
         "offsetX": 0,
-        "offsetY": 5,
+        "offsetY": 4,
         "spread": 0
+      },
+      "1": {
+        "shadowType": "dropShadow",
+        "radius": 4,
+        "color": "#00000014",
+        "offsetX": 0,
+        "offsetY": 2,
+        "spread": 0
+      },
+      "description": null,
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:4b63ec3f199e3e5a7e5ddbc791fd20943696203e,",
+          "exportKey": "effect"
+        }
       }
     }
   },
   "primitives": {
     "border": {
       "radius": {
-        "6": 6,
         "8": 8,
         "16": 16,
         "24": 24,
         "pill": 1000
       },
       "width": {
-        "1": 1,
-        "8": 8
+        "1": 1
       }
     },
     "size": {
@@ -430,7 +473,13 @@ export default {
       "48": 48,
       "64": 64,
       "96": 96,
-      "128": 128
+      "128": 128,
+      "280": 280,
+      "360": 360,
+      "512": 512,
+      "768": 768,
+      "960": 960,
+      "1024": 1024
     },
     "font": {
       "size": {
@@ -479,7 +528,8 @@ export default {
         "600": "#2859e1ff",
         "700": "#1b49c5ff",
         "800": "#163ba1ff",
-        "900": "#112e7dff"
+        "900": "#112e7dff",
+        "1000": "#08173eff"
       },
       "blue": {
         "100": "#ebf4ffff",
@@ -490,7 +540,8 @@ export default {
         "600": "#0064ccff",
         "700": "#005ab8ff",
         "800": "#00468fff",
-        "900": "#002852ff"
+        "900": "#002852ff",
+        "1000": "#031c37ff"
       },
       "turquoise": {
         "100": "#cbf0f1ff",
@@ -501,7 +552,8 @@ export default {
         "600": "#008c8fff",
         "700": "#00787aff",
         "800": "#006466ff",
-        "900": "#005052ff"
+        "900": "#005052ff",
+        "1000": "#013c3dff"
       },
       "green": {
         "100": "#ccf0e2ff",
@@ -512,7 +564,8 @@ export default {
         "600": "#028d56ff",
         "700": "#01794aff",
         "800": "#01794aff",
-        "900": "#015131ff"
+        "900": "#015131ff",
+        "1000": "#033623ff"
       },
       "yellow": {
         "100": "#fffbebff",
@@ -523,7 +576,8 @@ export default {
         "600": "#f5c900ff",
         "700": "#e0b800ff",
         "800": "#cca700ff",
-        "900": "#a38600ff"
+        "900": "#a38600ff",
+        "1000": "#715c00ff"
       },
       "orange": {
         "100": "#fff1d6ff",
@@ -534,7 +588,8 @@ export default {
         "600": "#f5a100ff",
         "700": "#e09300ff",
         "800": "#b87900ff",
-        "900": "#8f5e00ff"
+        "900": "#8f5e00ff",
+        "1000": "#624102ff"
       },
       "red": {
         "100": "#ffcec2ff",
@@ -545,7 +600,8 @@ export default {
         "600": "#f53000ff",
         "700": "#cc2800ff",
         "800": "#a32000ff",
-        "900": "#7a1800ff"
+        "900": "#7a1800ff",
+        "1000": "#581100ff"
       },
       "pink": {
         "100": "#ffebf2ff",
@@ -556,7 +612,8 @@ export default {
         "600": "#ff337aff",
         "700": "#ff0a60ff",
         "800": "#e0004eff",
-        "900": "#b80040ff"
+        "900": "#b80040ff",
+        "1000": "#83022fff"
       },
       "gray": {
         "100": "#f4f5f6ff",
@@ -574,9 +631,6 @@ export default {
     "breakpoint": {
       "minwidth": 320,
       "breakpoint": 640
-    },
-    "shadow": {
-      "shadowdepth1": " rgba(0, 0, 0, 0.1) 0 0 30px"
     },
     "zindex": {
       "1": 1,
@@ -597,13 +651,10 @@ export default {
         "radius": 1000
       },
       "padding": {
-        "right": 16,
-        "top": 8,
-        "bottom": 8,
-        "left": 16,
+        "block": 8,
+        "inline": 16,
         "icononly": {
-          "right": 8,
-          "left": 8
+          "padding": 8
         }
       },
       "gap": 16,
@@ -619,19 +670,38 @@ export default {
     "modal": {
       "border": {
         "radius": 16
+      },
+      "simple": {
+        "container": {
+          "size": {
+            "width": 512
+          }
+        }
+      },
+      "padding": {
+        "inline": 16,
+        "block": 16
+      },
+      "gap": 24,
+      "extended": {
+        "container": {
+          "size": {
+            "width": 768
+          }
+        }
       }
     },
     "input": {
       "text": {
         "padding": {
-          "right": 16,
-          "top": 8
+          "inline": 16,
+          "block": 12
         }
       },
       "radio": {
         "padding": {
-          "top": 8,
-          "right": 16
+          "block": 8,
+          "inline": 16
         },
         "gap": 12
       },
@@ -653,12 +723,6 @@ export default {
         }
       },
       "gap": 24,
-      "padding": {
-        "top": 16,
-        "right": 16,
-        "bottom": 24,
-        "left": 16
-      },
       "heading": {
         "color": {
           "background": "#f4f5f6a6"
@@ -677,8 +741,23 @@ export default {
           "color": "#373e43ff"
         }
       },
+      "padding": {
+        "bottom": 24,
+        "top": 16,
+        "left": 16,
+        "right": 16
+      },
       "color": {
         "background": "#ffffffff"
+      },
+      "listcard": {
+        "padding": 16
+      },
+      "container": {
+        "size": {
+          "width": 280,
+          "height": 360
+        }
       }
     },
     "label": {
@@ -694,10 +773,8 @@ export default {
         "nested": {
           "container": {
             "padding": {
-              "top": 8,
-              "right": 12,
-              "bottom": 8,
-              "left": 12
+              "block": 8,
+              "inline": 12
             },
             "gap": 12
           }
@@ -708,7 +785,7 @@ export default {
           "width": 1,
           "color": "#dde0e3ff"
         },
-        "gap": 20,
+        "gap": 16,
         "color": {
           "background": {
             "default": "#ffffffff",
@@ -725,29 +802,29 @@ export default {
           "container": {
             "size": {
               "height": 48
+            },
+            "padding": {
+              "inline": 16,
+              "block": 12
             }
           }
         },
         "padding": {
-          "top": 8,
-          "right": 16,
-          "bottom": 8,
-          "left": 16
+          "block": 8,
+          "inline": 16
         },
         "nested": {
           "container": {
             "padding": {
-              "top": 8,
-              "left": 12,
-              "bottom": 8,
-              "right": 12
+              "block": 8,
+              "inline": 12
             },
             "size": {
               "height": 40,
               "indent": 40
             },
             "border": {
-              "radius": 6
+              "radius": 8
             }
           }
         },
@@ -765,15 +842,43 @@ export default {
     },
     "dropdown": {
       "gap": 8
+    },
+    "progressbar": {
+      "border": {
+        "radius": 1000
+      },
+      "color": {
+        "bg": {
+          "default": "#dde0e3ff",
+          "low": "#ffcec2ff",
+          "some": "#fff4c2ff",
+          "basics": "#c2e0ffff",
+          "good": "#9ae0c5ff",
+          "high": "#e5dcf9ff",
+          "unknown": "#c7ccd1ff"
+        },
+        "fg": {
+          "default": "#002852ff",
+          "low": "#f53000ff",
+          "some": "#f5c900ff",
+          "basics": "#0064ccff",
+          "good": "#028d56ff",
+          "high": "#421c9cff",
+          "unknown": "#25292dff"
+        }
+      },
+      "size": {
+        "small": 8,
+        "default": 12
+      }
     }
   },
   "semantic": {
     "action": {
       "padding": {
-        "top": 8,
-        "right": 16,
-        "bottom": 8,
-        "left": 16
+        "xsmall": 8,
+        "medium": 16,
+        "small": 12
       },
       "heading": {
         "font": {
@@ -790,7 +895,7 @@ export default {
           "small": 16,
           "large": 24,
           "pill": 1000,
-          "xsmall": 6
+          "xsmall": 8
         }
       },
       "separator": {
@@ -800,12 +905,12 @@ export default {
         }
       },
       "color": {
-        "bg": {
+        "background": {
           "disabled": "#dde0e3ff",
           "default": "#f4f5f6ff",
           "error": "#f4f5f6ff"
         },
-        "fg": {
+        "foreground": {
           "disabled": "#373e43ff",
           "error": "#cc2800ff",
           "default": "#000000ff"
@@ -834,29 +939,63 @@ export default {
     },
     "progress": {
       "color": {
-        "background": "#002852ff"
+        "foreground": {
+          "default": "#002852ff",
+          "low": "#f53000ff",
+          "some": "#f5c900ff",
+          "basics": "#0064ccff",
+          "good": "#028d56ff",
+          "high": "#421c9cff",
+          "unknown": "#25292dff"
+        },
+        "background": {
+          "default": "#dde0e3ff",
+          "low": "#ffcec2ff",
+          "some": "#fff4c2ff",
+          "basics": "#c2e0ffff",
+          "good": "#9ae0c5ff",
+          "high": "#e5dcf9ff",
+          "unknown": "#c7ccd1ff"
+        }
+      },
+      "size": {
+        "small": 8,
+        "default": 12
+      }
+    },
+    "layout": {
+      "page": {
+        "padding": 24,
+        "gap": 24
       },
       "container": {
-        "size": {
-          "width": 8
+        "padding": {
+          "medium": 16,
+          "large": 24,
+          "xsmall": 8,
+          "small": 12
+        },
+        "gap": {
+          "large": 24,
+          "medium": 16
         }
       }
-    }
+    },
+    "elevation": {
+      "container": {
+        "border": {
+          "radius": 16
+        },
+        "width": {
+          "medium": 512,
+          "large": 768
+        }
+      }
+    },
+    "success": "#028d56ff",
+    "failure": "#e0004eff"
   },
   "typography": {
-    "label": {
-      "fontSize": 12,
-      "textDecoration": "none",
-      "fontFamily": "Inter",
-      "fontWeight": 400,
-      "fontStyle": "normal",
-      "fontStretch": "normal",
-      "letterSpacing": 0,
-      "lineHeight": 18,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
-      "textCase": "none"
-    },
     "action": {
       "button": {
         "fontSize": 16,
@@ -942,6 +1081,19 @@ export default {
         "paragraphSpacing": 0,
         "textCase": "none"
       },
+      "lead": {
+        "fontSize": 24,
+        "textDecoration": "none",
+        "fontFamily": "Inter",
+        "fontWeight": 400,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0,
+        "lineHeight": 36,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
       "caption": {
         "fontSize": 14,
         "textDecoration": "none",
@@ -955,15 +1107,15 @@ export default {
         "paragraphSpacing": 0,
         "textCase": "none"
       },
-      "lead": {
-        "fontSize": 24,
+      "badge": {
+        "fontSize": 12,
         "textDecoration": "none",
         "fontFamily": "Inter",
         "fontWeight": 400,
         "fontStyle": "normal",
         "fontStretch": "normal",
         "letterSpacing": 0,
-        "lineHeight": 36,
+        "lineHeight": 18,
         "paragraphIndent": 0,
         "paragraphSpacing": 0,
         "textCase": "none"
@@ -1049,17 +1201,17 @@ export default {
         "textCase": "none"
       },
       "xs": {
-        "fontSize": 18,
+        "fontSize": 16,
         "textDecoration": "none",
         "fontFamily": "Inter",
         "fontWeight": 600,
         "fontStyle": "normal",
         "fontStretch": "normal",
-        "letterSpacing": 0,
-        "lineHeight": 21.6,
+        "letterSpacing": 0.16,
+        "lineHeight": 19.2,
         "paragraphIndent": 0,
         "paragraphSpacing": 0,
-        "textCase": "none"
+        "textCase": "uppercase"
       },
       "xxs": {
         "fontSize": 14,
@@ -1073,6 +1225,19 @@ export default {
         "paragraphIndent": 0,
         "paragraphSpacing": 0,
         "textCase": "none"
+      },
+      "subheading": {
+        "fontSize": 14,
+        "textDecoration": "none",
+        "fontFamily": "Inter",
+        "fontWeight": 400,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0.28,
+        "lineHeight": 16.8,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "uppercase"
       }
     },
     "tile": {
@@ -1080,7 +1245,7 @@ export default {
         "fontSize": 24,
         "textDecoration": "none",
         "fontFamily": "Inter",
-        "fontWeight": 600,
+        "fontWeight": 500,
         "fontStyle": "normal",
         "fontStretch": "normal",
         "letterSpacing": 0,
