@@ -413,7 +413,7 @@
           "fontSize": 24,
           "textDecoration": "none",
           "fontFamily": "Inter",
-          "fontWeight": 600,
+          "fontWeight": 500,
           "fontStyle": "normal",
           "fontStretch": "normal",
           "letterSpacing": 0,
@@ -599,16 +599,29 @@
   },
   "effect": {
     "shadowdepth.default": {
-      "description": "Shadow depth 1",
-      "type": "custom-shadow",
-      "value": {
-        "shadowType": "dropShadow",
-        "radius": 16,
-        "color": "#0000001f",
-        "offsetX": 0,
-        "offsetY": 4,
-        "spread": 0
+      "0": {
+        "type": "custom-shadow",
+        "value": {
+          "shadowType": "dropShadow",
+          "radius": 16,
+          "color": "#0000001f",
+          "offsetX": 0,
+          "offsetY": 4,
+          "spread": 0
+        }
       },
+      "1": {
+        "type": "custom-shadow",
+        "value": {
+          "shadowType": "dropShadow",
+          "radius": 8,
+          "color": "#0000001f",
+          "offsetX": 0,
+          "offsetY": 2,
+          "spread": 0
+        }
+      },
+      "description": "Shadow depth 1",
       "extensions": {
         "org.lukasoppermann.figmaDesignTokens": {
           "styleId": "S:4589fee6d95dff6481f5a5ea6c9621d0a56d6ab1,",
@@ -689,16 +702,29 @@
       }
     },
     "modal": {
-      "description": null,
-      "type": "custom-shadow",
-      "value": {
-        "shadowType": "dropShadow",
-        "radius": 20,
-        "color": "#0000003d",
-        "offsetX": 0,
-        "offsetY": 4,
-        "spread": 0
+      "0": {
+        "type": "custom-shadow",
+        "value": {
+          "shadowType": "dropShadow",
+          "radius": 20,
+          "color": "#0000003d",
+          "offsetX": 0,
+          "offsetY": 4,
+          "spread": 0
+        }
       },
+      "1": {
+        "type": "custom-shadow",
+        "value": {
+          "shadowType": "dropShadow",
+          "radius": 4,
+          "color": "#00000014",
+          "offsetX": 0,
+          "offsetY": 2,
+          "spread": 0
+        }
+      },
+      "description": null,
       "extensions": {
         "org.lukasoppermann.figmaDesignTokens": {
           "styleId": "S:4b63ec3f199e3e5a7e5ddbc791fd20943696203e,",
@@ -981,9 +1007,23 @@
           }
         }
       },
-      "384": {
+      "280": {
         "type": "dimension",
-        "value": 384,
+        "value": 280,
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "collection": "primitives",
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "variableId": "VariableID:767:5333",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "360": {
+        "type": "dimension",
+        "value": 360,
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
             "collection": "primitives",
@@ -3124,7 +3164,7 @@
       "padding": {
         "inline": {
           "type": "color",
-          "value": "{semantic.layout.container.padding.large}",
+          "value": "{semantic.layout.container.padding.medium}",
           "extensions": {
             "org.lukasoppermann.figmaDesignTokens": {
               "collection": "component",
@@ -3139,7 +3179,7 @@
         },
         "block": {
           "type": "color",
-          "value": "{semantic.layout.container.padding.large}",
+          "value": "{semantic.layout.container.padding.medium}",
           "extensions": {
             "org.lukasoppermann.figmaDesignTokens": {
               "collection": "component",
@@ -3155,7 +3195,7 @@
       },
       "gap": {
         "type": "color",
-        "value": "{semantic.elevation.container.padding.large}",
+        "value": "{semantic.layout.page.gap}",
         "extensions": {
           "org.lukasoppermann.figmaDesignTokens": {
             "collection": "component",
@@ -3528,6 +3568,38 @@
               ],
               "variableId": "VariableID:706:1271",
               "exportKey": "variables"
+            }
+          }
+        }
+      },
+      "container": {
+        "size": {
+          "width": {
+            "type": "dimension",
+            "value": "{primitives.size.280}",
+            "extensions": {
+              "org.lukasoppermann.figmaDesignTokens": {
+                "collection": "component",
+                "scopes": [
+                  "WIDTH_HEIGHT"
+                ],
+                "variableId": "VariableID:767:5331",
+                "exportKey": "variables"
+              }
+            }
+          },
+          "height": {
+            "type": "dimension",
+            "value": "{primitives.size.360}",
+            "extensions": {
+              "org.lukasoppermann.figmaDesignTokens": {
+                "collection": "component",
+                "scopes": [
+                  "WIDTH_HEIGHT"
+                ],
+                "variableId": "VariableID:767:5332",
+                "exportKey": "variables"
+              }
             }
           }
         }
@@ -5032,6 +5104,34 @@
           }
         }
       }
+    },
+    "success": {
+      "type": "color",
+      "value": "{primitives.color.green.600}",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "collection": "semantic",
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "variableId": "VariableID:767:6169",
+          "exportKey": "variables"
+        }
+      }
+    },
+    "failure": {
+      "type": "color",
+      "value": "{primitives.color.pink.800}",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "collection": "semantic",
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "variableId": "VariableID:767:6170",
+          "exportKey": "variables"
+        }
+      }
     }
   },
   "typography": {
@@ -5889,7 +5989,7 @@
         },
         "fontWeight": {
           "type": "number",
-          "value": 600
+          "value": 500
         },
         "fontStyle": {
           "type": "string",
