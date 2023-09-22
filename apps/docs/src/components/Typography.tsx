@@ -1,7 +1,10 @@
-import tokens from "gu-ds-tokens/output/tokens.json";
-import "../css/inter.css";
 import "gu-ds-css/output/typography.css";
+import tokens from "gu-ds-tokens/output/tokens.json";
 import type { FunctionComponent } from "react";
+import "../css/inter.css";
+import * as styles from "./typography.module.css";
+
+console.log("styles", styles);
 
 interface Item {
   path: string[];
@@ -25,50 +28,42 @@ const flattenItem =
 const isTypographyStyle = (value: any) =>
   Object.keys(value).includes("fontSize");
 
-const items = flatten(tokens.typography);
+const allItems = flatten(tokens.typography);
 
-export const Typography = () => (
-  <div
-    style={{
-      padding: 20,
-      backgroundColor: tokens.primitives.color.black,
-      color: tokens.primitives.color.white,
-    }}
-  >
-    <style>
-      {`
-      th {
-        text-align: left;
-      }
-    
-      th,
-      td {
-        padding: 8px;
-        vertical-align: top;
-        border-bottom: solid 1px white;
-        font-weight: normal;
-      }
-    `}
-    </style>
-    <table>
-      <thead>
-        <tr>
-          <th className="content-body">Name</th>
-          <th className="content-body" colSpan={2}>
-            font-size
-          </th>
-          <th className="content-body">line-height</th>
-          <th className="content-body">font-weight</th>
-        </tr>
-      </thead>
-      <tbody>
-        {items.map((item, index) => (
-          <Variant key={index} item={item} />
-        ))}
-      </tbody>
-    </table>
-  </div>
-);
+interface Props {
+  filter: (item: Item) => boolean;
+}
+
+export const Typography: FunctionComponent<Props> = ({ filter }) => {
+  const items = allItems.filter(filter);
+  return (
+    <div
+      style={{
+        padding: 20,
+        backgroundColor: tokens.primitives.color.gray[100],
+        color: tokens.primitives.color.black,
+      }}
+    >
+      <table className={styles.table}>
+        <thead>
+          <tr className={styles.tr}>
+            <th className={`${styles.th} content-body`}>Name</th>
+            <th className={`${styles.th} content-body`} colSpan={2}>
+              font-size
+            </th>
+            <th className={`${styles.th} content-body`}>line-height</th>
+            <th className={`${styles.th} content-body`}>font-weight</th>
+          </tr>
+        </thead>
+        <tbody>
+          {items.map((item, index) => (
+            <Variant key={index} item={item} />
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
 
 interface VariantProps {
   item: Item;
@@ -77,12 +72,18 @@ interface VariantProps {
 const Variant: FunctionComponent<VariantProps> = ({ item }) => {
   const className = [...item.path, item.name].join("-");
   return (
-    <tr>
-      <td className={className}>{[...item.path, item.name].join("-")}</td>
-      <td className="content-body">{item.styles.fontSize}px</td>
-      <td className="content-body">{item.styles.fontSize / 16}rem</td>
-      <td className="content-body">{item.styles.lineHeight}px</td>
-      <td className="content-body">{item.styles.fontWeight}</td>
+    <tr className={styles.tr}>
+      <td className={`${styles.td} content-body`}>
+        {[...item.path, item.name].join("-")}
+      </td>
+      <td className={`${styles.td} content-body`}>{item.styles.fontSize}px</td>
+      <td className={`${styles.td} content-body`}>
+        {item.styles.fontSize / 16}rem
+      </td>
+      <td className={`${styles.td} content-body`}>
+        {item.styles.lineHeight}px
+      </td>
+      <td className={`${styles.td} content-body`}>{item.styles.fontWeight}</td>
     </tr>
   );
 };

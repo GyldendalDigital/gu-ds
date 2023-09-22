@@ -80,7 +80,9 @@ if (Astro.request.method === "POST") {
       <ColorMarkdown />
       <Colors client:idle />
       <TypographyMarkdown />
-      <Typography />
+      <Typography filter={(item) => item.path[0] === "heading"} />
+      <Typography filter={(item) => item.path[0] === "content"} />
+      <Typography filter={(item) => item.path[0] === "action"} />
     </div>
   </main>
 </Layout>

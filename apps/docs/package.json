@@ -19,12 +19,13 @@
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "astro": "^3.0.12",
-    "gu-ds-tokens": "*",
     "gu-ds-components": "*",
     "gu-ds-css": "*",
+    "gu-ds-tokens": "*",
     "lodash": "^4.17.21",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "styled-components": "^6.0.8",
     "svelte": "^4.0.0",
     "vue": "^3.2.30"
   }
