@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "license": "MIT",
   "scripts": {
-    "css": "node ./build.js"
+    "build": "node ./build.js"
   },
   "dependencies": {
     "gu-ds-tokens": "*"

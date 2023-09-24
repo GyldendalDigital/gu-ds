@@ -1,10 +1,8 @@
 import "gu-ds-css/output/typography.css";
 import tokens from "gu-ds-tokens/output/tokens.json";
 import type { FunctionComponent } from "react";
-import "../css/inter.css";
+import "../../css/inter.css";
 import * as styles from "./typography.module.css";
-
-console.log("styles", styles);
 
 interface Item {
   path: string[];
@@ -34,34 +32,27 @@ interface Props {
   filter: (item: Item) => boolean;
 }
 
-export const Typography: FunctionComponent<Props> = ({ filter }) => {
+export const TypographyTable: FunctionComponent<Props> = ({ filter }) => {
   const items = allItems.filter(filter);
   return (
-    <div
-      style={{
-        padding: 20,
-        backgroundColor: tokens.primitives.color.gray[100],
-        color: tokens.primitives.color.black,
-      }}
-    >
-      <table className={styles.table}>
-        <thead>
-          <tr className={styles.tr}>
-            <th className={`${styles.th} content-body`}>Name</th>
-            <th className={`${styles.th} content-body`} colSpan={2}>
-              font-size
-            </th>
-            <th className={`${styles.th} content-body`}>line-height</th>
-            <th className={`${styles.th} content-body`}>font-weight</th>
-          </tr>
-        </thead>
-        <tbody>
-          {items.map((item, index) => (
-            <Variant key={index} item={item} />
-          ))}
-        </tbody>
-      </table>
-    </div>
+    <table className={styles.table}>
+      <thead>
+        <tr className={styles.tr}>
+          <th className={`${styles.th} heading-xs`}>Text style</th>
+          <th className={`${styles.th} heading-xs`} colSpan={2}>
+            Font size
+          </th>
+          <th className={`${styles.th} content-body`}>Line height</th>
+          <th className={`${styles.th} content-body`}>Font weight</th>
+          <th className={`${styles.th} content-body`}>Font style</th>
+        </tr>
+      </thead>
+      <tbody>
+        {items.map((item, index) => (
+          <Variant key={index} item={item} />
+        ))}
+      </tbody>
+    </table>
   );
 };
 
@@ -73,8 +64,8 @@ const Variant: FunctionComponent<VariantProps> = ({ item }) => {
   const className = [...item.path, item.name].join("-");
   return (
     <tr className={styles.tr}>
-      <td className={`${styles.td} content-body`}>
-        {[...item.path, item.name].join("-")}
+      <td className={`${styles.tdWithFormatting} ${className}`}>
+        {[...item.path, item.name].join(" ")}
       </td>
       <td className={`${styles.td} content-body`}>{item.styles.fontSize}px</td>
       <td className={`${styles.td} content-body`}>
@@ -84,6 +75,7 @@ const Variant: FunctionComponent<VariantProps> = ({ item }) => {
         {item.styles.lineHeight}px
       </td>
       <td className={`${styles.td} content-body`}>{item.styles.fontWeight}</td>
+      <td className={`${styles.td} content-body`}>{item.styles.fontStyle}</td>
     </tr>
   );
 };

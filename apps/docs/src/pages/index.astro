@@ -8,8 +8,8 @@ import { Content as BorderMarkdown } from "../markdown/borders.md";
 import { Content as SizeMarkdown } from "../markdown/sizes.md";
 import { AnimatedInput } from "../components/AnimatedInput";
 import { TableClient, AzureNamedKeyCredential } from "@azure/data-tables";
-import { Typography } from "../components/Typography";
-import TypographyMarkdown from "../markdown/typography.md";
+import { Typography } from "../components/typography/Typography";
+import {CategoryHeader}from "../components/categoryHeader/CategoryHeader";
 
 const save = async (value: string) => {
   const account = import.meta.env.AZURE_ACCOUNT;
@@ -73,16 +73,14 @@ if (Astro.request.method === "POST") {
     }
 
     <div>
+      <CategoryHeader>Typography</CategoryHeader>
+      <Typography />
       <SizeMarkdown />
       <Sizes />
       <BorderMarkdown />
       <Borders />
       <ColorMarkdown />
       <Colors client:idle />
-      <TypographyMarkdown />
-      <Typography filter={(item) => item.path[0] === "heading"} />
-      <Typography filter={(item) => item.path[0] === "content"} />
-      <Typography filter={(item) => item.path[0] === "action"} />
     </div>
   </main>
 </Layout>

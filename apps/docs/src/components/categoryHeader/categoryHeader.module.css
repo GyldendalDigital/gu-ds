@@ -1,0 +1,9 @@
+.categoryHeader {
+    padding: calc(var(--primitives-size-32) * 1px);
+    background-color: var(--primitives-color-violet-1000);
+    color: var(--primitives-color-white);
+}
+
+.categoryHeader h2 {
+    margin: 0
+}

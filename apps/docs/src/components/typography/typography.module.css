@@ -1,0 +1,37 @@
+.typography {
+    padding: calc(var(--primitives-size-32) * 1px);
+    background-color: var(--primitives-color-gray-100);
+    color: var(--primitives-color-black);
+}
+
+.table {
+    width: 100%;
+    border-spacing: 0 10px;
+}
+
+.table th {
+    padding: var(--primitives-size-32);
+    vertical-align: top;
+    font-weight: normal;
+    text-align: left;
+}
+
+.table td {
+    padding-block: calc(var(--primitives-size-32) * 1px);
+    background-color: var(--primitives-color-white);
+}
+
+.tdWithFormatting {
+    padding-block: calc(var(--primitives-size-32) * 1px);
+    text-transform: capitalize;
+}
+
+.table td:first-child {
+    padding-left: calc(var(--primitives-size-32) * 1px);
+    border-radius: 16px 0 0 16px;
+}
+
+.table td:last-child {
+    padding-right: calc(var(--primitives-size-32) * 1px);
+    border-radius: 0 16px 16px 0;
+}
