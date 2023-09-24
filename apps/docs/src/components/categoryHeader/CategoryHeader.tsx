@@ -6,7 +6,7 @@ interface Props {
 }
 
 export const CategoryHeader: FunctionComponent<Props> = ({ children }) => (
-  <div class={styles.categoryHeader}>
-    <h2 class="heading-xl">{children}</h2>
+  <div className={styles.categoryHeader}>
+    <h2 className="heading-xl">{children}</h2>
   </div>
 );

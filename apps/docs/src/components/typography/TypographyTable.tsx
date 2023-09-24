@@ -1,5 +1,5 @@
+import typographyItems from "gu-ds-css/output/flattenedTokens.json";
 import "gu-ds-css/output/typography.css";
-import tokens from "gu-ds-tokens/output/tokens.json";
 import type { FunctionComponent } from "react";
 import "../../css/inter.css";
 import * as styles from "./typography.module.css";
@@ -10,30 +10,12 @@ interface Item {
   styles: any;
 }
 
-const flatten = (items: Record<string, any>, namePrefixes: string[] = []) =>
-  Object.entries(items)
-    .map((vvvv) => vvvv)
-    .map(flattenItem(namePrefixes))
-    .flat();
-
-const flattenItem =
-  (path: string[]) =>
-  ([name, value]: [string, any]): Item[] =>
-    isTypographyStyle(value)
-      ? [{ path, name, styles: value }]
-      : flatten(value, [...path, name]);
-
-const isTypographyStyle = (value: any) =>
-  Object.keys(value).includes("fontSize");
-
-const allItems = flatten(tokens.typography);
-
 interface Props {
   filter: (item: Item) => boolean;
 }
 
 export const TypographyTable: FunctionComponent<Props> = ({ filter }) => {
-  const items = allItems.filter(filter);
+  const items = typographyItems.filter(filter);
   return (
     <table className={styles.table}>
       <thead>
@@ -42,9 +24,9 @@ export const TypographyTable: FunctionComponent<Props> = ({ filter }) => {
           <th className={`${styles.th} heading-xs`} colSpan={2}>
             Font size
           </th>
-          <th className={`${styles.th} content-body`}>Line height</th>
-          <th className={`${styles.th} content-body`}>Font weight</th>
-          <th className={`${styles.th} content-body`}>Font style</th>
+          <th className={`${styles.th} heading-xs`}>Line height</th>
+          <th className={`${styles.th} heading-xs`}>Font weight</th>
+          <th className={`${styles.th} heading-xs`}>Font style</th>
         </tr>
       </thead>
       <tbody>

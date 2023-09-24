@@ -1,1 +1,0 @@
-📏 Alle størrelsene i _primitives-size_

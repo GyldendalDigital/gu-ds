@@ -1,19 +1,28 @@
 .typography {
-    padding: calc(var(--primitives-size-32) * 1px);
+    padding: calc(var(--primitives-size-48) * 1px) calc(var(--primitives-size-32) * 1px);
     background-color: var(--primitives-color-gray-100);
     color: var(--primitives-color-black);
 }
 
 .table {
     width: 100%;
-    border-spacing: 0 10px;
+    max-width: 1024px;
+    border-spacing: 0 calc(var(--primitives-size-16) * 1px);
+    margin-bottom: calc(var(--primitives-size-96) * 1px);
 }
 
-.table th {
-    padding: var(--primitives-size-32);
+.th {
     vertical-align: top;
-    font-weight: normal;
     text-align: left;
+
+    &:first-child {
+        padding-left: calc(var(--primitives-size-32) * 1px);
+    }
+}
+
+.table th,
+.table td {
+    padding-inline: calc(var(--primitives-size-16) * 1px);
 }
 
 .table td {
