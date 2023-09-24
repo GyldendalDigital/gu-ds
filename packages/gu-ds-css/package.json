@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "license": "MIT",
   "scripts": {
-    "build": "node ./build.js"
+    "build": "ts-node build.ts"
   },
   "dependencies": {
     "gu-ds-tokens": "*"
@@ -11,5 +11,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/GyldendalDigital/gu-ds"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
   }
 }
