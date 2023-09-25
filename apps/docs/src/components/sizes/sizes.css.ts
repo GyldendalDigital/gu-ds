@@ -2,13 +2,6 @@ import { globalStyle, style } from "@vanilla-extract/css";
 import { contentBody } from "gu-ds-css/output/typography.json";
 import tokens from "gu-ds-tokens/output/tokens.json";
 
-export const sizes = style({
-  margin: `0 0 ${tokens.primitives.size[16]}px 0`,
-  padding: tokens.primitives.size[32],
-  backgroundColor: tokens.primitives.color.gray[100],
-  color: tokens.primitives.color.black,
-});
-
 export const table = style({
   width: "100%",
   maxWidth: tokens.primitives.size[1024],
@@ -25,4 +18,9 @@ export const td = style({
   "&:first-child": {
     paddingLeft: `${tokens.primitives.size[32]}px`,
   },
+});
+
+export const tdNoTextBreak = style({
+  whiteSpace: "nowrap",
+  wordBreak: "keep-all",
 });

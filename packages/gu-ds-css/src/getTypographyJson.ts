@@ -1,14 +1,5 @@
 import { Item } from "./flattenNestedTokens";
-
-const capitalizeFirstCharacter = (string: string) =>
-  string.charAt(0).toUpperCase() + string.slice(1);
-
-const toCamelCase = (strings: string[]) =>
-  strings
-    .map((string, index) =>
-      index === 0 ? string : capitalizeFirstCharacter(string)
-    )
-    .join("");
+import { toCamelCase } from "./utils";
 
 export const getTypographyJson = ({ path, name, styles }: Item) => ({
   [toCamelCase([...path, name])]: {

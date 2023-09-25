@@ -2,6 +2,7 @@ import typographyItems from "gu-ds-css/output/flattenedTokens.json";
 import "gu-ds-css/output/typography.css";
 import type { FunctionComponent } from "react";
 import "../../css/inter.css";
+import { Table, Td, Th } from "../table/Table";
 import * as styles from "./typography.module.css";
 
 interface Item {
@@ -17,16 +18,14 @@ interface Props {
 export const TypographyTable: FunctionComponent<Props> = ({ filter }) => {
   const items = typographyItems.filter(filter);
   return (
-    <table className={styles.table}>
+    <Table>
       <thead>
-        <tr className={styles.tr}>
-          <th className={`${styles.th} heading-xs`}>Text style</th>
-          <th className={`${styles.th} heading-xs`} colSpan={2}>
-            Font size
-          </th>
-          <th className={`${styles.th} heading-xs`}>Line height</th>
-          <th className={`${styles.th} heading-xs`}>Font weight</th>
-          <th className={`${styles.th} heading-xs`}>Font style</th>
+        <tr>
+          <Th>Text style</Th>
+          <Th colSpan={2}>Font size</Th>
+          <Th>Line height</Th>
+          <Th>Font weight</Th>
+          <Th>Font style</Th>
         </tr>
       </thead>
       <tbody>
@@ -34,7 +33,7 @@ export const TypographyTable: FunctionComponent<Props> = ({ filter }) => {
           <Variant key={index} item={item} />
         ))}
       </tbody>
-    </table>
+    </Table>
   );
 };
 
@@ -45,19 +44,15 @@ interface VariantProps {
 const Variant: FunctionComponent<VariantProps> = ({ item }) => {
   const className = [...item.path, item.name].join("-");
   return (
-    <tr className={styles.tr}>
-      <td className={`${styles.tdWithFormatting} ${className}`}>
+    <tr>
+      <Td className={`${styles.tdWithFormatting} ${className}`}>
         {[...item.path, item.name].join(" ")}
-      </td>
-      <td className={`${styles.td} content-body`}>{item.styles.fontSize}px</td>
-      <td className={`${styles.td} content-body`}>
-        {item.styles.fontSize / 16}rem
-      </td>
-      <td className={`${styles.td} content-body`}>
-        {item.styles.lineHeight}px
-      </td>
-      <td className={`${styles.td} content-body`}>{item.styles.fontWeight}</td>
-      <td className={`${styles.td} content-body`}>{item.styles.fontStyle}</td>
+      </Td>
+      <Td>{item.styles.fontSize}px</Td>
+      <Td>{item.styles.fontSize / 16}rem</Td>
+      <Td>{item.styles.lineHeight}px</Td>
+      <Td>{item.styles.fontWeight}</Td>
+      <Td>{item.styles.fontStyle}</Td>
     </tr>
   );
 };

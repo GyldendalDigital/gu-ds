@@ -1,4 +1,4 @@
-.action-button {
+.actionButton {
   font-size: 16px;
   text-decoration: none;
   font-family: Inter;
@@ -9,7 +9,7 @@
   line-height: 1.5;
   margin-bottom: 0px;
 }
-.action-input-label {
+.actionInputLabel {
   font-size: 16px;
   text-decoration: none;
   font-family: Inter;
@@ -20,7 +20,7 @@
   line-height: 1.2;
   margin-bottom: 0px;
 }
-.action-input-placeholder {
+.actionInputPlaceholder {
   font-size: 16px;
   text-decoration: none;
   font-family: Inter;
@@ -31,7 +31,7 @@
   line-height: 1.5;
   margin-bottom: 0px;
 }
-.action-disabled-placeholder {
+.actionDisabledPlaceholder {
   font-size: 16px;
   text-decoration: none;
   font-family: Inter;
@@ -42,7 +42,7 @@
   line-height: 1.5;
   margin-bottom: 0px;
 }
-.action-disabled-button {
+.actionDisabledButton {
   font-size: 16px;
   text-decoration: none;
   font-family: Inter;
@@ -53,7 +53,7 @@
   line-height: 1.5;
   margin-bottom: 0px;
 }
-.content-body {
+.contentBody {
   font-size: 16px;
   text-decoration: none;
   font-family: Inter;
@@ -64,7 +64,7 @@
   line-height: 1.5;
   margin-bottom: 0px;
 }
-.content-lead {
+.contentLead {
   font-size: 24px;
   text-decoration: none;
   font-family: Inter;
@@ -75,7 +75,7 @@
   line-height: 1.5;
   margin-bottom: 0px;
 }
-.content-caption {
+.contentCaption {
   font-size: 14px;
   text-decoration: none;
   font-family: Inter;
@@ -86,7 +86,7 @@
   line-height: 1.5;
   margin-bottom: 0px;
 }
-.content-badge {
+.contentBadge {
   font-size: 12px;
   text-decoration: none;
   font-family: Inter;
@@ -97,7 +97,7 @@
   line-height: 1.5;
   margin-bottom: 0px;
 }
-.heading-xxxl {
+.headingXxxl {
   font-size: 64px;
   text-decoration: none;
   font-family: Inter;
@@ -108,7 +108,7 @@
   line-height: 1.2;
   margin-bottom: 0px;
 }
-.heading-xxl {
+.headingXxl {
   font-size: 48px;
   text-decoration: none;
   font-family: Inter;
@@ -119,7 +119,7 @@
   line-height: 1.2;
   margin-bottom: 0px;
 }
-.heading-xl {
+.headingXl {
   font-size: 40px;
   text-decoration: none;
   font-family: Inter;
@@ -130,7 +130,7 @@
   line-height: 1.2;
   margin-bottom: 0px;
 }
-.heading-l {
+.headingL {
   font-size: 32px;
   text-decoration: none;
   font-family: Inter;
@@ -141,7 +141,7 @@
   line-height: 1.2;
   margin-bottom: 0px;
 }
-.heading-m {
+.headingM {
   font-size: 24px;
   text-decoration: none;
   font-family: Inter;
@@ -152,7 +152,7 @@
   line-height: 1.2;
   margin-bottom: 0px;
 }
-.heading-s {
+.headingS {
   font-size: 20px;
   text-decoration: none;
   font-family: Inter;
@@ -163,7 +163,7 @@
   line-height: 1.2;
   margin-bottom: 0px;
 }
-.heading-xs {
+.headingXs {
   font-size: 16px;
   text-decoration: none;
   font-family: Inter;
@@ -174,7 +174,7 @@
   line-height: 1.2;
   margin-bottom: 0px;
 }
-.heading-xxs {
+.headingXxs {
   font-size: 14px;
   text-decoration: none;
   font-family: Inter;
@@ -185,7 +185,7 @@
   line-height: 1.2;
   margin-bottom: 0px;
 }
-.heading-subheading {
+.headingSubheading {
   font-size: 14px;
   text-decoration: none;
   font-family: Inter;
@@ -196,7 +196,7 @@
   line-height: 1.2;
   margin-bottom: 0px;
 }
-.tile-heading {
+.tileHeading {
   font-size: 24px;
   text-decoration: none;
   font-family: Inter;
@@ -207,7 +207,7 @@
   line-height: 1.2;
   margin-bottom: 0px;
 }
-.tile-body {
+.tileBody {
   font-size: 20px;
   text-decoration: none;
   font-family: Inter;
@@ -218,7 +218,7 @@
   line-height: 1.2;
   margin-bottom: 0px;
 }
-.tile-subheader {
+.tileSubheader {
   font-size: 16px;
   text-decoration: none;
   font-family: Inter;
@@ -229,7 +229,7 @@
   line-height: 1.2;
   margin-bottom: 0px;
 }
-.list-listitem-header-default {
+.listListitemHeaderDefault {
   font-size: 16px;
   text-decoration: none;
   font-family: Inter;
@@ -240,7 +240,7 @@
   line-height: 1.2;
   margin-bottom: 0px;
 }
-.list-listitem-header-selected {
+.listListitemHeaderSelected {
   font-size: 16px;
   text-decoration: none;
   font-family: Inter;
@@ -251,7 +251,7 @@
   line-height: 1.2;
   margin-bottom: 0px;
 }
-.list-listitem-header-small {
+.listListitemHeaderSmall {
   font-size: 14px;
   text-decoration: none;
   font-family: Inter;
@@ -262,7 +262,7 @@
   line-height: 8.571428571428571;
   margin-bottom: 0px;
 }
-.listitem-big-header-default {
+.listitemBigHeaderDefault {
   font-size: 16px;
   text-decoration: none;
   font-family: Inter;
@@ -273,7 +273,7 @@
   line-height: 1.2;
   margin-bottom: 0px;
 }
-.listitem-big-header-selected {
+.listitemBigHeaderSelected {
   font-size: 16px;
   text-decoration: none;
   font-family: Inter;

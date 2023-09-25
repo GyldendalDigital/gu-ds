@@ -3,19 +3,27 @@ import tokens from "gu-ds-tokens/output/tokens.json";
 import { flattenNestedTokens } from "./src/flattenNestedTokens";
 import { getTypographyCssClass } from "./src/getTypographyCssClass";
 import { getTypographyJson } from "./src/getTypographyJson";
+import { toCamelCase, trimLineBreaks } from "./src/utils";
 
 const flattenedTokens = flattenNestedTokens(tokens.typography);
 
-const trimLineBreaks = (string: string) => string.replace(/^\s+|\s+$/g, "");
-
-const css = flattenedTokens
-  .map(getTypographyCssClass)
+const plainCss = flattenedTokens
+  .map((item) =>
+    getTypographyCssClass([...item.path, item.name].join("-"), item.styles)
+  )
   .map(trimLineBreaks)
   .join("\n");
 
-fs.writeFileSync("output/typography.css", css);
+fs.writeFileSync("output/typography.css", plainCss);
 
-fs.writeFileSync("output/typography.module.css", css);
+const moduleCss = flattenedTokens
+  .map((item) =>
+    getTypographyCssClass(toCamelCase([...item.path, item.name]), item.styles)
+  )
+  .map(trimLineBreaks)
+  .join("\n");
+
+fs.writeFileSync("output/typography.module.css", moduleCss);
 
 const json = flattenedTokens.map(getTypographyJson).reduce((merged, object) => {
   const [key, value] = Object.entries(object)[0];

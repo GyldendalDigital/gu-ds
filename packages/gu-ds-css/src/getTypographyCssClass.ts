@@ -1,7 +1,5 @@
-import { Item } from "./flattenNestedTokens";
-
-export const getTypographyCssClass = ({ path, name, styles }: Item) => `
-.${[...path, name].join("-")} {
+export const getTypographyCssClass = (className: string, styles: any) => `
+.${className} {
   font-size: ${styles.fontSize}px;
   text-decoration: ${styles.textDecoration};
   font-family: ${styles.fontFamily};

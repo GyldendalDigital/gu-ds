@@ -1,33 +1,19 @@
-.typography {
-    padding: calc(var(--primitives-size-48) * 1px) calc(var(--primitives-size-32) * 1px);
-    background-color: var(--primitives-color-gray-100);
-    color: var(--primitives-color-black);
+.fontExampleRow {
+    display: flex;
+    gap: calc(var(--primitives-size-32) * 1px);
+    margin-bottom: calc(var(--primitives-size-32) * 1px);
 }
 
-.table {
-    width: 100%;
-    max-width: 1024px;
-    border-spacing: 0 calc(var(--primitives-size-16) * 1px);
-    margin-bottom: calc(var(--primitives-size-96) * 1px);
-}
-
-.th {
-    vertical-align: top;
-    text-align: left;
-
-    &:first-child {
-        padding-left: calc(var(--primitives-size-32) * 1px);
-    }
-}
-
-.table th,
-.table td {
-    padding-inline: calc(var(--primitives-size-16) * 1px);
-}
-
-.table td {
-    padding-block: calc(var(--primitives-size-32) * 1px);
+.box {
+    padding: calc(var(--primitives-size-32) * 1px);
+    border-radius: calc(var(--primitives-size-16) * 1px);
     background-color: var(--primitives-color-white);
+    color: var(--primitives-color-black);
+
+    & >*:last-child,
+    & p:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .tdWithFormatting {
@@ -35,12 +21,3 @@
     text-transform: capitalize;
 }
 
-.table td:first-child {
-    padding-left: calc(var(--primitives-size-32) * 1px);
-    border-radius: 16px 0 0 16px;
-}
-
-.table td:last-child {
-    padding-right: calc(var(--primitives-size-32) * 1px);
-    border-radius: 0 16px 16px 0;
-}

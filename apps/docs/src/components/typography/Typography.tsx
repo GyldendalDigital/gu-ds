@@ -1,13 +1,42 @@
-import type { FunctionComponent } from "react";
+import * as typographyStyles from "gu-ds-css/output/typography.module.css";
+import tokens from "gu-ds-tokens/output/tokens.json";
+import { type FunctionComponent, type ReactNode } from "react";
 import { RichText } from "../richText/RichText";
 import { TypographyTable } from "./TypographyTable";
 import * as styles from "./typography.module.css";
+import { Page } from "../page/Page";
+
+console.log(tokens.primitives.font.weight.regular);
 
 interface Props {}
 
+interface FontExampleProps {
+  weight: keyof typeof tokens.primitives.font.weight;
+  italic?: boolean;
+  children: ReactNode;
+}
+
+const FontExample: FunctionComponent<FontExampleProps> = ({
+  children,
+  weight,
+  italic = false,
+}) => {
+  return (
+    <div
+      className={`${styles.box} ${typographyStyles.headingM}`}
+      style={{
+        fontWeight: tokens.primitives.font.weight[weight],
+        fontStyle: italic ? "italic" : undefined,
+      }}
+    >
+      {children}
+    </div>
+  );
+};
+
 export const Typography: FunctionComponent<Props> = () => {
   return (
-    <div className={`${styles.typography}`}>
+    <Page>
       <RichText>
         <h2>General</h2>
         <p>
@@ -19,28 +48,46 @@ export const Typography: FunctionComponent<Props> = () => {
           <br />
           Medium på CTA.
         </p>
+      </RichText>
+      <RichText>
         <h2>Fonts</h2>
         <p>
-          Fonts Vi bruker fontfamilien Inter i vektene regular (400), medium
-          (500) og semibold (600), og tilsvarende vekter i italic.
+          Fonts Vi bruker fontfamilien Inter i vektene regular (
+          {tokens.primitives.font.weight.regular}), medium (
+          {tokens.primitives.font.weight.medium}) og semibold (
+          {tokens.primitives.font.weight.semibold}), og tilsvarende vekter i
+          italic.
         </p>
+        {Object.entries(tokens.primitives.font.weight).map(([key, value]) => {
+          const weight = key as keyof typeof tokens.primitives.font.weight;
+          return (
+            <div key={key} className={styles.fontExampleRow}>
+              <FontExample weight={weight}>Inter {weight}</FontExample>
+              <FontExample weight={weight} italic>
+                Inter {weight} italic
+              </FontExample>
+            </div>
+          );
+        })}
+      </RichText>
+      <RichText>
         <h2>Headings</h2>
-        <p>Headings Text styles som brukes til overskrifter på ulike nivåer.</p>
+        <p>Text styles som brukes til overskrifter på ulike nivåer.</p>
         <TypographyTable filter={(item) => item.path[0] === "heading"} />
+      </RichText>
+      <RichText>
         <h2>Content</h2>
         <p>Text styles som brukes til mengdetekst og innholdselementer.</p>
+        <TypographyTable filter={(item) => item.path[0] === "content"} />
       </RichText>
-      <TypographyTable filter={(item) => item.path[0] === "content"} />
       <RichText>
         <h3>Guidelines: Paragraphs & rich text</h3>
         <p>
           Regler for tekstavsnitt og lenker, uthevet tekst og kursiv i løpende
           tekst.
         </p>
-      </RichText>
 
-      <div>
-        <RichText>
+        <div className={styles.box}>
           <p>
             Tekstavsnitt som dette har en{" "}
             <strong>maksbredde på 36rem (864px)</strong> for å sikre god
@@ -63,17 +110,16 @@ export const Typography: FunctionComponent<Props> = () => {
             tekst, og de vil se ut <a href="/">som dette</a>. Slik tar vi høyde
             for alle tekstgrep som kan komme via rike tekstfelter i Redaptic.
           </p>
-        </RichText>
-      </div>
+        </div>
+      </RichText>
 
       <RichText>
         <h2>Action items</h2>
         <p>
           Text styles som brukes til komponenter som knapper, inputfelter, osv.
         </p>
+        <TypographyTable filter={(item) => item.path[0] === "action"} />
       </RichText>
-
-      <TypographyTable filter={(item) => item.path[0] === "action"} />
-    </div>
+    </Page>
   );
 };

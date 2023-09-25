@@ -7,13 +7,14 @@ import {
 import tokens from "gu-ds-tokens/output/tokens.json";
 
 export const richText = style({
-  margin: `0 0 ${tokens.primitives.size[16]}px 0`,
+  marginBottom: tokens.primitives.size[48] + tokens.primitives.size[24],
+  color: tokens.primitives.color.gray[800],
 });
 
 const heading = {
   margin: `0 0 ${tokens.primitives.size[16]}px 0`,
   paddingBottom: tokens.primitives.size[16],
-  borderBottom: `1px solid ${tokens.primitives.color.gray[300]}`,
+  borderBottom: `2px solid ${tokens.primitives.color.gray[300]}`,
 };
 
 globalStyle(`${richText} h2`, {
