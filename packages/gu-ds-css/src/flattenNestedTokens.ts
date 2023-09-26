@@ -1,6 +1,9 @@
+import { toCamelCase } from "./utils";
+
 export interface Item {
   path: string[];
   name: string;
+  fullNameCamelCase: string;
   styles: any;
 }
 
@@ -13,7 +16,14 @@ const flattenItem =
   (path: string[]) =>
   ([name, value]: [string, any]): Item[] =>
     isTypographyStyle(value)
-      ? [{ path, name, styles: value }]
+      ? [
+          {
+            path,
+            name,
+            fullNameCamelCase: toCamelCase([...path, name]),
+            styles: value,
+          },
+        ]
       : flattenNestedTokens(value, [...path, name]);
 
 const isTypographyStyle = (value: any) =>

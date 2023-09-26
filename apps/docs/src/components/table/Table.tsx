@@ -7,7 +7,9 @@ interface Props {
 }
 
 export const Table: FunctionComponent<Props> = ({ children }) => (
-  <table className={styles.table}>{children}</table>
+  <div className={styles.tableContainer}>
+    <table className={styles.table}>{children}</table>
+  </div>
 );
 
 export const Th: FunctionComponent<React.JSX.IntrinsicElements["th"]> = ({
@@ -22,21 +24,28 @@ export const Th: FunctionComponent<React.JSX.IntrinsicElements["th"]> = ({
 
 type TdProps = React.JSX.IntrinsicElements["td"] & {
   wide?: boolean;
+  noWrap?: boolean;
+  responsiveLabel?: string;
 };
 
 export const Td: FunctionComponent<TdProps> = ({
   children,
   className = "",
   wide = false,
+  noWrap = false,
+  responsiveLabel,
   ...props
 }) => (
   <td
     {...props}
-    className={`
-      ${typographyStyles.contentBody}
-      ${wide ? styles.tdWide : ""}
-      ${className}`}
+    className={[
+      typographyStyles.contentBody,
+      wide ? styles.tdWide : "",
+      noWrap ? styles.tdNoWrap : "",
+      className,
+    ].join(" ")}
   >
+    <span className={styles.responsiveLabel}>{responsiveLabel}</span>
     {children}
   </td>
 );

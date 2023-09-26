@@ -5,7 +5,18 @@ import { Table, Td } from "../table/Table";
 import { UnitFormatter } from "../unitFormatter/UnitFormatter";
 
 export const Borders = () => (
-  <Page>
+  <Page
+    heading="Borders"
+    code={JSON.stringify(
+      {
+        primitives: {
+          border: tokens.primitives.border,
+        },
+      },
+      null,
+      "  "
+    )}
+  >
     <RichText>
       <h2>Width</h2>
       <Table>
@@ -39,26 +50,28 @@ export const Borders = () => (
         fremhevede fargeflater o.l.
       </p>
       <Table>
-        {Object.entries(tokens.primitives.border.radius).map(([key, value]) => (
-          <tr>
-            <Td>primitives.border.radius.{key}</Td>
-            <Td wide>
-              <UnitFormatter>{value}</UnitFormatter>
-            </Td>
-            <Td>
-              <div
-                role="img"
-                aria-label="Illustrasjon"
-                style={{
-                  width: 240,
-                  height: 140,
-                  borderRadius: value,
-                  backgroundColor: tokens.primitives.color.gray[300],
-                }}
-              />
-            </Td>
-          </tr>
-        ))}
+        {Object.entries(tokens.primitives.border.radius).map(
+          ([key, value], index) => (
+            <tr key={index}>
+              <Td>primitives.border.radius.{key}</Td>
+              <Td wide>
+                <UnitFormatter>{value}</UnitFormatter>
+              </Td>
+              <Td>
+                <div
+                  role="img"
+                  aria-label="Illustrasjon"
+                  style={{
+                    width: 240,
+                    height: 140,
+                    borderRadius: value,
+                    backgroundColor: tokens.primitives.color.gray[300],
+                  }}
+                />
+              </Td>
+            </tr>
+          )
+        )}
       </Table>
     </RichText>
   </Page>

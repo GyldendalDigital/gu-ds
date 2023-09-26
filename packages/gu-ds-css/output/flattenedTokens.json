@@ -4,6 +4,7 @@
       "action"
     ],
     "name": "button",
+    "fullNameCamelCase": "actionButton",
     "styles": {
       "fontSize": 16,
       "textDecoration": "none",
@@ -24,6 +25,7 @@
       "input"
     ],
     "name": "label",
+    "fullNameCamelCase": "actionInputLabel",
     "styles": {
       "fontSize": 16,
       "textDecoration": "none",
@@ -44,6 +46,7 @@
       "input"
     ],
     "name": "placeholder",
+    "fullNameCamelCase": "actionInputPlaceholder",
     "styles": {
       "fontSize": 16,
       "textDecoration": "none",
@@ -64,6 +67,7 @@
       "disabled"
     ],
     "name": "placeholder",
+    "fullNameCamelCase": "actionDisabledPlaceholder",
     "styles": {
       "fontSize": 16,
       "textDecoration": "none",
@@ -84,6 +88,7 @@
       "disabled"
     ],
     "name": "button",
+    "fullNameCamelCase": "actionDisabledButton",
     "styles": {
       "fontSize": 16,
       "textDecoration": "none",
@@ -103,6 +108,7 @@
       "content"
     ],
     "name": "body",
+    "fullNameCamelCase": "contentBody",
     "styles": {
       "fontSize": 16,
       "textDecoration": "none",
@@ -122,6 +128,7 @@
       "content"
     ],
     "name": "lead",
+    "fullNameCamelCase": "contentLead",
     "styles": {
       "fontSize": 24,
       "textDecoration": "none",
@@ -141,6 +148,7 @@
       "content"
     ],
     "name": "caption",
+    "fullNameCamelCase": "contentCaption",
     "styles": {
       "fontSize": 14,
       "textDecoration": "none",
@@ -160,6 +168,7 @@
       "content"
     ],
     "name": "badge",
+    "fullNameCamelCase": "contentBadge",
     "styles": {
       "fontSize": 12,
       "textDecoration": "none",
@@ -179,6 +188,7 @@
       "heading"
     ],
     "name": "xxxl",
+    "fullNameCamelCase": "headingXxxl",
     "styles": {
       "fontSize": 64,
       "textDecoration": "none",
@@ -198,6 +208,7 @@
       "heading"
     ],
     "name": "xxl",
+    "fullNameCamelCase": "headingXxl",
     "styles": {
       "fontSize": 48,
       "textDecoration": "none",
@@ -217,6 +228,7 @@
       "heading"
     ],
     "name": "xl",
+    "fullNameCamelCase": "headingXl",
     "styles": {
       "fontSize": 40,
       "textDecoration": "none",
@@ -236,6 +248,7 @@
       "heading"
     ],
     "name": "l",
+    "fullNameCamelCase": "headingL",
     "styles": {
       "fontSize": 32,
       "textDecoration": "none",
@@ -255,6 +268,7 @@
       "heading"
     ],
     "name": "m",
+    "fullNameCamelCase": "headingM",
     "styles": {
       "fontSize": 24,
       "textDecoration": "none",
@@ -274,6 +288,7 @@
       "heading"
     ],
     "name": "s",
+    "fullNameCamelCase": "headingS",
     "styles": {
       "fontSize": 20,
       "textDecoration": "none",
@@ -293,6 +308,7 @@
       "heading"
     ],
     "name": "xs",
+    "fullNameCamelCase": "headingXs",
     "styles": {
       "fontSize": 16,
       "textDecoration": "none",
@@ -312,6 +328,7 @@
       "heading"
     ],
     "name": "xxs",
+    "fullNameCamelCase": "headingXxs",
     "styles": {
       "fontSize": 14,
       "textDecoration": "none",
@@ -331,6 +348,7 @@
       "heading"
     ],
     "name": "subheading",
+    "fullNameCamelCase": "headingSubheading",
     "styles": {
       "fontSize": 14,
       "textDecoration": "none",
@@ -350,6 +368,7 @@
       "tile"
     ],
     "name": "heading",
+    "fullNameCamelCase": "tileHeading",
     "styles": {
       "fontSize": 24,
       "textDecoration": "none",
@@ -369,6 +388,7 @@
       "tile"
     ],
     "name": "body",
+    "fullNameCamelCase": "tileBody",
     "styles": {
       "fontSize": 20,
       "textDecoration": "none",
@@ -388,6 +408,7 @@
       "tile"
     ],
     "name": "subheader",
+    "fullNameCamelCase": "tileSubheader",
     "styles": {
       "fontSize": 16,
       "textDecoration": "none",
@@ -409,6 +430,7 @@
       "header"
     ],
     "name": "default",
+    "fullNameCamelCase": "listListitemHeaderDefault",
     "styles": {
       "fontSize": 16,
       "textDecoration": "none",
@@ -430,6 +452,7 @@
       "header"
     ],
     "name": "selected",
+    "fullNameCamelCase": "listListitemHeaderSelected",
     "styles": {
       "fontSize": 16,
       "textDecoration": "none",
@@ -451,6 +474,7 @@
       "header"
     ],
     "name": "small",
+    "fullNameCamelCase": "listListitemHeaderSmall",
     "styles": {
       "fontSize": 14,
       "textDecoration": "none",
@@ -472,6 +496,7 @@
       "header"
     ],
     "name": "default",
+    "fullNameCamelCase": "listitemBigHeaderDefault",
     "styles": {
       "fontSize": 16,
       "textDecoration": "none",
@@ -493,6 +518,7 @@
       "header"
     ],
     "name": "selected",
+    "fullNameCamelCase": "listitemBigHeaderSelected",
     "styles": {
       "fontSize": 16,
       "textDecoration": "none",

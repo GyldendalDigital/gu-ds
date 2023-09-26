@@ -6,10 +6,6 @@ import { TypographyTable } from "./TypographyTable";
 import * as styles from "./typography.module.css";
 import { Page } from "../page/Page";
 
-console.log(tokens.primitives.font.weight.regular);
-
-interface Props {}
-
 interface FontExampleProps {
   weight: keyof typeof tokens.primitives.font.weight;
   italic?: boolean;
@@ -34,9 +30,18 @@ const FontExample: FunctionComponent<FontExampleProps> = ({
   );
 };
 
-export const Typography: FunctionComponent<Props> = () => {
+export const Typography: FunctionComponent = () => {
   return (
-    <Page>
+    <Page
+      heading="Typography"
+      code={JSON.stringify(
+        {
+          typography: tokens.typography,
+        },
+        null,
+        "  "
+      )}
+    >
       <RichText>
         <h2>General</h2>
         <p>

@@ -27,7 +27,21 @@ const Size = (name: string, value: number) => (
 );
 
 export const Sizes = () => (
-  <Page>
+  <Page
+    heading="Sizes"
+    code={JSON.stringify(
+      {
+        primitives: {
+          size: tokens.primitives.size,
+        },
+        semantic: {
+          layout: tokens.semantic.layout,
+        },
+      },
+      null,
+      "  "
+    )}
+  >
     <RichText>
       <h2>Size units</h2>
       <p>
@@ -157,8 +171,8 @@ const LayoutRow: FunctionComponent<LayoutRowProps> = ({
   const padding = pixels.padding ?? 0;
   return (
     <tr>
-      <Td>{name}</Td>
-      <Td>
+      <Td wide>{name}</Td>
+      <Td noWrap>
         <UnitFormatter>{pixels[selected]}</UnitFormatter>
       </Td>
       <Td>
@@ -167,8 +181,8 @@ const LayoutRow: FunctionComponent<LayoutRowProps> = ({
           aria-label="Demonstrasjon av layout"
           style={{
             position: "relative",
-            width: 240 - padding * 2,
-            height: height - padding * 2,
+            width: 240,
+            height: height,
             border: `solid ${padding}px ${
               selected === "padding"
                 ? tokens.primitives.color.violet[400]

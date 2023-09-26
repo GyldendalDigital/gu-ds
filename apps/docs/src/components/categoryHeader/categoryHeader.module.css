@@ -4,6 +4,31 @@
     color: var(--primitives-color-white);
 }
 
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
 .categoryHeader h2 {
     margin: 0
+}
+
+
+.code {
+    display: none;
+    background-color: var(--primitives-color-violet-1000);
+    color: var(--primitives-color-white);
+}
+
+.codeOpen {
+    display: block;
+}
+
+.codeToggleButton {
+    composes: headingXxs from "gu-ds-css/output/typography.module.css";
+    all: initial;
+    padding: calc(var(--primitives-size-16) * 1px);
+    background-color: var(--primitives-color-violet-1000);
+    color: var(--primitives-color-white);
+    cursor: pointer;
 }

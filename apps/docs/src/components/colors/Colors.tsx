@@ -1,21 +1,21 @@
+import * as typographyStyles from "gu-ds-css/output/typography.module.css";
 import tokens from "gu-ds-tokens/output/tokens.json";
-import {
-  colorBox,
-  category as categoryClass,
-  color,
-  grid,
-  colorInfo,
-  hexOpaque,
-  hexOpacity,
-  copyButton,
-  infoHeader,
-  colorBorder,
-} from "./colors.css";
+import type { FunctionComponent } from "react";
 import { Page } from "../page/Page";
 import { RichText } from "../richText/RichText";
 import * as richTextStyles from "../richText/richText.css.ts";
-import * as typographyStyles from "gu-ds-css/output/typography.module.css";
-import type { FunctionComponent } from "react";
+import {
+  category as categoryClass,
+  color,
+  colorBorder,
+  colorBox,
+  colorInfo,
+  copyButton,
+  grid,
+  hexOpacity,
+  hexOpaque,
+  infoHeader,
+} from "./colors.css";
 
 const colorCategories = Object.entries(tokens.primitives.color).reduce(
   (colors, [key, value]) => {
@@ -33,7 +33,18 @@ const colorCategories = Object.entries(tokens.primitives.color).reduce(
 );
 
 export const Colors = () => (
-  <Page>
+  <Page
+    heading="Colors"
+    code={JSON.stringify(
+      {
+        primitives: {
+          color: tokens.primitives.color,
+        },
+      },
+      null,
+      "  "
+    )}
+  >
     <RichText>
       <h2>Generelt om farger</h2>
       <p>

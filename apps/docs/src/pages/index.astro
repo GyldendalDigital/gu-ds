@@ -4,6 +4,7 @@ import { AnimatedInput } from "../components/AnimatedInput";
 import { Borders } from "../components/borders/Borders";
 import { CategoryHeader } from "../components/categoryHeader/CategoryHeader";
 import { Colors } from "../components/colors/Colors";
+import { Elevation } from "../components/elevation/Elevation";
 import { Sizes } from "../components/sizes/Sizes";
 import { Typography } from "../components/typography/Typography";
 import Layout from "../layouts/Layout.astro";
@@ -70,14 +71,11 @@ if (Astro.request.method === "POST") {
     }
 
     <div>
-      <CategoryHeader>Colors</CategoryHeader>
       <Colors client:idle />
-      <CategoryHeader>Typography</CategoryHeader>
-      <Typography />
-      <CategoryHeader>Sizes</CategoryHeader>
-      <Sizes />
-      <CategoryHeader>Borders</CategoryHeader>
-      <Borders />
+      <Typography client:idle />
+      <Sizes client:idle />
+      <Borders client:idle />
+      <Elevation client:idle />
     </div>
   </main>
 </Layout>

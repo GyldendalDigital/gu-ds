@@ -3,7 +3,7 @@ import tokens from "gu-ds-tokens/output/tokens.json";
 import { flattenNestedTokens } from "./src/flattenNestedTokens";
 import { getTypographyCssClass } from "./src/getTypographyCssClass";
 import { getTypographyJson } from "./src/getTypographyJson";
-import { toCamelCase, trimLineBreaks } from "./src/utils";
+import { trimLineBreaks } from "./src/utils";
 
 const flattenedTokens = flattenNestedTokens(tokens.typography);
 
@@ -17,9 +17,7 @@ const plainCss = flattenedTokens
 fs.writeFileSync("output/typography.css", plainCss);
 
 const moduleCss = flattenedTokens
-  .map((item) =>
-    getTypographyCssClass(toCamelCase([...item.path, item.name]), item.styles)
-  )
+  .map((item) => getTypographyCssClass(item.fullNameCamelCase, item.styles))
   .map(trimLineBreaks)
   .join("\n");
 
