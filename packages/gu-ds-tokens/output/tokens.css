@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 21 Sep 2023 11:08:17 GMT
+ * Generated on Tue, 26 Sep 2023 10:59:30 GMT
  */
 
 :root, :host {
@@ -432,8 +432,10 @@
   --primitives-size-6: 6;
   --primitives-border-width-1: 1;
   --primitives-border-radius-pill: 1000;
-  --semantic-failure: var(--primitives-color-pink-800);
-  --semantic-success: var(--primitives-color-green-600);
+  --semantic-color-failure-secondary: var(--primitives-color-pink-200);
+  --semantic-color-failure-primary: var(--primitives-color-pink-800);
+  --semantic-color-success-secondary: var(--primitives-color-green-100);
+  --semantic-color-success-primary: var(--primitives-color-green-600);
   --semantic-elevation-container-width-large: 768;
   --semantic-elevation-container-width-medium: 512;
   --semantic-layout-container-gap-medium: 16;
@@ -466,12 +468,11 @@
   --semantic-image-icon-size-width: 24;
   --semantic-image-thumbnail-border-radius: 1000;
   --semantic-action-container-scale: 1.05;
-  --semantic-action-color-foreground-default: var(--primitives-color-black);
-  --semantic-action-color-foreground-error: var(--primitives-color-red-700);
-  --semantic-action-color-foreground-disabled: var(--primitives-color-gray-800);
-  --semantic-action-color-background-error: var(--primitives-color-gray-100);
-  --semantic-action-color-background-default: var(--primitives-color-gray-100);
-  --semantic-action-color-background-disabled: var(--primitives-color-gray-200);
+  --semantic-action-color-default-background: var(--primitives-color-gray-100);
+  --semantic-action-color-default-foreground: var(--primitives-color-black);
+  --semantic-action-color-error-foreground: var(--primitives-color-white);
+  --semantic-action-color-disabled-foreground: var(--primitives-color-gray-800);
+  --semantic-action-color-disabled-background: var(--primitives-color-gray-200);
   --semantic-action-separator-border-color: var(--primitives-color-gray-200);
   --semantic-action-separator-border-width: 1;
   --semantic-action-border-radius-pill: 1000;
@@ -525,6 +526,7 @@
   --primitives-border-radius-16: 16;
   --primitives-border-radius-8: 8;
   --semantic-elevation-container-border-radius: 16;
+  --semantic-action-color-error-background: var(--semantic-color-failure-primary);
   --semantic-action-border-radius-xsmall: 8;
   --semantic-action-border-radius-large: 24;
   --semantic-action-border-radius-small: 16;
@@ -572,7 +574,7 @@
   --component-modal-padding-block: 16;
   --component-modal-padding-inline: 16;
   --component-modal-simple-container-size-width: 512;
-  --component-button-color-background: var(--semantic-action-color-background-default);
+  --component-button-color-background: var(--semantic-action-color-default-background);
   --component-button-padding-inline: 16;
   --component-button-padding-block: 8;
   --component-modal-border-radius: 16;
