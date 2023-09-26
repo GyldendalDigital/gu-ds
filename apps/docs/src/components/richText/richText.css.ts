@@ -17,18 +17,30 @@ const heading = {
   borderBottom: `2px solid ${tokens.primitives.color.gray[300]}`,
 };
 
-globalStyle(`${richText} h2`, {
+const _h2 = {
   ...heading,
   ...headingL,
-});
+};
 
-globalStyle(`${richText} h3`, {
+export const h2 = style(_h2);
+
+globalStyle(`${richText} h2`, _h2);
+
+const _h3 = {
   ...heading,
   ...headingM,
-});
+};
 
-globalStyle(`${richText} p`, {
+export const h3 = style(_h3);
+
+globalStyle(`${richText} h3`, _h3);
+
+const _p = {
   ...contentBody,
   maxWidth: 576,
   margin: `0 0 ${tokens.primitives.size[32]}px 0`,
-});
+};
+
+export const p = style(_p);
+
+globalStyle(`${richText} p`, _p);

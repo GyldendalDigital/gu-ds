@@ -1,15 +1,12 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { Colors } from "../components/Colors";
-import { Content as ColorMarkdown } from "../markdown/colors.md";
-import { Borders } from "../components/Borders";
-import { Sizes } from "../components/sizes/Sizes";
-import { Content as BorderMarkdown } from "../markdown/borders.md";
-import { Content as SizeMarkdown } from "../markdown/sizes.md";
+import { AzureNamedKeyCredential, TableClient } from "@azure/data-tables";
 import { AnimatedInput } from "../components/AnimatedInput";
-import { TableClient, AzureNamedKeyCredential } from "@azure/data-tables";
+import { Borders } from "../components/borders/Borders";
+import { CategoryHeader } from "../components/categoryHeader/CategoryHeader";
+import { Colors } from "../components/colors/Colors";
+import { Sizes } from "../components/sizes/Sizes";
 import { Typography } from "../components/typography/Typography";
-import {CategoryHeader}from "../components/categoryHeader/CategoryHeader";
+import Layout from "../layouts/Layout.astro";
 
 const save = async (value: string) => {
   const account = import.meta.env.AZURE_ACCOUNT;
@@ -73,14 +70,14 @@ if (Astro.request.method === "POST") {
     }
 
     <div>
+      <CategoryHeader>Colors</CategoryHeader>
+      <Colors client:idle />
       <CategoryHeader>Typography</CategoryHeader>
       <Typography />
-      <CategoryHeader>📏 Sizes</CategoryHeader>
+      <CategoryHeader>Sizes</CategoryHeader>
       <Sizes />
-      <BorderMarkdown />
+      <CategoryHeader>Borders</CategoryHeader>
       <Borders />
-      <ColorMarkdown />
-      <Colors client:idle />
     </div>
   </main>
 </Layout>
@@ -93,4 +90,3 @@ if (Astro.request.method === "POST") {
     font-size: calc(var(--primitives-size-20) * 1px);
   }
 </style>
-../components/sizes/Sizes

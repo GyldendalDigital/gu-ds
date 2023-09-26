@@ -20,12 +20,23 @@ export const Th: FunctionComponent<React.JSX.IntrinsicElements["th"]> = ({
   </th>
 );
 
-export const Td: FunctionComponent<React.JSX.IntrinsicElements["td"]> = ({
+type TdProps = React.JSX.IntrinsicElements["td"] & {
+  wide?: boolean;
+};
+
+export const Td: FunctionComponent<TdProps> = ({
   children,
   className = "",
+  wide = false,
   ...props
 }) => (
-  <td {...props} className={`${typographyStyles.contentBody} ${className}`}>
+  <td
+    {...props}
+    className={`
+      ${typographyStyles.contentBody}
+      ${wide ? styles.tdWide : ""}
+      ${className}`}
+  >
     {children}
   </td>
 );

@@ -13,10 +13,6 @@ const { title } = Astro.props;
     <meta name="description" content="Gyldendal Undervisning designsystem" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link
-      rel="stylesheet"
-      href="https://www.skolestudio.no/assets/fonts/inter-3.19/Inter-roman.var.woff2?v=3.19"
-    />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -31,6 +27,12 @@ const { title } = Astro.props;
 <style is:global>
   @import url("https://fonts.cdnfonts.com/css/inter");
   @import "gu-ds-tokens/output/tokens.css";
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
 
   :root {
     --accent: var(--primitives-color-purple-500);

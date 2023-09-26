@@ -1,1 +1,0 @@
-🎨 Alle fargene i _primitives-color_

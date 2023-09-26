@@ -1,1 +1,0 @@
-🖼 Alle rammene i _primitives-borders_

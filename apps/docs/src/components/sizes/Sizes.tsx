@@ -4,12 +4,13 @@ import { Page } from "../page/Page";
 import { RichText } from "../richText/RichText";
 import { Table, Td } from "../table/Table";
 import { table, td, tdNoTextBreak } from "./sizes.css";
+import { UnitFormatter } from "../unitFormatter/UnitFormatter";
 
 const Size = (name: string, value: number) => (
   <tr key={name}>
-    <td className={`${td} ${tdNoTextBreak}`}>{`primitives-size-${name}`}</td>
+    <td className={`${td} ${tdNoTextBreak}`}>{`primitives.size.${name}`}</td>
     <td className={`${td} ${tdNoTextBreak}`}>
-      {value}px ({value / 16}rem)
+      <UnitFormatter>{value}</UnitFormatter>
     </td>
     <td className={td}>
       <div
@@ -157,7 +158,9 @@ const LayoutRow: FunctionComponent<LayoutRowProps> = ({
   return (
     <tr>
       <Td>{name}</Td>
-      <Td>{pixels[selected]}</Td>
+      <Td>
+        <UnitFormatter>{pixels[selected]}</UnitFormatter>
+      </Td>
       <Td>
         <div
           role="img"
