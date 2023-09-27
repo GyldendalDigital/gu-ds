@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
+import * as styles from "./animatedInput.module.css";
 
 let knutDone = false;
 
 /** Half assed attempt to make a fancy input */
-export const AnimatedInput = ({
-  initialValue,
-}:{ initialValue: string }) => {
+export const AnimatedInput = () => {
   const [placeHolder, setPlaceHolder] = useState<string | undefined>("");
 
   const knut = "Knut?";
@@ -38,9 +37,9 @@ export const AnimatedInput = ({
 
   return (
     <input
+      className={styles.input}
       type="text"
-      name="name"
-      defaultValue={initialValue}
+      name="forslag"
       placeholder={placeHolder}
     />
   );

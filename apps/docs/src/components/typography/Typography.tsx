@@ -112,8 +112,15 @@ export const Typography: FunctionComponent = () => {
               <em>begge deler</em>
             </strong>{" "}
             på én gang. Noen ganger er det også behov for lenker i løpende
-            tekst, og de vil se ut <a href="/">som dette</a>. Slik tar vi høyde
-            for alle tekstgrep som kan komme via rike tekstfelter i Redaptic.
+            tekst, og de vil se ut som <a href="/">dette</a> (besøkt) og{" "}
+            <a href={"/?d=" + new Date().toISOString()}>dette</a> (ubesøkt).
+            Ideelt burde vi også vise en indikasjon på om lenka er{" "}
+            <a href="/">intern</a> eller{" "}
+            <a href="https://aksel.nav.no">ekstern</a>.
+          </p>
+          <p>
+            Slik tar vi høyde for alle tekstgrep som kan komme via rike
+            tekstfelter i Redaptic.
           </p>
         </div>
       </RichText>

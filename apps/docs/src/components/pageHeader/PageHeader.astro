@@ -1,0 +1,18 @@
+<header>
+  <img class="ds-gyldendal-logo" src="/gyldendal_frontpage_logo.svg" />
+  <slot />
+</header>
+
+<style>
+  header {
+    padding: calc(var(--primitives-size-18) * 1px);
+    background-color: var(--primitives-color-gray-100);
+  }
+  
+  .ds-gyldendal-logo {
+    position: absolute;
+    top: calc(var(--primitives-size-18) * 1px);
+    left: calc(var(--primitives-size-18) * 1px);
+    height: calc(var(--primitives-size-24) * 1px);
+  }
+  </style>

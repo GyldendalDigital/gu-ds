@@ -1,11 +1,11 @@
 ---
+import "@fontsource/fira-code"
+
 interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
-
-import "@fontsource/fira-code"
 ---
 
 <!doctype html>
@@ -19,10 +19,9 @@ import "@fontsource/fira-code"
     <title>{title}</title>
   </head>
   <body>
-    <header class="ds-header">
-      <img class="ds-gyldendal-logo" src="https://www.skolestudio.no/assets/gyldendal_frontpage_logo-d8b07920.svg" />
-    </header>
-    <slot />
+    <main>
+      <slot />
+    </main>
   </body>
 </html>
 
@@ -36,60 +35,16 @@ import "@fontsource/fira-code"
   }
 
   :root {
-    --accent: var(--primitives-color-purple-500);
-    --accent-light: var(--primitives-color-purple-100);
-    --accent-dark: var(--primitives-color-purple-800);
-    --accent-gradient: linear-gradient(
-      45deg,
-      var(--accent),
-      var(--accent-light) 30%,
-      var(--primitives-color-white) 60%
-    );
-  }
-  html {
-    font-family: Inter, system-ui, sans-serif;
-    background: var(--primitives-color-gray-1000);
-  }
-  body {
-    margin: 0;
-  }
-  main {
-    color: var(--primitives-color-blue-800);
-    font-size: calc(var(--primitives-size-20) * 1px);
-    line-height: var(--primitives-font-line-height-150) / 10;
-  }
-  h1 {
-    font-size: calc(var(--primitives-size-48) * 1px);
-    font-weight: var(--primitives-font-weight-bold);
-    text-align: center;
-    line-height: 0.9;
-  }
-  .ds-header {
-    display:flex;
-    justify-content: center;
-  }
-  .ds-gyldendal-logo {
-    margin: 10px;
-  }
-  input {
-    text-align: center;
-    width: calc(100px + 25vw);
-    border: 0;
-    border-bottom: 1px solid var(--primitives-color-white);
-    color: var(--primitives-color-white);
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-    font-size: calc(var(--primitives-size-48) * 1px);
   }
 
-  .submit-button {
-    background: var(--component-button-color-background);
-    border-radius: calc(var(--semantic-action-border-radius-pill) * 1px);
-    padding: calc(var(--component-button-padding-top)* 1px) calc(var(--component-button-padding-left)* 1px);
-    vertical-align: 5px;
-    margin-left: 5px;
+  html {
+  }
+
+  body {
+    font-family: Inter, system-ui, sans-serif;
+    margin: 0;
+  }
+
+  main {
   }
 </style>

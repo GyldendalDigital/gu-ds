@@ -1,14 +1,16 @@
 ---
-import { AzureNamedKeyCredential, TableClient } from "@azure/data-tables";
-import { AnimatedInput } from "../components/AnimatedInput";
 import { Borders } from "../components/borders/Borders";
-import { CategoryHeader } from "../components/categoryHeader/CategoryHeader";
 import { Colors } from "../components/colors/Colors";
 import { Elevation } from "../components/elevation/Elevation";
 import { Sizes } from "../components/sizes/Sizes";
 import { Typography } from "../components/typography/Typography";
 import Layout from "../layouts/Layout.astro";
+import PageHeader from "../components/pageHeader/PageHeader.astro";
+import { AzureNamedKeyCredential, TableClient } from "@azure/data-tables";
+import { AnimatedInput } from "../components/animatedInput/AnimatedInput";
+import * as typographyStyles from "gu-ds-css/output/typography.module.css";
 
+/** Cookies can only be set in pages, so PageHeader can't do this */
 const save = async (value: string) => {
   const account = import.meta.env.AZURE_ACCOUNT;
   const accountKey = import.meta.env.AZURE_KEY;
@@ -32,36 +34,38 @@ let forslagCookie = Astro.cookies.get("forslag")?.value ?? "";
 if (Astro.request.method === "POST") {
   try {
     const data = await Astro.request.formData();
-    const name = `${data.get("name")}`;
+    const forslag = `${data.get("forslag")}`;
 
-    if (forslagCookie !== name) {
-      await save(name);
+    if (forslagCookie !== forslag) {
+      await save(forslag);
 
-      Astro.cookies.set("forslag", name);
-      forslagCookie = name;
+      Astro.cookies.set("forslag", forslag);
+      forslagCookie = forslag;
     }
     return Astro.redirect("/");
   } catch (error) {
-    if (error instanceof Error) {
-      console.error(error.message);
-    }
+    console.error(error);
   }
 }
 ---
 
 <Layout title="Designsystem X">
-  <main>
-    <h1>
-      <form method="post">
-        Velkommen til <AnimatedInput client:load initialValue={forslagCookie} />
+  <PageHeader>
+    <!-- Temporary page header while name competition is going on -->
+    <form method="post">
+      <h1 class="heading-xxl ds-heading">
+        Velkommen til 
         {
-          !forslagCookie && (
-            <button class="submit-button">Send inn forslag</button>
-          )
+          forslagCookie 
+            ? forslagCookie 
+            : (
+                <AnimatedInput client:load />
+                <button type="submit" class={typographyStyles.actionButton + " submit-button"}>Send forslag</button>
+              )
         }
-        <br />
-      </form>
-    </h1>
+      </h1>
+    </form>
+  
     {
       forslagCookie && (
         <div class="status">
@@ -69,22 +73,31 @@ if (Astro.request.method === "POST") {
         </div>
       )
     }
-
-    <div>
-      <Colors client:idle />
-      <Typography client:idle />
-      <Sizes client:idle />
-      <Borders client:idle />
-      <Elevation client:idle />
-    </div>
-  </main>
+  </PageHeader>
+  <Colors client:idle />
+  <Typography client:idle />
+  <Sizes client:idle />
+  <Borders client:idle />
+  <Elevation client:idle />
 </Layout>
 
 <style>
+  .ds-heading {
+    text-align: center;
+    margin: calc(var(--primitives-size-32) * 1px) 0 calc(var(--primitives-size-18) * 1px);
+  }
+
+  .submit-button {
+    background-color: var(--component-button-color-background);
+    border-radius: calc(var(--semantic-action-border-radius-pill) * 1px);
+    padding: calc(var(--component-button-padding-block) * 1px)
+      calc(var(--component-button-padding-inline) * 1px);
+    vertical-align: 5px;
+    margin-left: 5px;
+  }
+
   .status {
     text-align: center;
-  }
-  small {
-    font-size: calc(var(--primitives-size-20) * 1px);
+    margin-top: calc(var(--primitives-size-18) * 1px);
   }
 </style>
