@@ -4,6 +4,9 @@
   "license": "MIT",
   "type": "module",
   "exports": {
+    "./css/*": {
+      "import": "./dist/*/react.css"
+    },
     "./react/*": {
       "import": "./dist/*/react.js"
     },
