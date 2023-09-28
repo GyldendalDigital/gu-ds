@@ -1,6 +1,6 @@
 import React, { CSSProperties } from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import { ProgressBar, Props } from ".";
+import { ProgressBar, Props } from "./ProgressBar";
 
 const meta: Meta<
     Props & {

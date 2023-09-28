@@ -1,5 +1,5 @@
 import React, { CSSProperties, FunctionComponent } from "react";
-import "./index.css";
+import "./ProgressBar.css";
 import { ProgressBarItem, ProgressBarType } from "./ProgressBarItem";
 
 export interface Props {
