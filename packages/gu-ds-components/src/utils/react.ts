@@ -1,3 +1,3 @@
-import { getProgressNameByPercentage } from "./progressHelpers";
+import { getProficiencyNameByPercentage } from "./progressHelpers";
 
-export default getProgressNameByPercentage;
+export default getProficiencyNameByPercentage;

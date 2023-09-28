@@ -1,4 +1,4 @@
-export const getProgressNameByPercentage = (
+export const getProficiencyNameByPercentage = (
     progressInPercent: number,
 ) => {
     if (progressInPercent === 0)

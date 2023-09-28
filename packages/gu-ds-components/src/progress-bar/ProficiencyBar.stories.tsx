@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { SimpleProgressBar } from "./SimpleProgressBar";
+import { ProficiencyBar } from "./ProficiencyBar";
 import React from "react";
-import { getProgressNameByPercentage } from "../utils/progressHelpers";
+import { getProficiencyNameByPercentage } from "../utils/progressHelpers";
 
 const labelledById = "aria-progress-id";
 
@@ -11,9 +11,9 @@ const getProgressSuffix = (progress: number) => {
     return "!";
 };
 
-const meta: Meta<typeof SimpleProgressBar> = {
-    title: "progress-bar/Simple",
-    component: SimpleProgressBar,
+const meta: Meta<typeof ProficiencyBar> = {
+    title: "progress-bar/Proficiency",
+    component: ProficiencyBar,
     argTypes: {
         progressInPercent: {
             control: { type: "range", min: 0, max: 100, step: 1 },
@@ -28,7 +28,7 @@ const meta: Meta<typeof SimpleProgressBar> = {
         (Story, storyContext) => (
             <div>
                 <span id={labelledById}>
-                    Progress: {getProgressNameByPercentage(storyContext.args.progressInPercent)}
+                    Progress: {getProficiencyNameByPercentage(storyContext.args.progressInPercent)}
                     {getProgressSuffix(storyContext.args.progressInPercent)}</span>
                 <Story />
             </div>
@@ -39,7 +39,7 @@ const meta: Meta<typeof SimpleProgressBar> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Simple: Story = {
+export const Proficiency: Story = {
     args: {
         labelledById,
         progressInPercent: 20
