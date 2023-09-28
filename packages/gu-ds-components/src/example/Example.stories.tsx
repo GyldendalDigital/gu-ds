@@ -15,7 +15,10 @@ export const Secondary: Story = {
   },
 };
 
-// copy paste this and replace Example with your component
+/** CREATING NEW STORIES
+ * - Copy paste the rest of this file
+ * - Replace Example with your component
+ */
 const C = Example;
 type T = typeof C;
 type M = Meta<T>;
@@ -23,7 +26,6 @@ type Story = StoryObj<T>;
 
 /** JSDoc på metadata */
 export default {
-  //title: "components/Confetti",
   component: C,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
