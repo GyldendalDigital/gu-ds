@@ -1,3 +1,4 @@
 import { ProgressBar } from "./ProgressBar";
+import { ProficiencyBar } from "./ProficiencyBar";
 
-export default ProgressBar;
+export { ProgressBar, ProficiencyBar };

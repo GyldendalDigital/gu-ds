@@ -1,5 +1,5 @@
 ---
-import ProgressBar from "gu-ds-components/react/progress-bar";
+import { ProgressBar } from "gu-ds-components/react/progress-bar";
 ---
 
 <h1>Komponenter</h1>
@@ -20,7 +20,7 @@ import ProgressBar from "gu-ds-components/react/progress-bar";
 <br />
 
 <script>
-import ProgressBar from "gu-ds-components/react/progress-bar";
+  import { ProgressBar } from "gu-ds-components/react/progress-bar";
   import { createElement } from "react";
   import { createRoot } from "react-dom/client";
   const element = document.getElementById("react-root");
@@ -53,7 +53,7 @@ import ProgressBar from "gu-ds-components/react/progress-bar";
 </div>
 
 <script>
-  import ProgressBar from "gu-ds-components/web-component/progress-bar";
+  import { ProgressBar } from "gu-ds-components/web-component/progress-bar";
   const progressBar = new ProgressBar();
   // progressBar.progressBars={[{valueNow: 50, "aria-label": "hei", }]}
   document.querySelector("#web-component-container")?.appendChild(progressBar);
