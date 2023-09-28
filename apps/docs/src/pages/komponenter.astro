@@ -1,0 +1,60 @@
+---
+import ProgressBar from "gu-ds-components/react/progress-bar";
+---
+
+<h1>Komponenter</h1>
+<h2>Progress bar</h2>
+
+<!-- Server side rendered react component -->
+
+<ProgressBar
+  progressBars={[{valueNow: 50, "aria-label": "hei", }]}
+/>
+
+<br />
+
+<!-- Client side rendered react component -->
+
+<div id="react-root"></div>
+
+<br />
+
+<script>
+import ProgressBar from "gu-ds-components/react/progress-bar";
+  import { createElement } from "react";
+  import { createRoot } from "react-dom/client";
+  const element = document.getElementById("react-root");
+  if (element) {
+    const root = createRoot(element);
+    const componentWithoutJsx = createElement(
+    ProgressBar,
+      // {
+      //   progressBars={[{valueNow: 50, "aria-label": "hei", }]}
+      // },
+      // null
+    );
+    root.render(componentWithoutJsx);
+  }
+</script>
+
+<!-- Web component using custom element -->
+
+<script>
+  import "gu-ds-components/web-component/progress-bar";
+</script>
+
+<gu-ds-progress-bar progressBars={[{valueNow: 50, "aria-label": "hei", }]} />
+
+<br />
+
+<!-- Scripted Web component -->
+
+<div id="web-component-container">
+</div>
+
+<script>
+  import ProgressBar from "gu-ds-components/web-component/progress-bar";
+  const progressBar = new ProgressBar();
+  // progressBar.progressBars={[{valueNow: 50, "aria-label": "hei", }]}
+  document.querySelector("#web-component-container")?.appendChild(progressBar);
+</script>
