@@ -9,14 +9,14 @@ import "gu-ds-components/css/progress-bar";
 <!-- Server side rendered react component -->
 
 <ProgressBar
-  progressBars={[{valueNow: 50, "aria-label": "hei", }]}
+  progressBars={[{valueNow: 50, "aria-label": "Server side rendered", }]}
 />
 
 <br />
 
 <!-- Client side rendered react component -->
 
-<div id="react-root"></div>
+<div id="react-root" />
 
 <br />
 
@@ -27,13 +27,7 @@ import "gu-ds-components/css/progress-bar";
   const element = document.getElementById("react-root");
   if (element) {
     const root = createRoot(element);
-    const componentWithoutJsx = createElement(
-    ProgressBar,
-      // {
-      //   progressBars={[{valueNow: 50, "aria-label": "hei", }]}
-      // },
-      // null
-    );
+    const componentWithoutJsx = createElement(ProgressBar, {progressBars:[{valueNow: 50, "aria-label": "Client side rendered", }]}, null);
     root.render(componentWithoutJsx);
   }
 </script>
@@ -44,18 +38,21 @@ import "gu-ds-components/css/progress-bar";
   import "gu-ds-components/web-component/progress-bar";
 </script>
 
-<gu-ds-progress-bar progressBars={[{valueNow: 50, "aria-label": "hei", }]} />
+<!-- Workaround to prevent Astro from escaping attribute value -->
+<!-- https://github.com/withastro/astro/issues/2095 -->
+<Fragment
+  set:html={`<gu-ds-progress-bar progress-bars='${JSON.stringify([{valueNow: 50, "aria-label": "Web component using custom element", }])}'></gu-ds-progress-bar progress-bars>`}
+/>
 
 <br />
 
 <!-- Scripted Web component -->
 
-<div id="web-component-container">
-</div>
+<div id="web-component-container"></div>
 
 <script>
   import { ProgressBar } from "gu-ds-components/web-component/progress-bar";
   const progressBar = new ProgressBar();
-  // progressBar.progressBars={[{valueNow: 50, "aria-label": "hei", }]}
+  progressBar.progressBars=[{valueNow: 50, "aria-label": "Scripted Web component", }]
   document.querySelector("#web-component-container")?.appendChild(progressBar);
 </script>

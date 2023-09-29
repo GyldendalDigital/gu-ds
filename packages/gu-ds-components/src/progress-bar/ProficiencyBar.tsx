@@ -14,7 +14,7 @@ export const propNames = {
     className: "string",
     labelledById: "string",
     progressInPercent: "number",
-    style: "CSSProperties",
+    style: "json",
 }
 
 /**

@@ -3,20 +3,20 @@ import "./ProgressBar.css";
 import { ProgressBarItem, ProgressBarType } from "./ProgressBarItem";
 
 export interface Props {
-    className?: string;
-    progressBars: Array<ProgressBarType>;
-    showFullLength?: boolean;
-    style?: CSSProperties;
-    height?: "default" | "low";
+  className?: string;
+  progressBars: Array<ProgressBarType>;
+  showFullLength?: boolean;
+  style?: CSSProperties;
+  height?: "default" | "low";
 }
 
 export const propNames = {
-    className: "string",
-    progressBars: "Array<ProgressBarType>",
-    showFullLength: "boolean",
-    style: "CSSProperties",
-    height: "default | low"
-}
+  className: "string",
+  progressBars: "json",
+  showFullLength: "boolean",
+  style: "json",
+  height: "string",
+};
 
 /**
  * A flexible and accessible bar intended to be used for learning analytics, and all other progress to be measured.
@@ -26,33 +26,34 @@ export const propNames = {
  * @returns Progress bar(s) on background.
  */
 export const ProgressBar: FunctionComponent<Props> = ({
-    className = "",
-    progressBars,
-    showFullLength = false,
-    style,
-    height = "default"
+  className = "",
+  progressBars,
+  showFullLength = false,
+  style,
+  height = "default",
 }) => {
-
-    let previousWidths = 0;
-    return (
-        <ol className={`list ${showFullLength ? "show-full-length" : ""} ${height === "low" ? "low" : ""} ${className}`} 
-        style={style}>
-            {progressBars.map((progressBar, index) => {
-                let formerPreviousWidths = 0;
-                if (!showFullLength) {
-                    formerPreviousWidths = previousWidths;
-                    previousWidths += progressBar.valueNow;
-                }
-                return (
-                    <ProgressBarItem
-                        key={index}
-                        progressBar={progressBar}
-                        fillerWidth={
-                            progressBar.valueNow - formerPreviousWidths
-                        }
-                    />
-                );
-            })}
-        </ol>
-    );
+  let previousWidths = 0;
+  return (
+    <ol
+      className={`list ${showFullLength ? "show-full-length" : ""} ${
+        height === "low" ? "low" : ""
+      } ${className}`}
+      style={style}
+    >
+      {progressBars.map((progressBar, index) => {
+        let formerPreviousWidths = 0;
+        if (!showFullLength) {
+          formerPreviousWidths = previousWidths;
+          previousWidths += progressBar.valueNow;
+        }
+        return (
+          <ProgressBarItem
+            key={index}
+            progressBar={progressBar}
+            fillerWidth={progressBar.valueNow - formerPreviousWidths}
+          />
+        );
+      })}
+    </ol>
+  );
 };
