@@ -1,0 +1,27 @@
+@import url(gu-ds-tokens/output/tokens.css);
+
+@layer guds {
+
+    .list {
+        --progress-bar-height: calc((var(--component-progressbar-size-default) * 1px) + (1em - 16px));
+        --progress-bar-border-radius: calc(1px * var(--component-progressbar-border-radius));
+        position: relative;
+        display: flex;
+        border-radius: var(--progress-bar-border-radius);
+        height: var(--progress-bar-height);
+        width: var(--progress-bar-width, 100%);
+        /* Necessary to stretch its container */
+        padding: 0;
+        background-color: var(--progress-bar-background-color, var(--component-progressbar-color-bg-default));
+        list-style: none;
+    }
+
+    .low {
+        --progress-bar-height: calc((var(--component-progressbar-size-small) * 1px) + (1em - 16px));
+    }
+
+    .show-full-length {
+        justify-content: space-between;
+    }
+    
+}

@@ -10,6 +10,7 @@ export const propNames = {
   message: "string",
 };
 
+/** JSDoc på komponent vises ikke i Storybook >_> */
 export const Example: FunctionComponent<ExampleProps> = ({
   message,
   backgroundColor,
