@@ -4,7 +4,7 @@ import {
   headingM,
   headingL,
 } from "gu-ds-css/output/typography.json";
-import tokens from "guds-tokens/output/tokens.json";
+import tokens from "gyldendal-tokens/output/tokens.json";
 
 export const richText = style({
   marginBottom: tokens.primitives.size[48] + tokens.primitives.size[24],

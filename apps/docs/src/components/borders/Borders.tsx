@@ -1,4 +1,4 @@
-import tokens from "guds-tokens/output/tokens.json";
+import tokens from "gyldendal-tokens/output/tokens.json";
 import { Page } from "../page/Page";
 import { RichText } from "../richText/RichText";
 import { Table, Td } from "../table/Table";

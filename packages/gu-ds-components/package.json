@@ -25,7 +25,7 @@
     "@r2wc/react-to-web-component": "^2.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "guds-tokens": "*"
+    "gyldendal-tokens": "*"
   },
   "devDependencies": {
     "tsup": "^7.2.0",

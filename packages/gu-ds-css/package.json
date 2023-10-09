@@ -6,7 +6,7 @@
     "build": "ts-node build.ts"
   },
   "dependencies": {
-    "guds-tokens": "*"
+    "gyldendal-tokens": "*"
   },
   "repository": {
     "type": "git",

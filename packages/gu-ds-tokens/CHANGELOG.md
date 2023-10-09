@@ -1,4 +1,4 @@
-# guds-tokens
+# gyldendal-tokens
 
 ## 0.1.0
 
