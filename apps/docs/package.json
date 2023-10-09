@@ -23,7 +23,7 @@
     "astro": "^3.0.12",
     "gu-ds-components": "*",
     "gu-ds-css": "*",
-    "gyldendal-tokens": "*",
+    "gu-ds-base": "*",
     "highlight.js": "^11.8.0",
     "lodash": "^4.17.21",
     "react": "^18.0.0",

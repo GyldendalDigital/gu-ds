@@ -1,5 +1,5 @@
-const StyleDictionary = require("style-dictionary").extend("./config.js");
-const minifyDictionary = require("./utils/minifyDictionary.js");
+const StyleDictionary = require("style-dictionary").extend("./config.ts");
+const minifyDictionary = require("./utils/minifyDictionary.ts");
 
 StyleDictionary.registerFormat({
   name: "json/nested-v2",

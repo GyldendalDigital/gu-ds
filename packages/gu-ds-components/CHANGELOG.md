@@ -6,7 +6,7 @@
 
 - Token package rename
 - Updated dependencies
-  - gyldendal-tokens@0.0.4
+  - gu-ds-base@0.0.4
 
 ## 0.0.3
 
@@ -14,7 +14,7 @@
 
 - Added progress bar components
 - Updated dependencies
-  - gyldendal-tokens@0.0.3
+  - gu-ds-base@0.0.3
 
 ## 0.0.2
 
