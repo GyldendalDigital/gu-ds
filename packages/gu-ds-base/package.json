@@ -1,8 +1,8 @@
 {
   "name": "gu-ds-base",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
-  "type":"commonjs",
+  "type": "commonjs",
   "scripts": {
     "build": "yarn tokens && yarn css",
     "tokens": "node ./build-tokens.ts",
