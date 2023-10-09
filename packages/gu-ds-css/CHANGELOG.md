@@ -6,7 +6,7 @@
 
 - Added progress bar components
 - Updated dependencies
-  - gu-ds-tokens@0.0.3
+  - guds-tokens@0.0.3
 
 ## 0.0.2
 
@@ -14,4 +14,4 @@
 
 - Første versjon av pakkene
 - Updated dependencies
-  - gu-ds-tokens@0.0.2
+  - guds-tokens@0.0.2

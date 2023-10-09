@@ -1,5 +1,5 @@
 import * as typographyStyles from "gu-ds-css/output/typography.module.css";
-import tokens from "gu-ds-tokens/output/tokens.json";
+import tokens from "guds-tokens/output/tokens.json";
 import { type FunctionComponent, type ReactNode } from "react";
 import { RichText } from "../richText/RichText";
 import { TypographyTable } from "./TypographyTable";

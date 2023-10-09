@@ -6,7 +6,7 @@
     "build": "ts-node build.ts"
   },
   "dependencies": {
-    "gu-ds-tokens": "*"
+    "guds-tokens": "*"
   },
   "repository": {
     "type": "git",

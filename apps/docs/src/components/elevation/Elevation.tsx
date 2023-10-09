@@ -1,7 +1,7 @@
 import type { FunctionComponent } from "react";
 import { Page } from "../page/Page";
 import { RichText } from "../richText/RichText";
-import tokens from "gu-ds-tokens/output/tokens.json";
+import tokens from "guds-tokens/output/tokens.json";
 
 export const Elevation: FunctionComponent = () => {
   return (

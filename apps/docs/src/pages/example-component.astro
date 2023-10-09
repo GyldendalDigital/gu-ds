@@ -1,6 +1,6 @@
 ---
 import Example from "gu-ds-components/react/example";
-import tokens from "gu-ds-tokens/output/tokens.json";
+import tokens from "guds-tokens/output/tokens.json";
 ---
 
 <!-- Server side rendered react component -->
@@ -20,7 +20,7 @@ import tokens from "gu-ds-tokens/output/tokens.json";
 
 <script>
   import Example from "gu-ds-components/react/example";
-  import tokens from "gu-ds-tokens/output/tokens.json";
+  import tokens from "guds-tokens/output/tokens.json";
   import { createElement } from "react";
   import { createRoot } from "react-dom/client";
   const element = document.getElementById("react-root");
@@ -56,7 +56,7 @@ import tokens from "gu-ds-tokens/output/tokens.json";
 
 <script>
   import Example from "gu-ds-components/web-component/example";
-  import tokens from "gu-ds-tokens/output/tokens.json";
+  import tokens from "guds-tokens/output/tokens.json";
   const example = new Example();
   example.backgroundColor = tokens.primitives.color.turquoise[100];
   example.message = "Scripted Web component"

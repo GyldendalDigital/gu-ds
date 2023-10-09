@@ -1,4 +1,4 @@
-# gu-ds-tokens
+# guds-tokens
 
 ## 0.0.3
 

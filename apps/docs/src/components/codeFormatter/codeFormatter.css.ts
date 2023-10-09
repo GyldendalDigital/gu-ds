@@ -1,5 +1,5 @@
 import { globalStyle, style } from "@vanilla-extract/css";
-import tokens from "gu-ds-tokens/output/tokens.json";
+import tokens from "guds-tokens/output/tokens.json";
 
 export const pre = style({
   margin: 0,

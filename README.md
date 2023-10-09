@@ -2,7 +2,7 @@
 
 Temporary URL: https://vermillion-sawine-93f2f2.netlify.app
 
-- [Token generation](./packages/gu-ds-tokens/README.md)
+- [Token generation](./packages/guds-tokens/README.md)
 
 ## 🙏 Credits
 

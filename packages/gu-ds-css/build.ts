@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import tokens from "gu-ds-tokens/output/tokens.json";
+import tokens from "guds-tokens/output/tokens.json";
 import { flattenNestedTokens } from "./src/flattenNestedTokens";
 import { getTypographyCssClass } from "./src/getTypographyCssClass";
 import { getTypographyJson } from "./src/getTypographyJson";
