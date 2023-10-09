@@ -1,5 +1,11 @@
 # gyldendal-tokens
 
+## 0.0.4
+
+### Patch Changes
+
+- Token package rename
+
 ## 0.1.0
 
 ### Minor Changes
