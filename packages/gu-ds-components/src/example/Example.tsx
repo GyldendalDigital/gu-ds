@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from "react";
+import tokens from "gu-ds-base/output/tokens.json";
 
 export interface ExampleProps {
   backgroundColor: string;
@@ -14,4 +15,14 @@ export const propNames = {
 export const Example: FunctionComponent<ExampleProps> = ({
   message,
   backgroundColor,
-}) => <div style={{ backgroundColor }}>{message}</div>;
+}) => (
+  <div
+    style={{
+      backgroundColor,
+      padding: tokens.primitives.size[16],
+      border: `solid 1px ${tokens.primitives.color.gray[800]}`,
+    }}
+  >
+    {message}
+  </div>
+);
