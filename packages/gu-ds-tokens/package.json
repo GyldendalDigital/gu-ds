@@ -5,11 +5,12 @@
   "scripts": {
     "tokens": "node ./build.js"
   },
-  "dependencies": {
-    "style-dictionary": "^3.8.0"
-  },
+  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/GyldendalDigital/gu-ds"
+  },
+  "devDependencies": {
+    "style-dictionary": "^3.8.0"
   }
 }
