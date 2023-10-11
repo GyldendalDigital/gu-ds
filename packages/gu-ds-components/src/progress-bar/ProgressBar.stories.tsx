@@ -54,6 +54,7 @@ export const Single: Story = {
     },
     args: {
         __progressBarFilledColorGreen: true,
+        __progressColor: "default"
     },
     argTypes: {
         __progressBarFilledColorGreen: {
@@ -70,7 +71,6 @@ export const Single: Story = {
     }
 };
 
-
 export const Double: Story = {
     render: (args) => {
         args.progressBars = [
@@ -80,7 +80,8 @@ export const Double: Story = {
             },
             {
                 valueNow: args.__progressBarSecondValue,
-                "aria-label": "Andre"
+                "aria-label": "Andre",
+                fillColorVar: args.__progressColor ? `--component-progressbar-color-fg-${args.__progressColor}` : "",
             },
         ];
         return <ProgressBar {...args} />;
@@ -88,6 +89,7 @@ export const Double: Story = {
     args: {
         showFullLength: false,
         __progressBarSecondValue: 55,
+        __progressColor: "default"
     },
     argTypes: {
         showFullLength: {
@@ -100,5 +102,12 @@ export const Double: Story = {
                 category: "Second bar",
             },
         },
+        __progressColor: {
+            control: "select",
+            options: ["default", "unknown", "low", "some", "basics", "good", "high"],
+            table: {
+                category: "Second bar",
+            },
+        }
     }
 };
