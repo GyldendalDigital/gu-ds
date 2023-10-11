@@ -43,8 +43,8 @@ export const Single: Story = {
         args.progressBars = [
             {
                 valueNow: args.__progressBarFirstValue,
-                fillColor: args.__progressColor ? `--component-progressbar-color-fg-${args.__progressColor}` : "",
-                filledColor: args.__progressBarFilledColorGreen ? "--component-progressbar-color-bg-good" : "",
+                fillColorVar: args.__progressColor ? `--component-progressbar-color-fg-${args.__progressColor}` : "",
+                filledColorVar: args.__progressBarFilledColorGreen ? "--component-progressbar-color-bg-good" : "",
                 "aria-label": "Første"
             },
         ];

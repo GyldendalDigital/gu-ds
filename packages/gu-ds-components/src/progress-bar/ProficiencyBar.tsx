@@ -42,7 +42,7 @@ export const ProficiencyBar: FunctionComponent<Props> = ({
             progressBars={[{
                 "aria-labelledby": labelledById,
                 valueNow: progressInPercent,
-                fillColor: `--component-progressbar-color-fg-${getProficiencyNameByPercentage(progressInPercent)}`
+                fillColorVar: `--component-progressbar-color-fg-${getProficiencyNameByPercentage(progressInPercent)}`
             }]} />
     );
 };

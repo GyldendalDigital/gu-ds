@@ -10,8 +10,8 @@ export type ProgressBarType = AriaProps & {
     valueNow: number;
     valueMin?: number;
     valueMax?: number;
-    fillColor?: string;
-    filledColor?: string;
+    fillColorVar?: string;
+    filledColorVar?: string;
 };
 
 interface ProgressBarItemProps {
@@ -48,10 +48,10 @@ export const ProgressBarItem: FunctionComponent<ProgressBarItemProps> = ({
                 style={
                     {
                         "--progress-bar-fill-color": 
-                            (progressBar.valueNow === valueMax && !!progressBar.filledColor)
-                            ? `var(${progressBar.filledColor})`
-                            : !!progressBar.fillColor ? 
-                                `var(${progressBar.fillColor})` : 
+                            (progressBar.valueNow === valueMax && !!progressBar.filledColorVar)
+                            ? `var(${progressBar.filledColorVar})`
+                            : !!progressBar.fillColorVar ? 
+                                `var(${progressBar.fillColorVar})` : 
                                 "var(--component-progressbar-color-fg-default)"
                     } as CSSProperties
                 }
