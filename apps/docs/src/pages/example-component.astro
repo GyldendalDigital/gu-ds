@@ -1,65 +1,69 @@
 ---
-import Example from "gu-ds-components/react/example";
+import "gu-ds-components/react/index.css"; 
+import { Example } from "gu-ds-components/react"; 
 import tokens from "gu-ds-base/output/tokens.json";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<!-- Server side rendered react component -->
+<Layout title="Test">
+  <!-- Server side rendered react component -->
 
-<Example
-  message="Server side rendered react component"
-  backgroundColor={tokens.primitives.color.pink[100]}
-/>
+  <Example
+    message="Server side rendered react component"
+    backgroundColor={tokens.primitives.color.pink[100]}
+  />
 
-<br />
+  <br />
 
-<!-- Client side rendered react component -->
+  <!-- Client side rendered react component -->
 
-<div id="react-root"></div>
+  <div id="react-root"></div>
 
-<br />
+  <br />
 
-<script>
-  import Example from "gu-ds-components/react/example";
-  import tokens from "gu-ds-base/output/tokens.json";
-  import { createElement } from "react";
-  import { createRoot } from "react-dom/client";
-  const element = document.getElementById("react-root");
-  if (element) {
-    const root = createRoot(element);
-    const componentWithoutJsx = createElement(
-      Example,
-      {
-        message: "Client side rendered react component",
-        backgroundColor: tokens.primitives.color.orange[100],
-      },
-      null
-    );
-    root.render(componentWithoutJsx);
-  }
-</script>
+  <script>
+    import { Example } from "gu-ds-components/react";
+    import tokens from "gu-ds-base/output/tokens.json";
+    import { createElement } from "react";
+    import { createRoot } from "react-dom/client";
+    const element = document.getElementById("react-root");
+    if (element) {
+      const root = createRoot(element);
+      const componentWithoutJsx = createElement(
+        Example,
+        {
+          message: "Client side rendered react component",
+          backgroundColor: tokens.primitives.color.orange[100],
+        },
+        null
+      );
+      root.render(componentWithoutJsx);
+    }
+  </script>
 
-<!-- Web component using custom element -->
+  <!-- Web component using custom element -->
 
-<script>
-  import "gu-ds-components/web-component/example";
-</script>
+  <script>
+    import "gu-ds-components/web-components";
+  </script>
 
-<gu-ds-example message="Web component using custom element" background-color={tokens.primitives.color.purple[100]} />
+  <gu-ds-example message="Web component using custom element" background-color={tokens.primitives.color.purple[100]} />
 
-<br />
+  <br />
 
 
-<!-- Scripted Web component -->
+  <!-- Scripted Web component -->
 
-<div id="web-component-container">
-</div>
+  <div id="web-component-container">
+  </div>
 
-<script>
-  import Example from "gu-ds-components/web-component/example";
-  import tokens from "gu-ds-base/output/tokens.json";
-  const example = new Example();
-  example.backgroundColor = tokens.primitives.color.turquoise[100];
-  example.message = "Scripted Web component"
-  document.querySelector("#web-component-container")?.appendChild(example);
-</script>
+  <script>
+    import { Example } from "gu-ds-components/web-components";
+    import tokens from "gu-ds-base/output/tokens.json";
+    const example = new Example();
+    example.backgroundColor = tokens.primitives.color.turquoise[100];
+    example.message = "Scripted Web component"
+    document.querySelector("#web-component-container")?.appendChild(example);
+  </script>
 
+</Layout>

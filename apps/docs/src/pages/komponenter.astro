@@ -1,6 +1,6 @@
 ---
-import { ProgressBar } from "gu-ds-components/react/progress-bar";
-import "gu-ds-components/css/progress-bar";
+import { ProgressBar } from "gu-ds-components/react";
+import "gu-ds-components/react/index.css"; 
 ---
 
 <h1>Komponenter</h1>
@@ -21,7 +21,7 @@ import "gu-ds-components/css/progress-bar";
 <br />
 
 <script>
-  import { ProgressBar } from "gu-ds-components/react/progress-bar";
+  import { ProgressBar } from "gu-ds-components/react";
   import { createElement } from "react";
   import { createRoot } from "react-dom/client";
   const element = document.getElementById("react-root");
@@ -35,7 +35,7 @@ import "gu-ds-components/css/progress-bar";
 <!-- Web component using custom element -->
 
 <script>
-  import "gu-ds-components/web-component/progress-bar";
+  import "gu-ds-components/web-components";
 </script>
 
 <!-- Workaround to prevent Astro from escaping attribute value -->
@@ -51,7 +51,7 @@ import "gu-ds-components/css/progress-bar";
 <div id="web-component-container"></div>
 
 <script>
-  import { ProgressBar } from "gu-ds-components/web-component/progress-bar";
+  import { ProgressBar } from "gu-ds-components/web-components";
   const progressBar = new ProgressBar();
   progressBar.progressBars=[{valueNow: 50, "aria-label": "Scripted Web component", }]
   document.querySelector("#web-component-container")?.appendChild(progressBar);
