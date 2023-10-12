@@ -1,0 +1,5 @@
+@import url(gu-ds-base/output/tokens.css);
+
+.example {
+    color: var(--primitives-color-gray-800);
+}

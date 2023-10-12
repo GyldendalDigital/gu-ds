@@ -1,5 +1,6 @@
-import React, { FunctionComponent } from "react";
 import tokens from "gu-ds-base/output/tokens.json";
+import React, { FunctionComponent } from "react";
+import classNames from "./example.module.css";
 
 export interface ExampleProps {
   backgroundColor: string;
@@ -17,6 +18,7 @@ export const Example: FunctionComponent<ExampleProps> = ({
   backgroundColor,
 }) => (
   <div
+    className={classNames.example}
     style={{
       backgroundColor,
       padding: tokens.primitives.size[16],
