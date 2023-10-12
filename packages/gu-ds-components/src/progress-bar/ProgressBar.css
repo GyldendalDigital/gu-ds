@@ -2,7 +2,7 @@
 
 @layer guds {
 
-    .list {
+    :global(.list) {
         --progress-bar-height: calc((var(--component-progressbar-size-default) * 1px) + (1em - 16px));
         --progress-bar-border-radius: calc(1px * var(--component-progressbar-border-radius));
         position: relative;
@@ -16,11 +16,11 @@
         list-style: none;
     }
 
-    .low {
+    :global(.low) {
         --progress-bar-height: calc((var(--component-progressbar-size-small) * 1px) + (1em - 16px));
     }
 
-    .show-full-length {
+    :global(.show-full-length) {
         justify-content: space-between;
     }
     

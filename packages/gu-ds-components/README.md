@@ -47,37 +47,31 @@ Components can be imported as react components or as web components.
 As a react component:
 
 ```jsx
-import { ProgressBar } from "gu-ds-components/react/progress-bar";
+import { ProgressBar } from "gu-ds-components/react";
 const App = () => <ProgressBar />;
 ```
 
 As a custom element:
 
 ```html
-<script>import "gu-ds-components/web-component/progress-bar";</script>
+<script>import "gu-ds-components/web-components";</script>
 <gu-ds-progress-bar />
 ```
 
 As a web component:
 
 ```JavaScript
-import { ProgressBar } from "gu-ds-components/web-component/progress-bar";
+import { ProgressBar } from "gu-ds-components/web-components";
 const progressBar = new ProgressBar();
 document.body.appendChild(progressBar);
 ```
 
 ## CSS
 
-CSS for individual components can be imported from **gu-ds-components/css**:
+CSS can be imported in JavaScript if supported by your bundler:
 
 ```JavaScript
-import "gu-ds-components/css/progress-bar";
-```
-
-Alternatively, all CSS can be imported in one go:
-
-```JavaScript
-import "gu-ds-components/css";
+import "gu-ds-components/css/components.css";
 ```
 
 <mark>

@@ -5,6 +5,7 @@
   "type": "module",
   "files": [
     "chunks/**/*",
+    "css/**/*",
     "react/**/*",
     "web-components/**/*"
   ],
