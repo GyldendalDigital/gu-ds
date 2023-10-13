@@ -1,67 +1,67 @@
 import React, { CSSProperties, FunctionComponent } from "react";
-import "./progressBarItem.css";
+import classNames from "./progressBarItem.css";
 
 type AriaProps =
-    | { "aria-label": string; "aria-labelledby"?: never; }
-    | { "aria-label"?: never; "aria-labelledby": string; };
+  | { "aria-label": string; "aria-labelledby"?: never }
+  | { "aria-label"?: never; "aria-labelledby": string };
 
 export type ProgressBarType = AriaProps & {
-    explainOtherUnitThanPercentage?: string;
-    valueNow: number;
-    valueMin?: number;
-    valueMax?: number;
-    fillColorVar?: string;
-    filledColorVar?: string;
+  explainOtherUnitThanPercentage?: string;
+  valueNow: number;
+  valueMin?: number;
+  valueMax?: number;
+  fillColorVar?: string;
+  filledColorVar?: string;
 };
 
 interface ProgressBarItemProps {
-    className?: string;
-    fillerWidth: number;
-    progressBar: ProgressBarType;
+  className?: string;
+  fillerWidth: number;
+  progressBar: ProgressBarType;
 }
 
 /**
- * 
+ *
  * @param progressBar Progressbar object, in which valueNow is the only mandatory property.
  * @returns Progress bar fill/foreground.
  */
 export const ProgressBarItem: FunctionComponent<ProgressBarItemProps> = ({
-    className = "",
-    fillerWidth,
-    progressBar,
+  className = "",
+  fillerWidth,
+  progressBar,
 }) => {
-    const valueMin = progressBar.valueMin || 0;
-    const valueMax = progressBar.valueMax || 100;
+  const valueMin = progressBar.valueMin || 0;
+  const valueMax = progressBar.valueMax || 100;
 
-    return (
-        <li
-            className={`item ${className}`}
-            style={
-                {
-                    "--progress-bar-item-width": `${fillerWidth}`,
-                } as CSSProperties
-            }
-        >
-            <div
-                className="fill"
-                role="progressbar"
-                style={
-                    {
-                        "--progress-bar-fill-color": 
-                            (progressBar.valueNow === valueMax && !!progressBar.filledColorVar)
-                            ? `var(${progressBar.filledColorVar})`
-                            : !!progressBar.fillColorVar ? 
-                                `var(${progressBar.fillColorVar})` : 
-                                "var(--component-progressbar-color-fg-default)"
-                    } as CSSProperties
-                }
-                aria-valuenow={progressBar.valueNow}
-                aria-valuemin={valueMin}
-                aria-label={progressBar["aria-label"]}
-                aria-labelledby={progressBar["aria-labelledby"]}
-                aria-valuetext={progressBar.explainOtherUnitThanPercentage}
-                aria-valuemax={valueMax}
-            ></div>
-        </li>
-    );
+  return (
+    <li
+      className={`${classNames.item} ${className}`}
+      style={
+        {
+          "--progress-bar-item-width": `${fillerWidth}`,
+        } as CSSProperties
+      }
+    >
+      <div
+        className={classNames.fill}
+        role="progressbar"
+        style={
+          {
+            "--progress-bar-fill-color":
+              progressBar.valueNow === valueMax && !!progressBar.filledColorVar
+                ? `var(${progressBar.filledColorVar})`
+                : !!progressBar.fillColorVar
+                ? `var(${progressBar.fillColorVar})`
+                : "var(--component-progressbar-color-fg-default)",
+          } as CSSProperties
+        }
+        aria-valuenow={progressBar.valueNow}
+        aria-valuemin={valueMin}
+        aria-label={progressBar["aria-label"]}
+        aria-labelledby={progressBar["aria-labelledby"]}
+        aria-valuetext={progressBar.explainOtherUnitThanPercentage}
+        aria-valuemax={valueMax}
+      ></div>
+    </li>
+  );
 };

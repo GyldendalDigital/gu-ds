@@ -1,12 +1,12 @@
 @layer guds {
 
-    :global(.item) {
+    .item {
         border-radius: inherit;
         height: inherit;
         width: calc(var(--progress-bar-item-width) * 1%);
     }
 
-    :global(.fill) {
+    .fill {
         border-radius: inherit;
         height: inherit;
         width: 100%;

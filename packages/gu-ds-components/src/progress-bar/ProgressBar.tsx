@@ -1,5 +1,5 @@
 import React, { CSSProperties, FunctionComponent } from "react";
-import "./ProgressBar.css";
+import classNames from "./ProgressBar.css";
 import { ProgressBarItem, ProgressBarType } from "./ProgressBarItem";
 
 export interface Props {
@@ -35,9 +35,9 @@ export const ProgressBar: FunctionComponent<Props> = ({
   let previousWidths = 0;
   return (
     <ol
-      className={`list ${showFullLength ? "show-full-length" : ""} ${
-        height === "low" ? "low" : ""
-      } ${className}`}
+      className={`${classNames.list} ${
+        showFullLength ? classNames["show-full-length"] : ""
+      } ${height === "low" ? classNames.low : ""} ${className}`}
       style={style}
     >
       {progressBars.map((progressBar, index) => {

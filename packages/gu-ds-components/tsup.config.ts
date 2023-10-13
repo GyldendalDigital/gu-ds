@@ -30,20 +30,23 @@ export default defineConfig(() => ({
   clean: false,
   bundle: true,
   external: ["react"],
-  loader: {
-    ".css": "local-css",
-  },
+  loader: { ".css": "local-css" },
   esbuildOptions(options) {
     options.chunkNames = `${chunks}/[name]-[hash]`;
   },
   async onSuccess() {
-    // The react and web-components directories now contains equal css files.
-    // Move one css file to the css directory and remove the other.
-    fs.mkdirSync(cssDirectory);
-    fs.renameSync(
-      `${reactDirectory}/index.css`,
-      `${cssDirectory}/components.css`
-    );
-    fs.rmSync(`${webComponentsDirectory}/index.css`);
+    moveCss();
   },
 }));
+
+// The react and web-components directories now contains equal css files.
+// Move one css file to the css directory and remove the other.
+
+const moveCss = () => {
+  fs.mkdirSync(cssDirectory);
+  fs.renameSync(
+    `${reactDirectory}/index.css`,
+    `${cssDirectory}/components.css`
+  );
+  fs.rmSync(`${webComponentsDirectory}/index.css`);
+};
