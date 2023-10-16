@@ -10,7 +10,6 @@ interface Props {
 
 export const CategoryHeader: FunctionComponent<Props> = ({ heading, code }) => {
   const [codeIsOpen, setCodeIsOpen] = useState(false);
-  console.log("codeIsOpen", codeIsOpen);
   return (
     <div className={styles.categoryHeader}>
       <div className={styles.top}>
