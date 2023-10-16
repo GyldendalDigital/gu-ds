@@ -1,13 +1,15 @@
-# Design tokens
+# Base
 
-## ⚡ Quick how to: update tokens
+## Design tokens
+
+### ⚡ Quick how to: update tokens
 
 1. Export json from Figma
 2. Replace json in `tokens-from-figma.json`
 3. Run `yarn build`
 4. Commit changes
 
-## 🧱 Token folder structure
+### 🧱 Token folder structure
 
 ```
 /
