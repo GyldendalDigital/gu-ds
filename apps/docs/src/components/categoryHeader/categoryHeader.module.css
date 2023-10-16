@@ -25,7 +25,6 @@
 }
 
 .codeToggleButton {
-    composes: headingXxs from "gu-ds-css/output/typography.module.css";
     all: initial;
     padding: calc(var(--primitives-size-16) * 1px);
     background-color: var(--primitives-color-violet-1000);

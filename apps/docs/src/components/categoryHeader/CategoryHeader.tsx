@@ -1,5 +1,6 @@
 import { useState, type FunctionComponent, type ReactNode } from "react";
 import styles from "./categoryHeader.module.css";
+import headingStyles from "gu-ds-css/output/typography.module.css";
 import { CodeFormatter } from "../codeFormatter/CodeFormatter";
 
 interface Props {
@@ -17,7 +18,7 @@ export const CategoryHeader: FunctionComponent<Props> = ({ heading, code }) => {
         {code && (
           <button
             type="button"
-            className={styles.codeToggleButton}
+            className={`${styles.codeToggleButton} ${headingStyles.headingXxs}`}
             onClick={() => setCodeIsOpen(!codeIsOpen)}
             aria-expanded={codeIsOpen}
           >
