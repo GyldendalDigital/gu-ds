@@ -12,7 +12,7 @@ export default defineConfig({
   output: "server",
   adapter: netlify(),
   vite: {
-    ssr: { noExternal: ["solid-use", "react-icons"] },
+    ssr: { noExternal: ["solid-use"] },
     plugins: [vanillaExtractPlugin()],
   },
 });
