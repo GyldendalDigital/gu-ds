@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { TableClient, AzureNamedKeyCredential } from "@azure/data-tables";
-import { countBy } from "lodash";
+import countBy from "lodash/countBy";
 
 const forslag = new Array<string>();
 
