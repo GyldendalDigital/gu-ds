@@ -12,7 +12,7 @@ const getProgressSuffix = (progress: number) => {
 };
 
 const meta: Meta<typeof ProficiencyBar> = {
-    title: "progress-bar/Proficiency",
+    title: "components/progress-bar/Proficiency",
     component: ProficiencyBar,
     argTypes: {
         progressInPercent: {

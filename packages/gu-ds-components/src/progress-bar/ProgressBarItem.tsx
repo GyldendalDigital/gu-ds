@@ -1,5 +1,5 @@
 import React, { CSSProperties, FunctionComponent } from "react";
-import classNames from "./progressBarItem.css";
+import classNames from "./progressBarItem.module.css";
 
 type AriaProps =
   | { "aria-label": string; "aria-labelledby"?: never }

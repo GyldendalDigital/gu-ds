@@ -29,6 +29,7 @@ const config = {
   },
   core: {
     disableTelemetry: true, // 👈 Disables telemetry
-  },
+    builder: '@storybook/builder-vite'
+  }
 };
 export default config;

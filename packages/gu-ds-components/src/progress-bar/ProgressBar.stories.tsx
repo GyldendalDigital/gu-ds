@@ -10,7 +10,7 @@ const meta: Meta<
         __progressColor: string;
     }
 > = {
-    title: "progress-bar",
+    title: "components/progress-bar",
     component: ProgressBar,
     args: {
         __progressBarFirstValue: 45,

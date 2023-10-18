@@ -1,5 +1,5 @@
 import React, { CSSProperties, FunctionComponent } from "react";
-import "./ProgressBar.css";
+import "./ProgressBar.module.css";
 import { ProgressBar } from "./ProgressBar";
 import { getProficiencyNameByPercentage } from "../utils/progressHelpers";
 
