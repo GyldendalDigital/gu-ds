@@ -1,5 +1,11 @@
 # gu-ds-base
 
+## 0.0.6
+
+### Patch Changes
+
+- Bump
+
 ## 0.0.5
 
 ### Patch Changes

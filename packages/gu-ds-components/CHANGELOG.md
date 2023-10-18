@@ -1,5 +1,13 @@
 # gu-ds-components
 
+## 0.0.7
+
+### Patch Changes
+
+- Bump
+- Updated dependencies
+  - gu-ds-base@0.0.6
+
 ## 0.0.5
 
 ### Patch Changes
