@@ -8,7 +8,7 @@ export const AnimatedInput = () => {
   const [placeHolder, setPlaceHolder] = useState<string | undefined>("");
 
   const knut = "Knut?";
-  const gud = "GUDS?";
+  const gud = "Gyldendal DS?";
 
   useEffect(() => {
     const timeoutID = window.setTimeout(() => {
@@ -41,6 +41,7 @@ export const AnimatedInput = () => {
       type="text"
       name="forslag"
       placeholder={placeHolder}
+      autoComplete="off"
     />
   );
 };

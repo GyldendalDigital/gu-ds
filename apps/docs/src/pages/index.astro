@@ -52,10 +52,10 @@ if (Astro.request.method === "POST") {
 <Layout title="Designsystem X">
   <PageHeader>
     <!-- Temporary page header while name competition is going on -->
-    <form method="post">
+    <form method="post" style={{ display: "flex", alignItems: "center", flexDirection: "column" }}>
       <h1 class="heading-xxl ds-heading">
-        Velkommen til 
-        {
+      Velkommen til 
+      {
           forslagCookie 
             ? forslagCookie 
             : (
@@ -64,15 +64,8 @@ if (Astro.request.method === "POST") {
               )
         }
       </h1>
+      <a href="/forslag">Se andre forslag {!forslagCookie && (" og stem")}</a>
     </form>
-  
-    {
-      forslagCookie && (
-        <div class="status">
-          Forslag mottatt. <a href="/forslag">Se andre forslag</a>.
-        </div>
-      )
-    }
   </PageHeader>
   <Colors client:idle />
   <Typography client:idle />

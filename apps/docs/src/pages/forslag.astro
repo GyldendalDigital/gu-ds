@@ -2,8 +2,48 @@
 import Layout from "../layouts/Layout.astro";
 import { TableClient, AzureNamedKeyCredential } from "@azure/data-tables";
 import countBy from "lodash/countBy";
+import * as typographyStyles from "gu-ds-css/output/typography.module.css";
 
 const forslag = new Array<string>();
+
+  
+/** Cookies can only be set in pages, so PageHeader can't do this */
+const save = async (value: string) => {
+  const account = import.meta.env.AZURE_ACCOUNT;
+  const accountKey = import.meta.env.AZURE_KEY;
+  const tableName = "dsforslag";
+
+  const credential = new AzureNamedKeyCredential(account, accountKey);
+  const client = new TableClient(
+    `https://${account}.table.core.windows.net`,
+    tableName,
+    credential
+  );
+
+  await client.createEntity({
+    partitionKey: value,
+    rowKey: new Date().toISOString(),
+  });
+};
+
+let forslagCookie = Astro.cookies.get("forslag")?.value ?? "";
+
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const forslag = `${data.get("forslag")}`;
+
+    if (forslagCookie !== forslag) {
+      await save(forslag);
+
+      Astro.cookies.set("forslag", forslag);
+      forslagCookie = forslag;
+    }
+    return Astro.redirect("/forslag");
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 const search = async () => {
   const account = import.meta.env.AZURE_ACCOUNT;
@@ -32,17 +72,72 @@ const forslagGroup = Object.entries(countBy(forslag))
 ---
 
 <Layout title="Forslag">
-  <main>
+  <div class="wrapper">
     <a href="/">Tilbake</a>
-    <h1>Forslag</h1>
-    <ul>
+    <h1 class="heading-xxl ds-heading">
+      Forslag</h1>
+    <table>
       {
         forslagGroup.map((f) => (
-          <li>
-            {f.value}: {f.count}
-          </li>
+          <tr>
+            <td>{f.value}</td>
+            <td>{f.count}</td>
+            <td>{forslagCookie ? forslagCookie == f.value ? ("👍") : "" : (
+              <form method="post">
+                <input
+      type="hidden"
+      name="forslag"
+      value={f.value}
+    />
+    <button type="submit" class={typographyStyles.actionButton + " submit-button"}>👍</button>
+    </form>)}</td>
+          </tr>
         ))
       }
-    </ul>
-  </main>
+    </table>
+  </div>
 </Layout>
+
+<style>
+  .ds-heading {
+    text-align: center;
+    margin: calc(var(--primitives-size-32) * 1px) 0 calc(var(--primitives-size-18) * 1px);
+  }
+
+  table {
+min-width: 50vw;
+border-collapse: collapse;
+border-spacing: 30px;
+  }
+
+  tr {
+    border-bottom: solid thin;
+  }
+
+  tr:nth-child(1) {
+background:rgb(233, 205, 0);
+}
+tr:nth-child(2) {
+background:rgb(215, 215, 215);
+}
+tr:nth-child(3) {
+background:rgb(152, 132, 0);
+}
+
+  td {
+    padding: 10px;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  
+  .submit-button {
+    background-color: var(--component-button-color-background);
+    border-radius: calc(var(--semantic-action-border-radius-pill) * 1px);
+  }
+</style>
