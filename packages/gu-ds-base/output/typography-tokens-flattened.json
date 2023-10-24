@@ -64,6 +64,27 @@
   {
     "path": [
       "action",
+      "input"
+    ],
+    "name": "disabled",
+    "fullNameCamelCase": "actionInputDisabled",
+    "styles": {
+      "fontSize": 16,
+      "textDecoration": "none",
+      "fontFamily": "Inter",
+      "fontWeight": 500,
+      "fontStyle": "italic",
+      "fontStretch": "normal",
+      "letterSpacing": 0,
+      "lineHeight": 19.2,
+      "paragraphIndent": 0,
+      "paragraphSpacing": 0,
+      "textCase": "none"
+    }
+  },
+  {
+    "path": [
+      "action",
       "disabled"
     ],
     "name": "placeholder",
@@ -528,6 +549,26 @@
       "fontStretch": "normal",
       "letterSpacing": 0,
       "lineHeight": 19.2,
+      "paragraphIndent": 0,
+      "paragraphSpacing": 0,
+      "textCase": "none"
+    }
+  },
+  {
+    "path": [
+      "section"
+    ],
+    "name": "input",
+    "fullNameCamelCase": "sectionInput",
+    "styles": {
+      "fontSize": 32,
+      "textDecoration": "none",
+      "fontFamily": "Inter",
+      "fontWeight": 400,
+      "fontStyle": "normal",
+      "fontStretch": "normal",
+      "letterSpacing": 0,
+      "lineHeight": 32,
       "paragraphIndent": 0,
       "paragraphSpacing": 0,
       "textCase": "none"

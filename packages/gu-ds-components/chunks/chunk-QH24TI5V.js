@@ -31,20 +31,20 @@ var Example = ({
 // src/progress-bar/ProgressBar.tsx
 import React3 from "react";
 
-// src/progress-bar/ProgressBar.css
-var ProgressBar_default = {
-  list: "ProgressBar_list",
-  low: "ProgressBar_low",
-  "show-full-length": "ProgressBar_show-full-length"
+// src/progress-bar/ProgressBar.module.css
+var ProgressBar_module_default = {
+  list: "ProgressBar_module_list",
+  low: "ProgressBar_module_low",
+  "show-full-length": "ProgressBar_module_show-full-length"
 };
 
 // src/progress-bar/ProgressBarItem.tsx
 import React2 from "react";
 
-// src/progress-bar/progressBarItem.css
-var progressBarItem_default = {
-  item: "progressBarItem_item",
-  fill: "progressBarItem_fill"
+// src/progress-bar/progressBarItem.module.css
+var progressBarItem_module_default = {
+  item: "progressBarItem_module_item",
+  fill: "progressBarItem_module_fill"
 };
 
 // src/progress-bar/ProgressBarItem.tsx
@@ -58,7 +58,7 @@ var ProgressBarItem = ({
   return /* @__PURE__ */ React2.createElement(
     "li",
     {
-      className: `${progressBarItem_default.item} ${className}`,
+      className: `${progressBarItem_module_default.item} ${className}`,
       style: {
         "--progress-bar-item-width": `${fillerWidth}`
       }
@@ -66,7 +66,7 @@ var ProgressBarItem = ({
     /* @__PURE__ */ React2.createElement(
       "div",
       {
-        className: progressBarItem_default.fill,
+        className: progressBarItem_module_default.fill,
         role: "progressbar",
         style: {
           "--progress-bar-fill-color": progressBar.valueNow === valueMax && !!progressBar.filledColorVar ? `var(${progressBar.filledColorVar})` : !!progressBar.fillColorVar ? `var(${progressBar.fillColorVar})` : "var(--component-progressbar-color-fg-default)"
@@ -101,7 +101,7 @@ var ProgressBar = ({
   return /* @__PURE__ */ React3.createElement(
     "ol",
     {
-      className: `${ProgressBar_default.list} ${showFullLength ? ProgressBar_default["show-full-length"] : ""} ${height === "low" ? ProgressBar_default.low : ""} ${className}`,
+      className: `${ProgressBar_module_default.list} ${showFullLength ? ProgressBar_module_default["show-full-length"] : ""} ${height === "low" ? ProgressBar_module_default.low : ""} ${className}`,
       style
     },
     progressBars.map((progressBar, index) => {

@@ -1,9 +1,20 @@
 /**
  * Do not edit directly
- * Generated on Mon, 16 Oct 2023 09:17:12 GMT
+ * Generated on Tue, 24 Oct 2023 12:52:31 GMT
  */
 
 :root, :host {
+  --typography-section-input-text-case: none;
+  --typography-section-input-paragraph-spacing: 0;
+  --typography-section-input-paragraph-indent: 0;
+  --typography-section-input-line-height: 32;
+  --typography-section-input-letter-spacing: 0;
+  --typography-section-input-font-stretch: normal;
+  --typography-section-input-font-style: normal;
+  --typography-section-input-font-weight: 400;
+  --typography-section-input-font-family: Inter;
+  --typography-section-input-text-decoration: none;
+  --typography-section-input-font-size: 32;
   --typography-listitem-big-header-selected-text-case: none;
   --typography-listitem-big-header-selected-paragraph-spacing: 0;
   --typography-listitem-big-header-selected-paragraph-indent: 0;
@@ -257,6 +268,17 @@
   --typography-action-disabled-placeholder-font-family: Inter;
   --typography-action-disabled-placeholder-text-decoration: none;
   --typography-action-disabled-placeholder-font-size: 16;
+  --typography-action-input-disabled-text-case: none;
+  --typography-action-input-disabled-paragraph-spacing: 0;
+  --typography-action-input-disabled-paragraph-indent: 0;
+  --typography-action-input-disabled-line-height: 19.2;
+  --typography-action-input-disabled-letter-spacing: 0;
+  --typography-action-input-disabled-font-stretch: normal;
+  --typography-action-input-disabled-font-style: italic;
+  --typography-action-input-disabled-font-weight: 500;
+  --typography-action-input-disabled-font-family: Inter;
+  --typography-action-input-disabled-text-decoration: none;
+  --typography-action-input-disabled-font-size: 16;
   --typography-action-input-placeholder-text-case: none;
   --typography-action-input-placeholder-paragraph-spacing: 0;
   --typography-action-input-placeholder-paragraph-indent: 0;
@@ -430,14 +452,26 @@
   --primitives-size-12: 12;
   --primitives-size-8: 8;
   --primitives-size-6: 6;
+  --primitives-size-2: 2;
   --primitives-border-width-1: 1;
   --primitives-border-radius-pill: 1000;
+  --sections-label-container-gap: 6;
+  --sections-label-container-border-radius: 2;
+  --sections-label-container-padding-block: 2;
+  --sections-label-container-padding-inline: 6;
+  --sections-label-container-color-background: var(--primitives-color-violet-100);
+  --sections-input-color-background-default: var(--primitives-color-violet-100);
+  --sections-input-color-border-selected: var(--primitives-color-violet-900);
+  --sections-input-color-border-default: var(--primitives-color-violet-400);
+  --sections-input-text-padding: 8;
   --semantic-color-failure-secondary: var(--primitives-color-pink-200);
   --semantic-color-failure-primary: var(--primitives-color-pink-800);
+  --semantic-color-success-secondar: var(--primitives-color-green-100);
   --semantic-color-success-secondary: var(--primitives-color-green-100);
   --semantic-color-success-primary: var(--primitives-color-green-600);
   --semantic-elevation-container-width-large: 768;
   --semantic-elevation-container-width-medium: 512;
+  --semantic-layout-container-gap-small: 8;
   --semantic-layout-container-gap-medium: 16;
   --semantic-layout-container-gap-large: 24;
   --semantic-layout-container-padding-small: 12;
@@ -532,20 +566,20 @@
   --semantic-action-border-radius-small: 16;
   --component-progressbar-size-default: 12;
   --component-progressbar-size-small: 8;
-  --component-progressbar-color-fg-unknown: var(--semantic-progress-color-foreground-unknown);
-  --component-progressbar-color-fg-high: var(--semantic-progress-color-foreground-high);
-  --component-progressbar-color-fg-good: var(--semantic-progress-color-foreground-good);
-  --component-progressbar-color-fg-basics: var(--semantic-progress-color-foreground-basics);
-  --component-progressbar-color-fg-some: var(--semantic-progress-color-foreground-some);
-  --component-progressbar-color-fg-low: var(--semantic-progress-color-foreground-low);
-  --component-progressbar-color-fg-default: var(--semantic-progress-color-foreground-default);
-  --component-progressbar-color-bg-unknown: var(--semantic-progress-color-background-unknown);
-  --component-progressbar-color-bg-high: var(--semantic-progress-color-background-high);
-  --component-progressbar-color-bg-good: var(--semantic-progress-color-background-good);
-  --component-progressbar-color-bg-basics: var(--semantic-progress-color-background-basics);
-  --component-progressbar-color-bg-some: var(--semantic-progress-color-background-some);
-  --component-progressbar-color-bg-low: var(--semantic-progress-color-background-low);
-  --component-progressbar-color-bg-default: var(--semantic-progress-color-background-default);
+  --component-progressbar-color-foreground-unknown: var(--semantic-progress-color-foreground-unknown);
+  --component-progressbar-color-foreground-high: var(--semantic-progress-color-foreground-high);
+  --component-progressbar-color-foreground-good: var(--semantic-progress-color-foreground-good);
+  --component-progressbar-color-foreground-basics: var(--semantic-progress-color-foreground-basics);
+  --component-progressbar-color-foreground-some: var(--semantic-progress-color-foreground-some);
+  --component-progressbar-color-foreground-low: var(--semantic-progress-color-foreground-low);
+  --component-progressbar-color-foreground-default: var(--semantic-progress-color-foreground-default);
+  --component-progressbar-color-background-unknown: var(--semantic-progress-color-background-unknown);
+  --component-progressbar-color-background-high: var(--semantic-progress-color-background-high);
+  --component-progressbar-color-background-good: var(--semantic-progress-color-background-good);
+  --component-progressbar-color-background-basics: var(--semantic-progress-color-background-basics);
+  --component-progressbar-color-background-some: var(--semantic-progress-color-background-some);
+  --component-progressbar-color-background-low: var(--semantic-progress-color-background-low);
+  --component-progressbar-color-background-default: var(--semantic-progress-color-background-default);
   --component-list-listitem-big-gap: 24;
   --component-list-listitem-big-container-padding: 24;
   --component-list-listitem-nested-container-border-radius: 8;
@@ -577,5 +611,6 @@
   --component-button-color-background: var(--semantic-action-color-default-background);
   --component-button-padding-inline: 16;
   --component-button-padding-block: 8;
+  --component-input-text-border-radius: 8;
   --component-modal-border-radius: 16;
 }

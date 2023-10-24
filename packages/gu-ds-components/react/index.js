@@ -2,7 +2,7 @@ import {
   Example,
   ProficiencyBar,
   ProgressBar
-} from "../chunks/chunk-SGE3GOYA.js";
+} from "../chunks/chunk-QH24TI5V.js";
 export {
   Example,
   ProficiencyBar,

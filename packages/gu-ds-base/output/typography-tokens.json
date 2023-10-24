@@ -29,6 +29,16 @@
     "letterSpacing": 0,
     "lineHeight": 1.5
   },
+  "actionInputDisabled": {
+    "fontSize": "16px",
+    "textDecoration": "none",
+    "fontFamily": "Inter",
+    "fontWeight": 500,
+    "fontStyle": "italic",
+    "fontStretch": "normal",
+    "letterSpacing": 0,
+    "lineHeight": 1.2
+  },
   "actionDisabledPlaceholder": {
     "fontSize": "16px",
     "textDecoration": "none",
@@ -258,5 +268,15 @@
     "fontStretch": "normal",
     "letterSpacing": 0,
     "lineHeight": 1.2
+  },
+  "sectionInput": {
+    "fontSize": "32px",
+    "textDecoration": "none",
+    "fontFamily": "Inter",
+    "fontWeight": 400,
+    "fontStyle": "normal",
+    "fontStretch": "normal",
+    "letterSpacing": 0,
+    "lineHeight": 1
   }
 }
