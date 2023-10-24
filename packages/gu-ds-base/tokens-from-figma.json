@@ -49,6 +49,22 @@
             "paragraphSpacing": 0,
             "textCase": "none"
           }
+        },
+        "disabled": {
+          "type": "custom-fontStyle",
+          "value": {
+            "fontSize": 16,
+            "textDecoration": "none",
+            "fontFamily": "Inter",
+            "fontWeight": 500,
+            "fontStyle": "italic",
+            "fontStretch": "normal",
+            "letterSpacing": 0,
+            "lineHeight": 19.2,
+            "paragraphIndent": 0,
+            "paragraphSpacing": 0,
+            "textCase": "none"
+          }
         }
       },
       "disabled": {
@@ -439,6 +455,24 @@
           }
         }
       }
+    },
+    "section": {
+      "input": {
+        "type": "custom-fontStyle",
+        "value": {
+          "fontSize": 32,
+          "textDecoration": "none",
+          "fontFamily": "Inter",
+          "fontWeight": 400,
+          "fontStyle": "normal",
+          "fontStretch": "normal",
+          "letterSpacing": 0,
+          "lineHeight": 32,
+          "paragraphIndent": 0,
+          "paragraphSpacing": 0,
+          "textCase": "none"
+        }
+      }
     }
   },
   "effect": {
@@ -569,6 +603,10 @@
       }
     },
     "size": {
+      "2": {
+        "type": "dimension",
+        "value": 2
+      },
       "6": {
         "type": "dimension",
         "value": 6
@@ -1393,6 +1431,12 @@
             "type": "color",
             "value": "{semantic.action.padding.small}"
           }
+        },
+        "border": {
+          "radius": {
+            "type": "color",
+            "value": "{semantic.action.border.radius.xsmall}"
+          }
         }
       },
       "radio": {
@@ -1693,7 +1737,7 @@
         }
       },
       "color": {
-        "bg": {
+        "background": {
           "default": {
             "type": "color",
             "value": "{semantic.progress.color.background.default}"
@@ -1723,7 +1767,7 @@
             "value": "{semantic.progress.color.background.unknown}"
           }
         },
-        "fg": {
+        "foreground": {
           "default": {
             "type": "color",
             "value": "{semantic.progress.color.foreground.default}"
@@ -2019,6 +2063,10 @@
           "medium": {
             "type": "dimension",
             "value": "{primitives.size.16}"
+          },
+          "small": {
+            "type": "dimension",
+            "value": "{primitives.size.8}"
           }
         }
       }
@@ -2052,6 +2100,10 @@
         "secondary": {
           "type": "color",
           "value": "{primitives.color.green.100}"
+        },
+        "secondar": {
+          "type": "color",
+          "value": "{primitives.color.green.100}"
         }
       },
       "failure": {
@@ -2062,6 +2114,64 @@
         "secondary": {
           "type": "color",
           "value": "{primitives.color.pink.200}"
+        }
+      }
+    }
+  },
+  "sections": {
+    "input": {
+      "text": {
+        "padding": {
+          "type": "dimension",
+          "value": "{primitives.size.8}"
+        }
+      },
+      "color": {
+        "border": {
+          "default": {
+            "type": "color",
+            "value": "{primitives.color.violet.400}"
+          },
+          "selected": {
+            "type": "color",
+            "value": "{primitives.color.violet.900}"
+          }
+        },
+        "background": {
+          "default": {
+            "type": "color",
+            "value": "{primitives.color.violet.100}"
+          }
+        }
+      }
+    },
+    "label": {
+      "container": {
+        "color": {
+          "background": {
+            "type": "color",
+            "value": "{primitives.color.violet.100}"
+          }
+        },
+        "padding": {
+          "inline": {
+            "type": "dimension",
+            "value": "{primitives.size.6}"
+          },
+          "block": {
+            "type": "dimension",
+            "value": "{primitives.size.2}"
+          }
+        },
+        "border": {
+          "radius": {
+            "type": "dimension",
+            "value": "{primitives.size.2}"
+          }
+        },
+        "gap": {
+          "type": "dimension",
+          "value": "{primitives.size.6}"
         }
       }
     }
@@ -2193,6 +2303,52 @@
           "lineHeight": {
             "type": "dimension",
             "value": 24
+          },
+          "paragraphIndent": {
+            "type": "dimension",
+            "value": 0
+          },
+          "paragraphSpacing": {
+            "type": "dimension",
+            "value": 0
+          },
+          "textCase": {
+            "type": "string",
+            "value": "none"
+          }
+        },
+        "disabled": {
+          "fontSize": {
+            "type": "dimension",
+            "value": 16
+          },
+          "textDecoration": {
+            "type": "string",
+            "value": "none"
+          },
+          "fontFamily": {
+            "type": "string",
+            "value": "Inter"
+          },
+          "fontWeight": {
+            "type": "number",
+            "value": 500
+          },
+          "fontStyle": {
+            "type": "string",
+            "value": "italic"
+          },
+          "fontStretch": {
+            "type": "string",
+            "value": "normal"
+          },
+          "letterSpacing": {
+            "type": "dimension",
+            "value": 0
+          },
+          "lineHeight": {
+            "type": "dimension",
+            "value": 19.2
           },
           "paragraphIndent": {
             "type": "dimension",
@@ -3284,6 +3440,54 @@
               "value": "none"
             }
           }
+        }
+      }
+    },
+    "section": {
+      "input": {
+        "fontSize": {
+          "type": "dimension",
+          "value": 32
+        },
+        "textDecoration": {
+          "type": "string",
+          "value": "none"
+        },
+        "fontFamily": {
+          "type": "string",
+          "value": "Inter"
+        },
+        "fontWeight": {
+          "type": "number",
+          "value": 400
+        },
+        "fontStyle": {
+          "type": "string",
+          "value": "normal"
+        },
+        "fontStretch": {
+          "type": "string",
+          "value": "normal"
+        },
+        "letterSpacing": {
+          "type": "dimension",
+          "value": 0
+        },
+        "lineHeight": {
+          "type": "dimension",
+          "value": 32
+        },
+        "paragraphIndent": {
+          "type": "dimension",
+          "value": 0
+        },
+        "paragraphSpacing": {
+          "type": "dimension",
+          "value": 0
+        },
+        "textCase": {
+          "type": "string",
+          "value": "none"
         }
       }
     }
