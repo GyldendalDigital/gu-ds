@@ -7,7 +7,7 @@
 Design tokens can be imported as json, css variables or sass variables:
 
 ```JavaScript
-import theme from "gu-ds-base/themes/magazine.json";
+import theme from "~gu-ds-base/themes/magazine.json";
 
 export const Button = styled.button`
     background-color: ${theme.component.button.color.background};
