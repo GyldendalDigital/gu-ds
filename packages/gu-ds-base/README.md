@@ -47,6 +47,8 @@ Typography can be applied directly to HTML using CSS classes or by using `compos
 Also see the typography component from gu-ds-components:
 
 ```tsx
+import { ThemeProvider, Typography } from "~gu-ds-components/react";
+
 <ThemeProvider variant="magazine">
     <Typography component="h1" variant="headingXxl" />
 </TheThemeProviderme>
