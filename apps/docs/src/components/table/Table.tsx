@@ -1,6 +1,6 @@
-import type { FunctionComponent, PropsWithChildren, ReactNode } from "react";
-import styles from "./table.module.css";
+import type { FunctionComponent, ReactNode } from "react";
 import typographyStyles from "gu-ds-css/output/typography.module.css";
+import styles from "./table.module.css";
 
 interface Props {
   children?: ReactNode;

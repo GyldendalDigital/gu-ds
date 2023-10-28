@@ -2,9 +2,9 @@ import * as typographyStyles from "gu-ds-css/output/typography.module.css";
 import tokens from "gu-ds-base/output/tokens.json";
 import { type FunctionComponent, type ReactNode } from "react";
 import { RichText } from "../richText/RichText";
+import { Page } from "../page/Page";
 import { TypographyTable } from "./TypographyTable";
 import * as styles from "./typography.module.css";
-import { Page } from "../page/Page";
 
 interface FontExampleProps {
   weight: keyof typeof tokens.primitives.font.weight;
@@ -33,7 +33,6 @@ const FontExample: FunctionComponent<FontExampleProps> = ({
 export const Typography: FunctionComponent = () => {
   return (
     <Page
-      heading="Typography"
       code={JSON.stringify(
         {
           typography: tokens.typography,
@@ -41,6 +40,7 @@ export const Typography: FunctionComponent = () => {
         null,
         "  "
       )}
+      heading="Typography"
     >
       <RichText>
         <h2>General</h2>
@@ -66,9 +66,9 @@ export const Typography: FunctionComponent = () => {
         {Object.entries(tokens.primitives.font.weight).map(([key, value]) => {
           const weight = key as keyof typeof tokens.primitives.font.weight;
           return (
-            <div key={key} className={styles.fontExampleRow}>
+            <div className={styles.fontExampleRow} key={key}>
               <FontExample weight={weight}>Inter {weight}</FontExample>
-              <FontExample weight={weight} italic>
+              <FontExample italic weight={weight}>
                 Inter {weight} italic
               </FontExample>
             </div>
@@ -113,7 +113,7 @@ export const Typography: FunctionComponent = () => {
             </strong>{" "}
             på én gang. Noen ganger er det også behov for lenker i løpende
             tekst, og de vil se ut som <a href="/">dette</a> (besøkt) og{" "}
-            <a href={"/?d=" + new Date().toISOString()}>dette</a> (ubesøkt).
+            <a href={`/?d=${new Date().toISOString()}`}>dette</a> (ubesøkt).
             Ideelt burde vi også vise en indikasjon på om lenka er{" "}
             <a href="/">intern</a> eller{" "}
             <a href="https://aksel.nav.no">ekstern</a>.

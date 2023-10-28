@@ -32,7 +32,7 @@ export const TypographyTable: FunctionComponent<Props> = ({ filter }) => {
       </thead>
       <tbody>
         {items.map((item, index) => (
-          <Variant key={index} item={item} />
+          <Variant item={item} key={index} />
         ))}
       </tbody>
     </Table>

@@ -3,8 +3,8 @@ import type { FunctionComponent } from "react";
 import { Page } from "../page/Page";
 import { RichText } from "../richText/RichText";
 import { Table, Td } from "../table/Table";
-import { table, td, tdNoTextBreak } from "./sizes.css";
 import { UnitFormatter } from "../unitFormatter/UnitFormatter";
+import { table, td, tdNoTextBreak } from "./sizes.css";
 
 const Size = (name: string, value: number) => (
   <tr key={name}>
@@ -14,12 +14,12 @@ const Size = (name: string, value: number) => (
     </td>
     <td className={td}>
       <div
-        role="img"
         aria-label="Illustrasjon av størrelse"
+        role="img"
         style={{
           background: tokens.primitives.color.violet[900],
-          width: value + "px",
-          height: tokens.primitives.size[18] + "px",
+          width: `${value  }px`,
+          height: `${tokens.primitives.size[18]  }px`,
         }}
       />
     </td>
@@ -28,7 +28,6 @@ const Size = (name: string, value: number) => (
 
 export const Sizes = () => (
   <Page
-    heading="Sizes"
     code={JSON.stringify(
       {
         primitives: {
@@ -41,6 +40,7 @@ export const Sizes = () => (
       null,
       "  "
     )}
+    heading="Sizes"
   >
     <RichText>
       <h2>Size units</h2>
@@ -77,19 +77,19 @@ export const Sizes = () => (
       </p>
       <Table>
         <LayoutRow
+          height={200}
           name="semantic.layout.page.padding"
           pixels={{ padding: tokens.semantic.layout.page.padding }}
           selected="padding"
-          height={200}
         />
         <LayoutRow
+          height={200}
           name="semantic.layout.page.gap"
           pixels={{
             padding: tokens.semantic.layout.page.padding,
             horizontalGap: tokens.semantic.layout.page.gap,
           }}
           selected="horizontalGap"
-          height={200}
         />
       </Table>
     </RichText>
@@ -97,20 +97,20 @@ export const Sizes = () => (
       <h3>Container</h3>
       <Table>
         <LayoutRows
-          namePrefix={`semantic.layout.container.padding.`}
+          height={140}
           items={tokens.semantic.layout.container.padding}
+          namePrefix="semantic.layout.container.padding."
           pixels={{}}
           selected="padding"
-          height={140}
         />
         <LayoutRows
-          namePrefix={`semantic.layout.container.gap.`}
+          height={140}
           items={tokens.semantic.layout.container.gap}
+          namePrefix="semantic.layout.container.gap."
           pixels={{
             padding: tokens.semantic.layout.page.padding,
           }}
           selected="verticalGap"
-          height={140}
         />
       </Table>
     </RichText>
@@ -120,9 +120,7 @@ export const Sizes = () => (
 interface LayoutRowsProps {
   selected: "padding" | "horizontalGap" | "verticalGap";
   namePrefix: string;
-  items: {
-    [key: string]: number;
-  };
+  items: Record<string, number>;
   pixels: {
     padding?: number;
     horizontalGap?: number;
@@ -144,11 +142,11 @@ const LayoutRows: FunctionComponent<LayoutRowsProps> = ({
       .map(([key, value]) => {
         return (
           <LayoutRow
+            height={height}
             key={key}
             name={`${namePrefix}${key}`}
             pixels={{ ...pixels, [selected]: value }}
             selected={selected}
-            height={height}
           />
         );
       })}
@@ -177,12 +175,12 @@ const LayoutRow: FunctionComponent<LayoutRowProps> = ({
       </Td>
       <Td>
         <div
-          role="img"
           aria-label="Demonstrasjon av layout"
+          role="img"
           style={{
             position: "relative",
             width: 240,
-            height: height,
+            height,
             border: `solid ${padding}px ${
               selected === "padding"
                 ? tokens.primitives.color.violet[400]
@@ -190,8 +188,7 @@ const LayoutRow: FunctionComponent<LayoutRowProps> = ({
             }`,
           }}
         >
-          {pixels.horizontalGap && (
-            <div
+          {pixels.horizontalGap ? <div
               style={{
                 position: "absolute",
                 top: `calc(50% - ${pixels.horizontalGap / 2}px)`,
@@ -202,10 +199,8 @@ const LayoutRow: FunctionComponent<LayoutRowProps> = ({
                     ? tokens.primitives.color.violet[400]
                     : tokens.primitives.color.violet[200],
               }}
-            />
-          )}
-          {pixels.verticalGap && (
-            <div
+            /> : null}
+          {pixels.verticalGap ? <div
               style={{
                 position: "absolute",
                 left: `calc(50% - ${pixels.verticalGap / 2}px)`,
@@ -216,8 +211,7 @@ const LayoutRow: FunctionComponent<LayoutRowProps> = ({
                     ? tokens.primitives.color.violet[400]
                     : tokens.primitives.color.violet[200],
               }}
-            />
-          )}
+            /> : null}
         </div>
       </Td>
     </tr>

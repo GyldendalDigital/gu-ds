@@ -3,7 +3,6 @@ import svelte from "@astrojs/svelte";
 import vue from "@astrojs/vue";
 import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 import { defineConfig } from "astro/config";
-
 import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config

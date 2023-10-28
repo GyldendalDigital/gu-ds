@@ -14,7 +14,7 @@ const project = resolve(process.cwd(), "tsconfig.json");
 
 module.exports = {
   extends: [
-    "@vercel/style-guide/eslint/browser", // requires @babel/eslint-parser
+    "@vercel/style-guide/eslint/browser",
     "@vercel/style-guide/eslint/typescript",
     "@vercel/style-guide/eslint/react",
   ].map(require.resolve),
@@ -38,6 +38,7 @@ module.exports = {
   rules: {
     "react/function-component-definition": "off",
     "import/no-extraneous-dependencies": "off",
+    "import/no-default-export": "off",
     "import/prefer-default-export": "off",
     "@typescript-eslint/no-unsafe-assignment": "off",
     "unicorn/filename-case": [
@@ -46,7 +47,7 @@ module.exports = {
         cases: {
           camelCase: true,
           pascalCase: true,
-          kababCase: true,
+          kebabCase: true,
         },
       },
     ],

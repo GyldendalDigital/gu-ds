@@ -17,7 +17,7 @@ import {
   infoHeader,
 } from "./colors.css";
 
-const colorCategories = Object.entries(tokens.primitives.color).reduce(
+const colorCategories = Object.entries(tokens.primitives.color).reduce<Record<string, Record<string, string>>>(
   (colors, [key, value]) => {
     if (typeof value === "string") {
       colors.base = colors.base ?? ({} as Record<string, string>);
@@ -29,12 +29,11 @@ const colorCategories = Object.entries(tokens.primitives.color).reduce(
   },
   {
     base: {},
-  } as Record<string, Record<string, string>>
+  }
 );
 
 export const Colors = () => (
   <Page
-    heading="Colors"
     code={JSON.stringify(
       {
         primitives: {
@@ -44,6 +43,7 @@ export const Colors = () => (
       null,
       "  "
     )}
+    heading="Colors"
   >
     <RichText>
       <h2>Generelt om farger</h2>
@@ -55,16 +55,16 @@ export const Colors = () => (
     <div className={grid}>
       {Object.entries(colorCategories).map(([categoryName, colors]) => {
         return (
-          <div key={categoryName} className={categoryClass}>
+          <div className={categoryClass} key={categoryName}>
             <h3 className={richTextStyles.h3}>
               {categoryName.charAt(0).toUpperCase() + categoryName.slice(1)}
             </h3>
             {Object.entries(colors).map(([tokenKey, hex], index) => (
               <Color
-                key={index}
                 categoryName={categoryName}
-                tokenKey={tokenKey}
                 hex={hex}
+                key={index}
+                tokenKey={tokenKey}
               />
             ))}
           </div>
@@ -97,7 +97,7 @@ const Color: FunctionComponent<ColorProps> = ({
   hex,
 }) => {
   return (
-    <div key={categoryName} className={colorBox}>
+    <div className={colorBox} key={categoryName}>
       <div
         className={`${color} ${tokenKey === "white" ? colorBorder : ""}`}
         style={{ backgroundColor: hex }}

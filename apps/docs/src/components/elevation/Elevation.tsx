@@ -1,12 +1,11 @@
 import type { FunctionComponent } from "react";
+import tokens from "gu-ds-base/output/tokens.json";
 import { Page } from "../page/Page";
 import { RichText } from "../richText/RichText";
-import tokens from "gu-ds-base/output/tokens.json";
 
 export const Elevation: FunctionComponent = () => {
   return (
     <Page
-      heading="Elevation"
       code={JSON.stringify(
         {
           semantic: {
@@ -16,6 +15,7 @@ export const Elevation: FunctionComponent = () => {
         null,
         "  "
       )}
+      heading="Elevation"
     >
       <RichText>
         <h3>Button shadow</h3>

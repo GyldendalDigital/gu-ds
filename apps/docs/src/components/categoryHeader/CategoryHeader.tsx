@@ -1,7 +1,7 @@
 import { useState, type FunctionComponent, type ReactNode } from "react";
-import styles from "./categoryHeader.module.css";
 import headingStyles from "gu-ds-css/output/typography.module.css";
 import { CodeFormatter } from "../codeFormatter/CodeFormatter";
+import styles from "./categoryHeader.module.css";
 
 interface Props {
   heading: ReactNode;
@@ -14,22 +14,24 @@ export const CategoryHeader: FunctionComponent<Props> = ({ heading, code }) => {
     <div className={styles.categoryHeader}>
       <div className={styles.top}>
         <h2 className="heading-xl">{heading}</h2>
-        {code && (
+        {code ? (
           <button
-            type="button"
-            className={`${styles.codeToggleButton} ${headingStyles.headingXxs}`}
-            onClick={() => setCodeIsOpen(!codeIsOpen)}
             aria-expanded={codeIsOpen}
+            className={`${styles.codeToggleButton} ${headingStyles.headingXxs}`}
+            onClick={() => {
+              setCodeIsOpen(!codeIsOpen);
+            }}
+            type="button"
           >
             Source {codeIsOpen ? "↑" : "↓"}
           </button>
-        )}
+        ) : null}
       </div>
-      {code && (
+      {code ? (
         <div className={`${styles.code} ${codeIsOpen ? styles.codeOpen : ""}`}>
           <CodeFormatter>{code}</CodeFormatter>
         </div>
-      )}
+      ) : null}
     </div>
   );
 };

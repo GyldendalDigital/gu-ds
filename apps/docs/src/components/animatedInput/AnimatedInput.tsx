@@ -12,7 +12,7 @@ export const AnimatedInput = () => {
 
   useEffect(() => {
     const timeoutID = window.setTimeout(() => {
-      if (placeHolder == undefined) return;
+      if (placeHolder === undefined) return;
 
       if (knutDone) {
         setPlaceHolder(gud.slice(0, placeHolder.length + 1));
@@ -32,16 +32,18 @@ export const AnimatedInput = () => {
       }
     }, 250);
 
-    return () => window.clearTimeout(timeoutID);
+    return () => {
+      window.clearTimeout(timeoutID);
+    };
   }, [placeHolder]);
 
   return (
     <input
+      autoComplete="off"
       className={styles.input}
-      type="text"
       name="forslag"
       placeholder={placeHolder}
-      autoComplete="off"
+      type="text"
     />
   );
 };

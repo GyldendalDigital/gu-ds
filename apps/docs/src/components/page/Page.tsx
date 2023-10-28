@@ -1,6 +1,6 @@
 import type { FunctionComponent, ReactNode } from "react";
-import styles from "./page.module.css";
 import { CategoryHeader } from "../categoryHeader/CategoryHeader";
+import styles from "./page.module.css";
 
 interface Props {
   children?: ReactNode;
@@ -10,7 +10,7 @@ interface Props {
 
 export const Page: FunctionComponent<Props> = ({ children, heading, code }) => (
   <div className={styles.page}>
-    <CategoryHeader heading={heading} code={code} />
+    <CategoryHeader code={code} heading={heading} />
     <div className={styles.content}>{children}</div>
   </div>
 );

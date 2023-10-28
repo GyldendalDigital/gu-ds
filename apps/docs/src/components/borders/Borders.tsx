@@ -6,7 +6,6 @@ import { UnitFormatter } from "../unitFormatter/UnitFormatter";
 
 export const Borders = () => (
   <Page
-    heading="Borders"
     code={JSON.stringify(
       {
         primitives: {
@@ -16,20 +15,21 @@ export const Borders = () => (
       null,
       "  "
     )}
+    heading="Borders"
   >
     <RichText>
       <h2>Width</h2>
       <Table>
         {Object.entries(tokens.primitives.border.width).map(([key, value]) => (
-          <tr>
+          <tr key={key}>
             <Td>primitives.border.width.{key}</Td>
             <Td wide>
               <UnitFormatter>{value}</UnitFormatter>
             </Td>
             <Td>
               <div
-                role="img"
                 aria-label="Illustrasjon"
+                role="img"
                 style={{
                   width: 240,
                   height: 140,
@@ -59,8 +59,8 @@ export const Borders = () => (
               </Td>
               <Td>
                 <div
-                  role="img"
                   aria-label="Illustrasjon"
+                  role="img"
                   style={{
                     width: 240,
                     height: 140,
