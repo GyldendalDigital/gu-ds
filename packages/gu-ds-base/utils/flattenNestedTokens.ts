@@ -1,4 +1,4 @@
-import { toCamelCase } from "./string-utils";
+import { toCamelCase } from "./string-utils.ts";
 
 export interface Item {
   path: string[];

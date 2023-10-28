@@ -1,5 +1,5 @@
-import { Item } from "./flattenNestedTokens";
-import { toCamelCase } from "./string-utils";
+import { Item } from "./flattenNestedTokens.ts";
+import { toCamelCase } from "./string-utils.ts";
 
 export const getTypographyJson = ({ path, name, styles }: Item) => ({
   [toCamelCase([...path, name])]: {

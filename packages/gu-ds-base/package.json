@@ -7,7 +7,7 @@
     "clean": "rm -rf node_modules",
     "build": "yarn tokens && yarn css",
     "tokens": "node ./build-tokens.ts",
-    "css": "ts-node build-css.ts"
+    "css": "deno run build-css.ts --allow-all"
   },
   "repository": {
     "type": "git",

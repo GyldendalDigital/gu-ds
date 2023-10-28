@@ -1,9 +1,9 @@
-import * as fs from "fs";
-import tokens from "./output/tokens.json";
-import { flattenNestedTokens } from "./utils/flattenNestedTokens";
-import { getTypographyCssClass } from "./utils/getTypographyCssClass";
-import { getTypographyJson } from "./utils/getTypographyJson";
-import { trimLineBreaks } from "./utils/string-utils";
+import * as fs from "node:fs";
+import tokens from "./output/tokens.json" assert { type: "json" };
+import { flattenNestedTokens } from "./utils/flattenNestedTokens.ts";
+import { getTypographyCssClass } from "./utils/getTypographyCssClass.ts";
+import { getTypographyJson } from "./utils/getTypographyJson.ts";
+import { trimLineBreaks } from "./utils/string-utils.ts";
 
 const typographyTokensFlattened = flattenNestedTokens(tokens.typography);
 
