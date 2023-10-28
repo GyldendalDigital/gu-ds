@@ -14,12 +14,15 @@ const project = resolve(process.cwd(), "tsconfig.json");
 
 module.exports = {
   extends: [
-    "@vercel/style-guide/eslint/browser",
+    "@vercel/style-guide/eslint/browser", // requires @babel/eslint-parser
     "@vercel/style-guide/eslint/typescript",
     "@vercel/style-guide/eslint/react",
   ].map(require.resolve),
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
   parserOptions: {
     project,
+    extraFileExtensions: [".css"],
   },
   globals: {
     JSX: true,
@@ -31,9 +34,8 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: ["node_modules/", "dist/", ".eslintrc.js"],
-
+  ignorePatterns: ["node_modules/", "dist/", ".eslintrc.cjs"],
   rules: {
-    // add specific rules configurations here
+    "react/function-component-definition": "off",
   },
 };

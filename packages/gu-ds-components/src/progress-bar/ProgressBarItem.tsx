@@ -1,4 +1,5 @@
-import React, { CSSProperties, FunctionComponent } from "react";
+import type { CSSProperties, FunctionComponent } from "react";
+import React from "react";
 import classNames from "./progressBarItem.module.css";
 
 type AriaProps =
@@ -22,7 +23,7 @@ interface ProgressBarItemProps {
 
 /**
  *
- * @param progressBar Progressbar object, in which valueNow is the only mandatory property.
+ * @param progressBar - Progressbar object, in which valueNow is the only mandatory property.
  * @returns Progress bar fill/foreground.
  */
 export const ProgressBarItem: FunctionComponent<ProgressBarItemProps> = ({
@@ -43,6 +44,12 @@ export const ProgressBarItem: FunctionComponent<ProgressBarItemProps> = ({
       }
     >
       <div
+        aria-label={progressBar["aria-label"]}
+        aria-labelledby={progressBar["aria-labelledby"]}
+        aria-valuemax={valueMax}
+        aria-valuemin={valueMin}
+        aria-valuenow={progressBar.valueNow}
+        aria-valuetext={progressBar.explainOtherUnitThanPercentage}
         className={classNames.fill}
         role="progressbar"
         style={
@@ -55,13 +62,7 @@ export const ProgressBarItem: FunctionComponent<ProgressBarItemProps> = ({
                 : "var(--component-progressbar-color-fg-default)",
           } as CSSProperties
         }
-        aria-valuenow={progressBar.valueNow}
-        aria-valuemin={valueMin}
-        aria-label={progressBar["aria-label"]}
-        aria-labelledby={progressBar["aria-labelledby"]}
-        aria-valuetext={progressBar.explainOtherUnitThanPercentage}
-        aria-valuemax={valueMax}
-      ></div>
+      />
     </li>
   );
 };
