@@ -1,6 +1,8 @@
-import React, { CSSProperties } from "react";
-import { Meta, StoryObj } from "@storybook/react";
-import { ProgressBar, Props } from "./ProgressBar";
+import type { CSSProperties } from "react";
+import React from "react";
+import type { Meta, StoryObj } from "@storybook/react";
+import type { Props } from "./ProgressBar";
+import { ProgressBar } from "./ProgressBar";
 
 const meta: Meta<
     Props & {

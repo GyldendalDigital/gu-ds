@@ -1,5 +1,5 @@
+import type { Meta, StoryObj } from "@storybook/react";
 import { Example } from "./Example";
-import { Meta, StoryObj } from "@storybook/react";
 
 /** JSDoc på story */
 export const Primary: Story = {

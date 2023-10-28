@@ -1,7 +1,8 @@
-import React, { CSSProperties, FunctionComponent } from "react";
+import type { CSSProperties, FunctionComponent } from "react";
+import React from "react";
 import "./ProgressBar.module.css";
-import { ProgressBar } from "./ProgressBar";
 import { getProficiencyNameByPercentage } from "../utils/progressHelpers";
+import { ProgressBar } from "./ProgressBar";
 
 export interface Props {
     className?: string;
@@ -32,17 +33,17 @@ export const ProficiencyBar: FunctionComponent<Props> = ({
     return (
         <ProgressBar
             className={className}
+            progressBars={[{
+                "aria-labelledby": labelledById,
+                valueNow: progressInPercent,
+                fillColorVar: `--component-progressbar-color-fg-${getProficiencyNameByPercentage(progressInPercent)}`
+            }]}
             style={{
                 ...style,
                 ...{
                     "--progress-bar-background-color": `var(--component-progressbar-color-bg-${getProficiencyNameByPercentage(progressInPercent)})`
                 } as CSSProperties
             }
-            }
-            progressBars={[{
-                "aria-labelledby": labelledById,
-                valueNow: progressInPercent,
-                fillColorVar: `--component-progressbar-color-fg-${getProficiencyNameByPercentage(progressInPercent)}`
-            }]} />
+            } />
     );
 };

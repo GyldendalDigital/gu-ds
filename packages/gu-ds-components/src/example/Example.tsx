@@ -1,5 +1,6 @@
 import tokens from "gu-ds-base/output/tokens.json";
-import React, { FunctionComponent } from "react";
+import type { FunctionComponent } from "react";
+import React from "react";
 import classNames from "./example.module.css";
 
 export interface ExampleProps {
@@ -12,7 +13,7 @@ export const propNames = {
   message: "string",
 };
 
-/** JSDoc på komponent vises ikke i Storybook >_> */
+/** JSDoc på komponent vises ikke i Storybook */
 export const Example: FunctionComponent<ExampleProps> = ({
   message,
   backgroundColor,

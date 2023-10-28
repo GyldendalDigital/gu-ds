@@ -37,5 +37,18 @@ module.exports = {
   ignorePatterns: ["node_modules/", "dist/", ".eslintrc.cjs"],
   rules: {
     "react/function-component-definition": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "unicorn/filename-case": [
+      "error",
+      {
+        cases: {
+          camelCase: true,
+          pascalCase: true,
+          kababCase: true,
+        },
+      },
+    ],
   },
 };

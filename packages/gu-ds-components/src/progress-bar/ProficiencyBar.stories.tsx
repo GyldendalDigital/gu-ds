@@ -1,7 +1,7 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { ProficiencyBar } from "./ProficiencyBar";
+import type { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 import { getProficiencyNameByPercentage } from "../utils/progressHelpers";
+import { ProficiencyBar } from "./ProficiencyBar";
 
 const labelledById = "aria-progress-id";
 

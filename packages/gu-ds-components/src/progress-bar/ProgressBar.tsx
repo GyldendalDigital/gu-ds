@@ -1,10 +1,12 @@
-import React, { CSSProperties, FunctionComponent } from "react";
+import type { CSSProperties, FunctionComponent } from "react";
+import React from "react";
 import classNames from "./ProgressBar.module.css";
-import { ProgressBarItem, ProgressBarType } from "./ProgressBarItem";
+import type { ProgressBarType } from "./ProgressBarItem";
+import { ProgressBarItem } from "./ProgressBarItem";
 
 export interface Props {
   className?: string;
-  progressBars: Array<ProgressBarType>;
+  progressBars: ProgressBarType[];
   showFullLength?: boolean;
   style?: CSSProperties;
   height?: "default" | "low";
@@ -48,9 +50,9 @@ export const ProgressBar: FunctionComponent<Props> = ({
         }
         return (
           <ProgressBarItem
+            fillerWidth={progressBar.valueNow - formerPreviousWidths}
             key={index}
             progressBar={progressBar}
-            fillerWidth={progressBar.valueNow - formerPreviousWidths}
           />
         );
       })}
