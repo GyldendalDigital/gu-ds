@@ -1,5 +1,5 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": ["tsconfig/base.json", "astro/tsconfigs/strict"],
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "react"

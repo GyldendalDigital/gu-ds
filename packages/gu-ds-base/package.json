@@ -15,6 +15,7 @@
   "devDependencies": {
     "style-dictionary": "^3.8.0",
     "ts-node": "^10.9.1",
+    "tsconfig": "*",
     "typescript": "^5.2.2"
   }
 }

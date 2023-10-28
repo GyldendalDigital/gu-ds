@@ -37,6 +37,7 @@
   "devDependencies": {
     "@vanilla-extract/vite-plugin": "^3.9.0",
     "chromatic": "^7.4.0",
-    "eslint-config-custom": "*"
+    "eslint-config-custom": "*",
+    "tsconfig": "*"
   }
 }
