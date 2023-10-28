@@ -1,6 +1,7 @@
 {
   "name": "gu-ds",
   "scripts": {
+    "clean": "turbo run clean && rm -rf node_modules",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "build": "turbo build",

@@ -9,5 +9,8 @@
     "@vercel/style-guide": "^5.0.1",
     "eslint-config-turbo": "^1.10.16",
     "typescript": "*"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules"
   }
 }
