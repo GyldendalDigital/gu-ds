@@ -1,13 +1,8 @@
 {
   "name": "gu-ds",
-  "version": "0.0.1",
-  "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
     "dev": "turbo dev",
+    "lint": "turbo lint",
     "build": "turbo build",
     "tokens": "turbo tokens",
     "storybook": "turbo storybook",
@@ -15,6 +10,14 @@
   },
   "dependencies": {
     "@changesets/cli": "^2.26.2",
+    "eslint": "^8.52.0",
+    "prettier": "^3.0.3",
     "turbo": "latest"
-  }
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "packageManager": "yarn@4.0.0",
+  "private": true
 }

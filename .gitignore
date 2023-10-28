@@ -16,3 +16,6 @@ pnpm-debug.log*
 
 # turbo
 .turbo
+
+# yarn
+.yarn

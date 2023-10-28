@@ -8,14 +8,13 @@
     "tokens": "node ./build-tokens.ts",
     "css": "ts-node build-css.ts"
   },
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/GyldendalDigital/gu-ds"
   },
   "devDependencies": {
+    "style-dictionary": "^3.8.0",
     "ts-node": "^10.9.1",
-    "typescript": "^5.2.2",
-    "style-dictionary": "^3.8.0"
+    "typescript": "^5.2.2"
   }
 }
