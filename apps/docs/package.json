@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "clean": "rm -rf node_modules",
+    "lint": "eslint ./src/**/*",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
@@ -35,6 +37,7 @@
   },
   "devDependencies": {
     "@vanilla-extract/vite-plugin": "^3.9.0",
-    "chromatic": "^7.4.0"
+    "chromatic": "^7.4.0",
+    "eslint-config-custom": "*"
   }
 }
