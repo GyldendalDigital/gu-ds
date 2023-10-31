@@ -23,17 +23,10 @@ module.exports = {
       version: "detect", // Tells eslint-plugin-react to automatically detect the version of React to use
     },
   },
-  ignorePatterns: ["node_modules/", "dist/", ".eslintrc.cjs", "**/*.css", "**/*.scss"],
+  ignorePatterns: ["node_modules/", "dist/", ".eslintrc.cjs"],
   rules: {
-    // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
-    // e.g. "@typescript-eslint/explicit-function-return-type": "off",
+    // reference: https://eslint.org/docs/latest/rules/
     quotes: ["error", "double", "avoid-escape"],
-    "no-case-declarations": "off",
-    "react/prop-types": "off",
-    "react/display-name": "off",
-    "@typescript-eslint/no-explicit-any": "off",
-    "jsx-a11y/no-autofocus": "off",
-    "storybook/no-redundant-story-name": "off",
-    "react/no-unescaped-entities": 0,
+    "react/react-in-jsx-scope": "off",
   },
 };
