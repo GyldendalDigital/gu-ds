@@ -1,5 +1,11 @@
 # gu-ds-base
 
+## 0.0.8
+
+### Patch Changes
+
+- Added stylelint
+
 ## 0.0.6
 
 ### Patch Changes

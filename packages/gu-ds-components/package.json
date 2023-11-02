@@ -1,6 +1,6 @@
 {
   "name": "gu-ds-components",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "MIT",
   "type": "module",
   "files": [
@@ -10,6 +10,10 @@
     "web-components/**/*"
   ],
   "scripts": {
+    "clean": "rm -rf .turbo && rm -rf node_modules",
+    "lint": "yarn lint:js & yarn lint:css",
+    "lint:js": "eslint ./src/**/*.{ts,tsx}",
+    "lint:css": "stylelint ./src/**/*.css",
     "build": "tsup",
     "prepare": "npm run build",
     "dev": "npm run build -- --watch"
@@ -21,6 +25,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@gu-ds/eslint-config": "*",
+    "gu-ds-stylelint": "*",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2"
   },

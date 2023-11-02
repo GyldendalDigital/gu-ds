@@ -1,9 +1,10 @@
 {
   "name": "gu-ds-base",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "MIT",
   "type": "commonjs",
   "scripts": {
+    "clean": "rm -rf .turbo && rm -rf node_modules",
     "build": "yarn tokens && yarn css",
     "tokens": "node ./build-tokens.ts",
     "css": "ts-node build-css.ts"
