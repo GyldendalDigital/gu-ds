@@ -1,6 +1,6 @@
 {
   "name": "gu-ds-components",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "MIT",
   "type": "module",
   "files": [
@@ -25,7 +25,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "eslint-config-custom": "*",
+    "@gu-ds/eslint-config": "*",
     "gu-ds-stylelint": "*",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2"

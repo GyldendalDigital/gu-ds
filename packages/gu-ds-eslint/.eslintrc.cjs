@@ -1,3 +1,6 @@
+/**
+ * @type {import("eslint").Linter.Config}
+ */
 module.exports = {
   root: true,
   env: {
@@ -13,7 +16,7 @@ module.exports = {
     "plugin:jsx-a11y/recommended",
     "plugin:storybook/recommended",
   ],
-  parser: "@typescript-eslint/parser", // Specifies the ESLint parser
+  parser: "@typescript-eslint/parser",
   globals: {
     JSX: true,
   },
