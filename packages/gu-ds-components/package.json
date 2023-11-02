@@ -10,8 +10,10 @@
     "web-components/**/*"
   ],
   "scripts": {
-    "clean": "rm -rf node_modules",
-    "lint": "eslint ./src/**/*.{ts,tsx}",
+    "clean": "rm -rf .turbo && rm -rf node_modules",
+    "lint": "yarn lint:js & yarn lint:css",
+    "lint:js": "eslint ./src/**/*.{ts,tsx}",
+    "lint:css": "stylelint ./src/**/*.css",
     "build": "tsup",
     "prepare": "npm run build",
     "dev": "npm run build -- --watch"
@@ -24,6 +26,7 @@
   },
   "devDependencies": {
     "eslint-config-custom": "*",
+    "gu-ds-stylelint": "*",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2"
   },

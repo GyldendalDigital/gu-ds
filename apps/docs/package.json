@@ -4,8 +4,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "clean": "rm -rf node_modules",
-    "lint": "eslint ./src/**/*.{ts,tsx}",
+    "clean": "rm -rf .turbo && rm -rf .netlify && rm -rf dist && rm -rf node_modules",
+    "lint": "yarn lint:js & yarn lint:css",
+    "lint:js": "eslint ./src/**/*.{ts,tsx}",
+    "lint:css": "stylelint ./src/**/*.css",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
@@ -38,6 +40,7 @@
   "devDependencies": {
     "@vanilla-extract/vite-plugin": "^3.9.0",
     "chromatic": "^7.4.0",
-    "eslint-config-custom": "*"
+    "eslint-config-custom": "*",
+    "gu-ds-stylelint": "*"
   }
 }

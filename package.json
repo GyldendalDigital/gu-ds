@@ -7,7 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "clean": "rm -rf node_modules",
+    "clean": "rm -rf .turbo && rm -rf node_modules",
     "lint": "turbo lint",
     "dev": "turbo dev",
     "build": "turbo build",
