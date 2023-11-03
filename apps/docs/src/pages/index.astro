@@ -6,66 +6,13 @@ import { Sizes } from "../components/sizes/Sizes";
 import { Typography } from "../components/typography/Typography";
 import Layout from "../layouts/Layout.astro";
 import PageHeader from "../components/pageHeader/PageHeader.astro";
-import { AzureNamedKeyCredential, TableClient } from "@azure/data-tables";
 import { AnimatedInput } from "../components/animatedInput/AnimatedInput";
 import * as typographyStyles from "gu-ds-css/output/typography.module.css";
-
-/** Cookies can only be set in pages, so PageHeader can't do this */
-const save = async (value: string) => {
-  const account = import.meta.env.AZURE_ACCOUNT;
-  const accountKey = import.meta.env.AZURE_KEY;
-  const tableName = "dsforslag";
-
-  const credential = new AzureNamedKeyCredential(account, accountKey);
-  const client = new TableClient(
-    `https://${account}.table.core.windows.net`,
-    tableName,
-    credential
-  );
-
-  await client.createEntity({
-    partitionKey: value,
-    rowKey: new Date().toISOString(),
-  });
-};
-
-let forslagCookie = Astro.cookies.get("forslag")?.value ?? "";
-
-if (Astro.request.method === "POST") {
-  try {
-    const data = await Astro.request.formData();
-    const forslag = `${data.get("forslag")}`;
-
-    if (forslagCookie !== forslag) {
-      await save(forslag);
-
-      Astro.cookies.set("forslag", forslag);
-      forslagCookie = forslag;
-    }
-    return Astro.redirect("/");
-  } catch (error) {
-    console.error(error);
-  }
-}
 ---
 
 <Layout title="Designsystem X">
   <PageHeader>
-    <!-- Temporary page header while name competition is going on -->
-    <form method="post" style={{ display: "flex", alignItems: "center", flexDirection: "column" }}>
-      <h1 class="heading-xxl ds-heading">
-      Velkommen til 
-      {
-          forslagCookie 
-            ? forslagCookie 
-            : (
-                <AnimatedInput client:load />
-                <button type="submit" class={typographyStyles.actionButton + " submit-button"}>Send forslag</button>
-              )
-        }
-      </h1>
-      <a href="/forslag">Se andre forslag {!forslagCookie && (" og stem")}</a>
-    </form>
+    <h1 class:list={[typographyStyles.headingXxxl, "ds-heading"]}>DS X</h1>
   </PageHeader>
   <Colors client:idle />
   <Typography client:idle />
@@ -77,7 +24,8 @@ if (Astro.request.method === "POST") {
 <style>
   .ds-heading {
     text-align: center;
-    margin: calc(var(--primitives-size-32) * 1px) 0 calc(var(--primitives-size-18) * 1px);
+    margin: 0;
+    padding: calc(var(--primitives-size-8) * 1px) 0;
   }
 
   .submit-button {
