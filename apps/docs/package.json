@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "clean": "rm -rf .turbo && rm -rf .netlify && rm -rf dist && rm -rf node_modules",
+    "clean": "rm -rf .turbo .netlify dist node_modules",
     "lint": "yarn lint:js & yarn lint:css",
     "lint:js": "eslint ./src/**/*.{ts,tsx}",
     "lint:css": "stylelint ./src/**/*.css",

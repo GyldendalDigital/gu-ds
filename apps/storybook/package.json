@@ -22,7 +22,7 @@
     "react-dom": "18.2.0"
   },
   "scripts": {
-    "clean": "rm -rf node_modules",
+    "clean": "rm -rf node_modules storybook-static",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   }

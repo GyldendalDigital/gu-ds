@@ -1,6 +1,6 @@
 {
   "name": "gu-ds-components",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "license": "MIT",
   "type": "module",
   "files": [
@@ -10,7 +10,7 @@
     "web-components/**/*"
   ],
   "scripts": {
-    "clean": "rm -rf .turbo && rm -rf node_modules",
+    "clean": "rm -rf .turbo node_modules",
     "lint": "yarn lint:js & yarn lint:css",
     "lint:js": "eslint ./src/**/*.{ts,tsx}",
     "lint:css": "stylelint ./src/**/*.css",

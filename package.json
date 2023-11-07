@@ -7,7 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "clean": "rm -rf .turbo && rm -rf node_modules",
+    "clean": "turbo clean && rm -rf .turbo node_modules",
     "lint": "turbo lint",
     "dev": "turbo dev",
     "build": "turbo build",
@@ -16,8 +16,7 @@
     "css": "turbo css"
   },
   "dependencies": {
-    "@changesets/cli": "^2.26.2",
-    "eslint": "latest",
+    "@changesets/cli": "latest",
     "prettier": "latest",
     "turbo": "latest"
   }
