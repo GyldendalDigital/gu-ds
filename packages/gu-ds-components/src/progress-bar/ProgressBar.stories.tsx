@@ -43,13 +43,13 @@ export const Single: Story = {
         args.progressBars = [
             {
                 valueNow: args.__progressBarFirstValue,
-                fillColorVar: args.__progressColor ? `--component-progressbar-color-fg-${args.__progressColor}` : "",
-                filledColorVar: args.__progressBarFilledColorGreen ? "--component-progressbar-color-bg-good" : "",
+                fillColorVar: args.__progressColor ? `--component-progressbar-color-foreground-${args.__progressColor}` : "",
+                filledColorVar: args.__progressBarFilledColorGreen ? "--component-progressbar-color-background-good" : "",
                 "aria-label": "Første"
             },
         ];
         return <ProgressBar {...args} style={{
-            "--progress-bar-background-color": args.__progressColor ? `var(--component-progressbar-color-bg-${args.__progressColor})` : ""
+            "--progress-bar-background-color": args.__progressColor ? `var(--component-progressbar-color-background-${args.__progressColor})` : ""
         } as CSSProperties}/>;
     },
     args: {
@@ -81,7 +81,7 @@ export const Double: Story = {
             {
                 valueNow: args.__progressBarSecondValue,
                 "aria-label": "Andre",
-                fillColorVar: args.__progressColor ? `--component-progressbar-color-fg-${args.__progressColor}` : "",
+                fillColorVar: args.__progressColor ? `--component-progressbar-color-foreground-${args.__progressColor}` : "",
             },
         ];
         return <ProgressBar {...args} />;

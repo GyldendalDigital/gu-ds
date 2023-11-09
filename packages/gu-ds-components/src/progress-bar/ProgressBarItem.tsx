@@ -52,7 +52,7 @@ export const ProgressBarItem: FunctionComponent<ProgressBarItemProps> = ({
                 ? `var(${progressBar.filledColorVar})`
                 : !!progressBar.fillColorVar
                 ? `var(${progressBar.fillColorVar})`
-                : "var(--component-progressbar-color-fg-default)",
+                : "var(--component-progressbar-color-foreground-default)",
           } as CSSProperties
         }
         aria-valuenow={progressBar.valueNow}

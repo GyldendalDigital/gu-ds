@@ -35,14 +35,14 @@ export const ProficiencyBar: FunctionComponent<Props> = ({
             style={{
                 ...style,
                 ...{
-                    "--progress-bar-background-color": `var(--component-progressbar-color-bg-${getProficiencyNameByPercentage(progressInPercent)})`
+                    "--progress-bar-background-color": `var(--component-progressbar-color-background-${getProficiencyNameByPercentage(progressInPercent)})`
                 } as CSSProperties
             }
             }
             progressBars={[{
                 "aria-labelledby": labelledById,
                 valueNow: progressInPercent,
-                fillColorVar: `--component-progressbar-color-fg-${getProficiencyNameByPercentage(progressInPercent)}`
+                fillColorVar: `--component-progressbar-color-foreground-${getProficiencyNameByPercentage(progressInPercent)}`
             }]} />
     );
 };

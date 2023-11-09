@@ -16,7 +16,7 @@
     height: var(--progress-bar-height);
     width: var(--progress-bar-width, 100%);
     padding: 0;
-    background-color: var(--progress-bar-background-color, var(--component-progressbar-color-bg-default));
+    background-color: var(--progress-bar-background-color, var(--component-progressbar-color-background-default));
     list-style: none;
   }
   .ProgressBar_module_low {
