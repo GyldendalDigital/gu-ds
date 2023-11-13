@@ -1,5 +1,5 @@
 // src/example/Example.tsx
-import tokens from "gu-ds-base/output/tokens.json";
+import tokens from "gu-ds-base/themes/default/tokens.json";
 import React from "react";
 
 // src/example/example.module.css

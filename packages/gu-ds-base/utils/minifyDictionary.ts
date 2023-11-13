@@ -1,4 +1,6 @@
-module.exports = function minifyDictionary(obj) {
+import { TransformedTokens } from "style-dictionary";
+
+export const minifyDictionary = (obj: TransformedTokens) => {
   if (obj === null || obj === undefined) {
     return null;
   }
@@ -7,17 +9,20 @@ module.exports = function minifyDictionary(obj) {
     return obj;
   }
 
-  var toRet = {};
+  var toRet: TransformedTokens = {};
 
   if (obj.hasOwnProperty("value")) {
     return obj.value;
   } else {
     for (var name in obj) {
       if (obj.hasOwnProperty(name)) {
-        toRet[name] = minifyDictionary(obj[name]);
+        const value = minifyDictionary(obj[name]);
+        if (value) {
+          toRet[name] = value;
+        }
       }
     }
   }
-  
+
   return toRet;
-}
+};

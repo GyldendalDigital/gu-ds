@@ -1,4 +1,4 @@
-import tokens from "gu-ds-base/output/tokens.json";
+import tokens from "gu-ds-base/themes/default/tokens.json";
 import React, { FunctionComponent } from "react";
 import classNames from "./example.module.css";
 
