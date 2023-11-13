@@ -8,23 +8,10 @@ module.exports = {
     "stylelint-config-prettier",
   ],
   rules: {
-    "at-rule-name-case": [
-      "lower",
-      {
-        message: "Use lowercase, it is easier to read in the code",
-      },
-    ],
-    "at-rule-semicolon-newline-after": "always",
     "block-no-empty": [
       true,
       {
         message: "Delete empty CSS rules - keep your CSS maintainable",
-      },
-    ],
-    "color-hex-case": [
-      "lower",
-      {
-        message: "Lowercase letters are easier to distinguish from numbers",
       },
     ],
     "color-hex-length": [
@@ -34,9 +21,6 @@ module.exports = {
       },
     ],
     "declaration-block-no-shorthand-property-overrides": true,
-    "declaration-block-semicolon-newline-after": "always",
-    "declaration-colon-space-after": "always-single-line",
-    "declaration-colon-space-before": "never",
     "declaration-empty-line-before": "never",
     "declaration-no-important": [
       true,
@@ -65,8 +49,6 @@ module.exports = {
       perspective: ["px"],
       "stroke-width": ["px"],
     },
-    "function-comma-space-after": "always-single-line",
-    "function-comma-space-before": "never",
     "function-name-case": [
       "lower",
       {
@@ -85,15 +67,6 @@ module.exports = {
       true,
       {
         message: "Delete the unit when value is 0 - keep your CSS readable",
-      },
-    ],
-    "no-empty-first-line": true,
-    "number-leading-zero": "always",
-    "number-no-trailing-zeros": true,
-    "property-case": [
-      "lower",
-      {
-        message: "Use lowercase, it is easier to read in the code",
       },
     ],
     "order/properties-order": [
@@ -262,12 +235,6 @@ module.exports = {
       },
     ],
     "shorthand-property-no-redundant-values": true,
-    "unit-case": [
-      "lower",
-      {
-        message: "Use lowercase, it is easier to read in the code",
-      },
-    ],
     "value-keyword-case": [
       "lower",
       {
