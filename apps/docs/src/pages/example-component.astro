@@ -1,7 +1,7 @@
 ---
 import "gu-ds-components/css/components.css"; 
 import { Example } from "gu-ds-components/react"; 
-import tokens from "gu-ds-base/output/tokens.json";
+import tokens from "gu-ds-base/themes/default/tokens.json";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -23,7 +23,7 @@ import Layout from "../layouts/Layout.astro";
 
   <script>
     import { Example } from "gu-ds-components/react";
-    import tokens from "gu-ds-base/output/tokens.json";
+    import tokens from "gu-ds-base/themes/default/tokens.json";
     import { createElement } from "react";
     import { createRoot } from "react-dom/client";
     const element = document.getElementById("react-root");
@@ -59,7 +59,7 @@ import Layout from "../layouts/Layout.astro";
 
   <script>
     import { Example } from "gu-ds-components/web-components";
-    import tokens from "gu-ds-base/output/tokens.json";
+    import tokens from "gu-ds-base/themes/default/tokens.json";
     const example = new Example();
     example.backgroundColor = tokens.primitives.color.turquoise[100];
     example.message = "Scripted Web component"

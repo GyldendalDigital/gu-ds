@@ -1,6 +1,6 @@
 import { globalStyle, style } from "@vanilla-extract/css";
 import { contentBody } from "gu-ds-css/output/typography.json";
-import tokens from "gu-ds-base/output/tokens.json";
+import tokens from "gu-ds-base/themes/default/tokens.json";
 
 export const table = style({
   width: "100%",

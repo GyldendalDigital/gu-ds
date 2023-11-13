@@ -1,4 +1,4 @@
-import tokens from "gu-ds-base/output/tokens.json";
+import tokens from "gu-ds-base/themes/default/tokens.json";
 import type { FunctionComponent } from "react";
 import { Page } from "../page/Page";
 import { RichText } from "../richText/RichText";
