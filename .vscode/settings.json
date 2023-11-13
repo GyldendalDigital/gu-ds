@@ -1,3 +1,10 @@
 {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "[css]": {
+        "editor.defaultFormatter": "stylelint.vscode-stylelint",
+        "files.insertFinalNewline": true
+    }
 }

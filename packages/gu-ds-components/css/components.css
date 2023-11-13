@@ -1,4 +1,4 @@
-@import "gu-ds-base/themes/default/tokens.css";
+@import url("gu-ds-base/themes/default/tokens.css");
 
 /* src/example/example.module.css */
 .example_module_example {
@@ -13,15 +13,17 @@
     position: relative;
     display: flex;
     border-radius: var(--progress-bar-border-radius);
+    padding: 0;
     height: var(--progress-bar-height);
     width: var(--progress-bar-width, 100%);
-    padding: 0;
-    background-color: var(--progress-bar-background-color, var(--component-progressbar-color-bg-default));
     list-style: none;
+    background-color: var(--progress-bar-background-color, var(--component-progressbar-color-background-default));
   }
+
   .ProgressBar_module_low {
     --progress-bar-height: calc((var(--component-progressbar-size-small) * 1px) + (1em - 16px));
   }
+
   .ProgressBar_module_show-full-length {
     justify-content: space-between;
   }
@@ -34,6 +36,7 @@
     height: inherit;
     width: calc(var(--progress-bar-item-width) * 1%);
   }
+
   .progressBarItem_module_fill {
     border-radius: inherit;
     height: inherit;
