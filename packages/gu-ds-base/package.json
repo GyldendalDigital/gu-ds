@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm -rf .turbo node_modules",
     "build": "yarn tokens && yarn css",
-    "tokens": "node ./build-tokens.ts",
+    "tokens": "ts-node ./build-tokens.ts",
     "css": "ts-node build-css.ts"
   },
   "dependencies": {},

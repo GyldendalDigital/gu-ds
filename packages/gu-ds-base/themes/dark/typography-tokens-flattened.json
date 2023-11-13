@@ -12,10 +12,7 @@
       "fontWeight": 500,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 24,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -33,10 +30,7 @@
       "fontWeight": 500,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 19.2,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -54,10 +48,7 @@
       "fontWeight": 400,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 24,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -75,10 +66,7 @@
       "fontWeight": 500,
       "fontStyle": "italic",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 19.2,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -96,10 +84,7 @@
       "fontWeight": 400,
       "fontStyle": "italic",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 24,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -117,10 +102,7 @@
       "fontWeight": 500,
       "fontStyle": "italic",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 24,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -137,10 +119,7 @@
       "fontWeight": 400,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 24,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -157,10 +136,7 @@
       "fontWeight": 400,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 36,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -177,10 +153,7 @@
       "fontWeight": 400,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 21,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -197,10 +170,7 @@
       "fontWeight": 400,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 18,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -217,10 +187,7 @@
       "fontWeight": 600,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 76.8,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -237,10 +204,7 @@
       "fontWeight": 600,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 57.6,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -257,10 +221,7 @@
       "fontWeight": 600,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 48,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -277,10 +238,7 @@
       "fontWeight": 600,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 38.4,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -297,10 +255,7 @@
       "fontWeight": 600,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 28.8,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -317,10 +272,7 @@
       "fontWeight": 600,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 24,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -339,8 +291,6 @@
       "fontStretch": "normal",
       "letterSpacing": 0.16,
       "lineHeight": 19.2,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "uppercase"
     }
   },
@@ -357,10 +307,7 @@
       "fontWeight": 600,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 16.8,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -379,8 +326,6 @@
       "fontStretch": "normal",
       "letterSpacing": 0.28,
       "lineHeight": 16.8,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "uppercase"
     }
   },
@@ -397,10 +342,7 @@
       "fontWeight": 500,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 28.8,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -417,10 +359,7 @@
       "fontWeight": 400,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 24,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -437,10 +376,7 @@
       "fontWeight": 500,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 19.2,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -459,10 +395,7 @@
       "fontWeight": 400,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 19.2,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -481,10 +414,7 @@
       "fontWeight": 500,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 19.2,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -503,10 +433,7 @@
       "fontWeight": 400,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 120,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -525,10 +452,7 @@
       "fontWeight": 400,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 19.2,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -547,10 +471,7 @@
       "fontWeight": 500,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 19.2,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   },
@@ -567,10 +488,7 @@
       "fontWeight": 400,
       "fontStyle": "normal",
       "fontStretch": "normal",
-      "letterSpacing": 0,
       "lineHeight": 32,
-      "paragraphIndent": 0,
-      "paragraphSpacing": 0,
       "textCase": "none"
     }
   }

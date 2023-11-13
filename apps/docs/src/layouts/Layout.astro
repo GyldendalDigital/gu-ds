@@ -1,11 +1,14 @@
 ---
-import "@fontsource/fira-code"
+import "@fontsource/fira-code";
+import { getTheme } from "../theme";
 
 interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
+
+const theme = getTheme(Astro);
 ---
 
 <!doctype html>
@@ -18,40 +21,41 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <script type="module">
-      import RefreshRuntime from '/@react-refresh'
-      RefreshRuntime.injectIntoGlobalHook(window)
-      window.$RefreshReg$ = () => {}
-      window.$RefreshSig$ = () => (type) => type
-      window.__vite_plugin_react_preamble_installed__ = true
+      import RefreshRuntime from "/@react-refresh";
+      RefreshRuntime.injectIntoGlobalHook(window);
+      window.$RefreshReg$ = () => {};
+      window.$RefreshSig$ = () => (type) => type;
+      window.__vite_plugin_react_preamble_installed__ = true;
     </script>
   </head>
-  <body>
+  <body class:list={theme.className}>
     <main>
       <slot />
     </main>
   </body>
+
+  <style is:global>
+    @import "gu-ds-base/themes/default/tokens.css";
+    @import "gu-ds-base/themes/dark/tokens.css";
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box;
+    }
+
+    :root {
+    }
+
+    html {
+    }
+
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      margin: 0;
+    }
+
+    main {
+    }
+  </style>
 </html>
-
-<style is:global>
-  @import "gu-ds-base/output/tokens.css";
-
-  *,
-  *:before,
-  *:after {
-    box-sizing: border-box;
-  }
-
-  :root {
-  }
-
-  html {
-  }
-
-  body {
-    font-family: Inter, system-ui, sans-serif;
-    margin: 0;
-  }
-
-  main {
-  }
-</style>

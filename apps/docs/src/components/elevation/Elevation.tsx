@@ -1,7 +1,7 @@
 import type { FunctionComponent } from "react";
 import { Page } from "../page/Page";
 import { RichText } from "../richText/RichText";
-import tokens from "gu-ds-base/output/tokens.json";
+import tokens from "gu-ds-base/themes/default/tokens.json";
 
 export const Elevation: FunctionComponent = () => {
   return (
@@ -19,11 +19,9 @@ export const Elevation: FunctionComponent = () => {
     >
       <RichText>
         <h3>Button shadow</h3>
-        {Object.entries(tokens.semantic.elevation).map(
-          ([key, value], index) => (
-            <div key={index}>{key}</div>
-          )
-        )}
+        {Object.entries(tokens.semantic.elevation).map(([key], index) => (
+          <div key={index}>{key}</div>
+        ))}
       </RichText>
       <RichText>
         <h3>Modal shadow</h3>

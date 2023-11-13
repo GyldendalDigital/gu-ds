@@ -1,9 +1,9 @@
 /**
  * Do not edit directly
- * Generated on Tue, 24 Oct 2023 12:52:31 GMT
+ * Generated on Fri, 10 Nov 2023 08:38:15 GMT
  */
 
-:root, :host {
+.namespace-theme-default {
   --typography-section-input-text-case: none;
   --typography-section-input-paragraph-spacing: 0;
   --typography-section-input-paragraph-indent: 0;
@@ -464,6 +464,11 @@
   --sections-input-color-border-selected: var(--primitives-color-violet-900);
   --sections-input-color-border-default: var(--primitives-color-violet-400);
   --sections-input-text-padding: 8;
+  --semantic-color-surface-container-foreground: var(--primitives-color-gray-1000);
+  --semantic-color-surface-container-background: var(--primitives-color-white);
+  --semantic-color-surface-border: var(--primitives-color-gray-300);
+  --semantic-color-surface-page-foreground: var(--primitives-color-gray-1000);
+  --semantic-color-surface-page-background: var(--primitives-color-gray-100);
   --semantic-color-failure-secondary: var(--primitives-color-pink-200);
   --semantic-color-failure-primary: var(--primitives-color-pink-800);
   --semantic-color-success-secondar: var(--primitives-color-green-100);
@@ -471,6 +476,7 @@
   --semantic-color-success-primary: var(--primitives-color-green-600);
   --semantic-elevation-container-width-large: 768;
   --semantic-elevation-container-width-medium: 512;
+  --semantic-layout-container-margin-bottom: 96;
   --semantic-layout-container-gap-small: 8;
   --semantic-layout-container-gap-medium: 16;
   --semantic-layout-container-gap-large: 24;
@@ -489,13 +495,14 @@
   --semantic-progress-color-background-some: var(--primitives-color-yellow-200);
   --semantic-progress-color-background-low: var(--primitives-color-red-100);
   --semantic-progress-color-background-default: var(--primitives-color-gray-200);
+  --semantic-progress-color-foreground-default-secondary: var(--primitives-color-turquoise-500);
   --semantic-progress-color-foreground-unknown: var(--primitives-color-gray-900);
   --semantic-progress-color-foreground-high: var(--primitives-color-purple-700);
   --semantic-progress-color-foreground-good: var(--primitives-color-green-600);
   --semantic-progress-color-foreground-basics: var(--primitives-color-blue-600);
   --semantic-progress-color-foreground-some: var(--primitives-color-yellow-600);
   --semantic-progress-color-foreground-low: var(--primitives-color-red-600);
-  --semantic-progress-color-foreground-default: var(--primitives-color-blue-900);
+  --semantic-progress-color-foreground-default-primary: var(--primitives-color-blue-900);
   --semantic-image-icon-size-small-height: 18;
   --semantic-image-icon-size-small-width: 18;
   --semantic-image-icon-size-height: 24;
@@ -533,7 +540,6 @@
   --component-label-border-radius: 1000;
   --component-tile-container-size-height: 360;
   --component-tile-container-size-width: 280;
-  --component-tile-color-background: var(--primitives-color-white);
   --component-tile-activitycard-subheading-color: var(--primitives-color-gray-800);
   --component-tile-activitycard-subheading-font-weight: 400;
   --component-tile-activitycard-heading-font-weight: 400;
@@ -572,7 +578,7 @@
   --component-progressbar-color-foreground-basics: var(--semantic-progress-color-foreground-basics);
   --component-progressbar-color-foreground-some: var(--semantic-progress-color-foreground-some);
   --component-progressbar-color-foreground-low: var(--semantic-progress-color-foreground-low);
-  --component-progressbar-color-foreground-default: var(--semantic-progress-color-foreground-default);
+  --component-progressbar-color-foreground-default: var(--semantic-progress-color-foreground-default-primary);
   --component-progressbar-color-background-unknown: var(--semantic-progress-color-background-unknown);
   --component-progressbar-color-background-high: var(--semantic-progress-color-background-high);
   --component-progressbar-color-background-good: var(--semantic-progress-color-background-good);
@@ -594,6 +600,8 @@
   --component-list-listitem-border-width: 1;
   --component-list-listcontainer-border-radius: 16;
   --component-tile-listcard-padding: 16;
+  --component-tile-color-foreground: var(--semantic-color-surface-container-foreground);
+  --component-tile-color-background: var(--semantic-color-surface-container-background);
   --component-tile-padding-right: 16;
   --component-tile-padding-left: 16;
   --component-tile-padding-top: 16;

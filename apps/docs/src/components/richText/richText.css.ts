@@ -1,14 +1,16 @@
 import { globalStyle, style } from "@vanilla-extract/css";
 import {
   contentBody,
-  headingM,
   headingL,
+  headingM,
 } from "gu-ds-css/output/typography.json";
-import tokens from "gu-ds-base/output/tokens.json";
+import { getTheme } from "../../theme";
+
+const { tokens } = getTheme();
 
 export const richText = style({
   marginBottom: tokens.primitives.size[48] + tokens.primitives.size[24],
-  color: tokens.primitives.color.gray[800],
+  color: "var(--semantic-color-surface-container-foreground)",
 });
 
 const heading = {

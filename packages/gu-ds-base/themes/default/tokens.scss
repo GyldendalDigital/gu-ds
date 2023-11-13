@@ -1,6 +1,6 @@
 
 // Do not edit directly
-// Generated on Tue, 24 Oct 2023 12:52:31 GMT
+// Generated on Fri, 10 Nov 2023 08:38:15 GMT
 
 $primitives-border-radius-8: 8;
 $primitives-border-radius-16: 16;
@@ -189,6 +189,7 @@ $component-tile-padding-top: 16;
 $component-tile-padding-left: 16;
 $component-tile-padding-right: 16;
 $component-tile-color-background: #ffffffff;
+$component-tile-color-foreground: #121516ff;
 $component-tile-listcard-padding: 16;
 $component-tile-container-size-width: 280;
 $component-tile-container-size-height: 360;
@@ -261,13 +262,14 @@ $semantic-image-icon-size-width: 24;
 $semantic-image-icon-size-height: 24;
 $semantic-image-icon-size-small-width: 18;
 $semantic-image-icon-size-small-height: 18;
-$semantic-progress-color-foreground-default: #002852ff;
+$semantic-progress-color-foreground-default-primary: #002852ff;
 $semantic-progress-color-foreground-low: #f53000ff;
 $semantic-progress-color-foreground-some: #f5c900ff;
 $semantic-progress-color-foreground-basics: #0064ccff;
 $semantic-progress-color-foreground-good: #028d56ff;
 $semantic-progress-color-foreground-high: #421c9cff;
 $semantic-progress-color-foreground-unknown: #25292dff;
+$semantic-progress-color-foreground-default-secondary: #00b5b8ff;
 $semantic-progress-color-background-default: #dde0e3ff;
 $semantic-progress-color-background-low: #ffcec2ff;
 $semantic-progress-color-background-some: #fff4c2ff;
@@ -286,6 +288,7 @@ $semantic-layout-container-padding-small: 12;
 $semantic-layout-container-gap-large: 24;
 $semantic-layout-container-gap-medium: 16;
 $semantic-layout-container-gap-small: 8;
+$semantic-layout-container-margin-bottom: 96;
 $semantic-elevation-container-border-radius: 16;
 $semantic-elevation-container-width-medium: 512;
 $semantic-elevation-container-width-large: 768;
@@ -294,6 +297,11 @@ $semantic-color-success-secondary: #ccf0e2ff;
 $semantic-color-success-secondar: #ccf0e2ff;
 $semantic-color-failure-primary: #e0004eff;
 $semantic-color-failure-secondary: #ffd6e4ff;
+$semantic-color-surface-page-background: #f4f5f6ff;
+$semantic-color-surface-page-foreground: #121516ff;
+$semantic-color-surface-border: #c7ccd1ff;
+$semantic-color-surface-container-background: #ffffffff;
+$semantic-color-surface-container-foreground: #121516ff;
 $sections-input-text-padding: 8;
 $sections-input-color-border-default: #7091ebff;
 $sections-input-color-border-selected: #112e7dff;

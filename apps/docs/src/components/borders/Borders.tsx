@@ -1,4 +1,4 @@
-import tokens from "gu-ds-base/output/tokens.json";
+import tokens from "gu-ds-base/themes/default/tokens.json";
 import { Page } from "../page/Page";
 import { RichText } from "../richText/RichText";
 import { Table, Td } from "../table/Table";
@@ -20,25 +20,27 @@ export const Borders = () => (
     <RichText>
       <h2>Width</h2>
       <Table>
-        {Object.entries(tokens.primitives.border.width).map(([key, value]) => (
-          <tr>
-            <Td>primitives.border.width.{key}</Td>
-            <Td wide>
-              <UnitFormatter>{value}</UnitFormatter>
-            </Td>
-            <Td>
-              <div
-                role="img"
-                aria-label="Illustrasjon"
-                style={{
-                  width: 240,
-                  height: 140,
-                  border: `solid 2px ${tokens.primitives.color.gray[300]}`,
-                }}
-              />
-            </Td>
-          </tr>
-        ))}
+        {Object.entries(tokens.primitives.border.width).map(
+          ([key, value], index) => (
+            <tr key={index}>
+              <Td>primitives.border.width.{key}</Td>
+              <Td wide>
+                <UnitFormatter>{value}</UnitFormatter>
+              </Td>
+              <Td>
+                <div
+                  role="img"
+                  aria-label="Illustrasjon"
+                  style={{
+                    width: 240,
+                    height: 140,
+                    border: `solid 2px ${tokens.primitives.color.gray[300]}`,
+                  }}
+                />
+              </Td>
+            </tr>
+          )
+        )}
       </Table>
     </RichText>
     <RichText>
