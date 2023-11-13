@@ -1,4 +1,4 @@
-@import "gu-ds-base/themes/default/tokens.css";
+@import url("gu-ds-base/themes/default/tokens.css");
 
 /* src/example/example.module.css */
 .example_module_example {
@@ -12,16 +12,18 @@
     --progress-bar-border-radius: calc(1px * var(--component-progressbar-border-radius));
     position: relative;
     display: flex;
-    border-radius: var(--progress-bar-border-radius);
-    height: var(--progress-bar-height);
     width: var(--progress-bar-width, 100%);
+    height: var(--progress-bar-height);
     padding: 0;
-    background-color: var(--progress-bar-background-color, var(--component-progressbar-color-background-default));
     list-style: none;
+    background-color: var(--progress-bar-background-color, var(--component-progressbar-color-background-default));
+    border-radius: var(--progress-bar-border-radius);
   }
+
   .ProgressBar_module_low {
     --progress-bar-height: calc((var(--component-progressbar-size-small) * 1px) + (1em - 16px));
   }
+
   .ProgressBar_module_show-full-length {
     justify-content: space-between;
   }
@@ -30,16 +32,17 @@
 /* src/progress-bar/progressBarItem.module.css */
 @layer guds {
   .progressBarItem_module_item {
-    border-radius: inherit;
-    height: inherit;
     width: calc(var(--progress-bar-item-width) * 1%);
-  }
-  .progressBarItem_module_fill {
-    border-radius: inherit;
     height: inherit;
+    border-radius: inherit;
+  }
+
+  .progressBarItem_module_fill {
     width: 100%;
     max-width: 100%;
+    height: inherit;
     background-color: var(--progress-bar-fill-color);
+    border-radius: inherit;
     transition: width 0.2s ease-in;
   }
 }

@@ -50,7 +50,7 @@ export const ProgressBarItem: FunctionComponent<ProgressBarItemProps> = ({
             "--progress-bar-fill-color":
               progressBar.valueNow === valueMax && !!progressBar.filledColorVar
                 ? `var(${progressBar.filledColorVar})`
-                : !!progressBar.fillColorVar
+                : progressBar.fillColorVar
                 ? `var(${progressBar.fillColorVar})`
                 : "var(--component-progressbar-color-foreground-default)",
           } as CSSProperties

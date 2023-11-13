@@ -1,5 +1,5 @@
-import { ExampleProps, ProgressBarProps as Props, ProficiencyBarProps as Props$1 } from '../react/index.js';
-import 'react';
+import { ExampleProps, ProgressBarProps as Props, ProficiencyBarProps as Props$1 } from "../react/index.js";
+import "react";
 
 declare const Example: new (...params: any[]) => HTMLElement & ExampleProps;
 

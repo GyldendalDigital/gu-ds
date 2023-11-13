@@ -16,7 +16,7 @@ const meta: Meta<
         __progressBarFirstValue: 45,
         height: "default",
     },
-    tags: ['autodocs'],
+    tags: ["autodocs"],
     argTypes: {
         height: {
             control: "inline-radio",

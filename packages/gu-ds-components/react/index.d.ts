@@ -1,4 +1,4 @@
-import { FunctionComponent, CSSProperties } from 'react';
+import { FunctionComponent, CSSProperties } from "react";
 
 interface ExampleProps {
     backgroundColor: string;
