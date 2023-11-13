@@ -6,14 +6,14 @@
         --progress-bar-border-radius: calc(1px * var(--component-progressbar-border-radius));
         position: relative;
         display: flex;
-        width: var(--progress-bar-width, 100%);
-        height: var(--progress-bar-height);
+        border-radius: var(--progress-bar-border-radius);
 
         /* Necessary to stretch its container */
         padding: 0;
+        height: var(--progress-bar-height);
+        width: var(--progress-bar-width, 100%);
         list-style: none;
         background-color: var(--progress-bar-background-color, var(--component-progressbar-color-background-default));
-        border-radius: var(--progress-bar-border-radius);
     }
 
     .low {

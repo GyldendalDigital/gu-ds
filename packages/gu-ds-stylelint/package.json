@@ -9,7 +9,7 @@
   "dependencies": {
     "stylelint": "latest",
     "stylelint-config-prettier": "latest",
-    "stylelint-config-rational-order": "latest",
+    "stylelint-order": "latest",
     "stylelint-config-standard": "latest"
   }
 }
